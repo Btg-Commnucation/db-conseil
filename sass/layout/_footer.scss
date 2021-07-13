@@ -1,0 +1,25 @@
+@use '../abstracts';
+
+footer {
+  background-color: abstracts.$grey-100;
+  padding: 4.1rem 0 5rem 0;
+
+  .widget-container {
+    width: 26%;
+    font-size: 2rem;
+  }
+
+  img {
+    margin-bottom: 1.8rem;
+  }
+
+  .textwidget {
+    strong {
+      font-family: abstracts.$neutra-bold;
+      font-weight: 700;
+    }
+    p:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+}
