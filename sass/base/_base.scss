@@ -1,8 +1,12 @@
+@use '../abstracts';
+
 /* Set root font-size @10px equivalent */
 html {
-    font-size: .625em; /* fallback IE8+ */
-    font-size: calc(1em * .625); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
-    scroll-behavior: smooth;
+  font-size: 0.625em; /* fallback IE8+ */
+  font-size: calc(
+    1em * 0.625
+  ); /* IE9-IE11 math fixing. See http://bit.ly/1g4X0bX */
+  scroll-behavior: smooth;
 }
 
 /* Box sizing rules */
@@ -141,8 +145,8 @@ a[href^="tel"] {
     text-decoration: underline;
   }
 
-  a[href]:not([href^='#'])::after {
-    content: '('attr(href)')';
+  a[href]:not([href^="#"])::after {
+    content: "(" attr(href) ")";
   }
 }
 
@@ -150,17 +154,22 @@ ul {
   padding: 0;
 }
 
-
 /* Set text selection color & background */
 
 ::-moz-selection {
-    color: #000;
-    background-color: #fd0;
+  color: #000;
+  background-color: #fd0;
 }
 
 ::selection {
-    color: #000;
-    background-color: #fd0;
+  color: #000;
+  background-color: #fd0;
 }
 
 /* Set font-family, base font-size and line-height */
+
+body {
+  font-family: abstracts.$neutra-book;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
