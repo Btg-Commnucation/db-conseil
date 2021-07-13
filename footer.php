@@ -15,8 +15,10 @@
                 <?php dynamic_sidebar( 'footer-text' ); ?>
             </div>
         </section>
-        <section class="mentions"></section>
     </div>
+    <section class="mentions">
+        <?php dynamic_sidebar( 'mentions-footer' ); ?>
+    </section>
 </footer>
 
 <?php wp_footer();  ?>
