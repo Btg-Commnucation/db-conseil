@@ -1,3 +1,5 @@
+@use '../abstracts';
+@use '../base';
 header {
   max-width: 1200px;
   margin-top: 1.4rem;
@@ -15,10 +17,40 @@ header {
     li:not(:last-of-type) {
       margin-right: 4.4rem;
     }
+
+    a {
+      font-family: abstracts.$neutra-bold;
+      font-size: 1.8rem;
+      color: abstracts.$grey-600;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
   }
 
   .form-button__container {
     margin-left: 4.4rem;
+
+    a {
+      font-size: 1.8rem;
+      color: white;
+      background-color: abstracts.$blue-700;
+      padding: 1rem 1rem 1rem 1rem;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+      border-radius: 5px;
+
+      &::before {
+        content: url(../img/little-white-symbols.svg);
+      }
+
+      &:last-of-type {
+        background-color: abstracts.$yellow-600;
+      }
+    }
 
     a:first-of-type {
       margin-right: 2.3rem;
