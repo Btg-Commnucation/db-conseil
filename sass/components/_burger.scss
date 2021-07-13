@@ -1,0 +1,109 @@
+.menu-btn {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .menu-main-menu-container {
+    display: flex;
+    align-items: center;
+  }
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background-color: #272727;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-btn__burger::before,
+  .menu-btn__burger::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #272727;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-btn__burger::before {
+    transform: translateY(-16px);
+  }
+  .menu-btn__burger::after {
+    transform: translateY(16px);
+  }
+
+  .menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+
+  .menu-btn ~ #main-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: translateY(-100px);
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+
+    li {
+      display: none !important;
+    }
+  }
+
+  .menu-btn.open ~ #main-menu {
+    display: flex;
+    z-index: 99;
+    width: 100%;
+    height: auto;
+    transform: translateY(105px);
+
+    li {
+      display: flex !important;
+    }
+  }
+
+  #inscrption .menu-item {
+    border: 0px solid transparent;
+    padding-left: 0;
+  }
+
+  #main-menu .menu-item:last-of-type {
+    border-right: 0px solid transparent;
+  }
+  #main-menu .menu-item:first-of-type {
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .menu-btn.open ~ #main-menu {
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(238px);
+  }
+
+  #main-menu .menu-item:not(:first-of-type) {
+    border: 0px solid transparent;
+  }
+}
