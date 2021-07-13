@@ -19,7 +19,7 @@
                 'items_wrap' => '<div class="menu-btn">
                     <div class="menu-btn__burger">
                     </div>
-                </div><ul id="%1$s" class="%2$s" hidden>%3$s</ul>',
+                </div><ul id="%1$s" class="%2$s" >%3$s</ul>',
             ) ); ?>
         </div>
         <div class="form-button__container">
