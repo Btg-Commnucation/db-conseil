@@ -5,8 +5,21 @@ footer {
   padding: 4.1rem 0 5rem 0;
 
   .widget-container {
-    width: 26%;
+    flex: 1 0 25%;
     font-size: 2rem;
+
+    &:nth-of-type(2) {
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: abstracts.$blue-700;
+      }
+      a::before {
+        content: url(../img/linkedin.svg);
+        padding-right: 1rem;
+      }
+    }
   }
 
   img {
@@ -22,4 +35,10 @@ footer {
       margin-bottom: 2rem;
     }
   }
+}
+
+.hero-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }

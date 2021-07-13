@@ -22,3 +22,7 @@ register_sidebar( array(
 	'id' => 'footer-address',
 	'name' => 'Adresse du bas de page',
 ) );
+register_sidebar( array(
+	'id' => 'footer-socials',
+	'name' => 'Réseaux sociaux du bas de page',
+) );
