@@ -1,0 +1,27 @@
+header {
+  max-width: 1200px;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  margin-left: 2.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .main-menu__container {
+    display: flex;
+  }
+  #main-menu {
+    display: flex;
+    li:not(:last-of-type) {
+      margin-right: 4.4rem;
+    }
+  }
+
+  .form-button__container {
+    margin-left: 4.4rem;
+
+    a:first-of-type {
+      margin-right: 2.3rem;
+    }
+  }
+}

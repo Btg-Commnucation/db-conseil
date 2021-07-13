@@ -21,9 +21,9 @@
                     </div>
                 </div><ul id="%1$s" class="%2$s" >%3$s</ul>',
             ) ); ?>
-        </div>
-        <div class="form-button__container">
-            <a href="#">Je postule</a>
-            <a href="#">Je recrute</a>
+            <div class="form-button__container">
+                <a href="#">Je postule</a>
+                <a href="#">Je recrute</a>
+            </div>
         </div>
     </header>
