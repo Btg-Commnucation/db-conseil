@@ -1,7 +1,7 @@
 @use '../abstracts';
 @use '../base';
 header {
-  max-width: 1200px;
+  max-width: 85%;
   margin-top: 1.4rem;
   margin-bottom: 1.4rem;
   margin-left: 2.6rem;
@@ -11,6 +11,18 @@ header {
 
   .main-menu__container {
     display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1050px) {
+      width: 60%;
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 724px) {
+      justify-content: space-around;
+    }
+    @media screen and (max-width: 520px) {
+      width: auto;
+    }
   }
   #main-menu {
     display: flex;
@@ -29,8 +41,27 @@ header {
     }
   }
 
+  .vertical {
+    display: none;
+    @media screen and (max-width: 520px) {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .horizontal {
+      display: none;
+    }
+  }
+
   .form-button__container {
     margin-left: 4.4rem;
+
+    @media screen and (max-width: 724px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
 
     a {
       font-size: 1.8rem;
@@ -54,6 +85,9 @@ header {
 
     a:first-of-type {
       margin-right: 2.3rem;
+      @media screen and (max-width: 724px) {
+        margin-right: 0;
+      }
     }
   }
 }

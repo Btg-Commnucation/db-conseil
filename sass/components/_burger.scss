@@ -1,8 +1,10 @@
+@use '../abstracts';
+
 .menu-btn {
   display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1050px) {
   .menu-main-menu-container {
     display: flex;
     align-items: center;
@@ -20,7 +22,7 @@
   .menu-btn__burger {
     width: 50px;
     height: 6px;
-    background-color: #272727;
+    background-color: abstracts.$blue-700;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
     transition: all 0.5s ease-in-out;
@@ -31,7 +33,7 @@
     position: absolute;
     width: 50px;
     height: 6px;
-    background: #272727;
+    background: abstracts.$blue-700;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
     transition: all 0.5s ease-in-out;
@@ -77,10 +79,18 @@
     z-index: 99;
     width: 100%;
     height: auto;
-    transform: translateY(105px);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform: translateY(114px);
 
     li {
       display: flex !important;
+      margin: 0;
+
+      &:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
     }
   }
 
@@ -98,9 +108,7 @@
 }
 @media screen and (max-width: 500px) {
   .menu-btn.open ~ #main-menu {
-    flex-direction: column;
     align-items: center;
-    transform: translateY(238px);
   }
 
   #main-menu .menu-item:not(:first-of-type) {
