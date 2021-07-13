@@ -17,3 +17,8 @@ add_action( 'wp_enqueue_scripts', 'pdw_load_stylesheets_and_scripts' );
 register_nav_menus( array(
     'main' => 'Menu principal',
 ) );
+
+register_sidebar( array(
+	'id' => 'footer-address',
+	'name' => 'Adresse du bas de page',
+) );
