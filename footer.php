@@ -6,10 +6,14 @@
                 <?php dynamic_sidebar( 'footer-address' ); ?>
             </div>
             <div class="widget-container">
-            <?php dynamic_sidebar( 'footer-socials' ); ?>
+                <?php dynamic_sidebar( 'footer-socials' ); ?>
             </div>
-            <div class="widget-container"></div>
-            <div class="widget-container"></div>
+            <div class="widget-container">
+                <?php dynamic_sidebar( 'nav-menu' ); ?>
+            </div>
+            <div class="widget-container">
+                <?php dynamic_sidebar( 'footer-text' ); ?>
+            </div>
         </section>
         <section class="mentions"></section>
     </div>

@@ -16,6 +16,7 @@ add_action( 'wp_enqueue_scripts', 'pdw_load_stylesheets_and_scripts' );
 
 register_nav_menus( array(
     'main' => 'Menu principal',
+    'footer-main' => 'Menu bas de page',
 ) );
 
 register_sidebar( array(
@@ -25,4 +26,12 @@ register_sidebar( array(
 register_sidebar( array(
 	'id' => 'footer-socials',
 	'name' => 'Réseaux sociaux du bas de page',
+) );
+register_sidebar( array(
+	'id' => 'nav-menu',
+	'name' => 'Menu du bas de page',
+) );
+register_sidebar( array(
+	'id' => 'footer-text',
+	'name' => 'Texte du bas de page',
 ) );
