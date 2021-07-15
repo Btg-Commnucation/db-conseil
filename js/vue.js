@@ -79,8 +79,8 @@ const Home = {
 };
 
 const Resultats = {
-  props: ["searchCaterogy", "searchRegion", "searchJobType"],
-  template: "<h1>Resultats</h1>",
+  props: ["searchCategorie", "searchRegion", "searchJobType"],
+  template: "#resultats",
   name: "Resultats",
   data: () => {
     return {
@@ -90,7 +90,6 @@ const Resultats = {
       lookingCategorie: "",
       lookingRegion: "",
       lookingJobType: "",
-      showAll: false,
       pageNumber: 0,
       pagination: [],
       i: 1,
@@ -101,26 +100,20 @@ const Resultats = {
   },
   computed: {
     filteredList() {
-      this.lookingArea = this.searchArea != null ? this.searchArea : "";
-      this.lookingCategory =
-        this.searchCategory != null ? this.searchCategory : "";
-      this.lookingKey = this.searchKey != null ? this.searchKey : "";
+      this.lookingRegion = this.searchRegion != null ? this.searchRegion : "";
+      this.lookingCategorie =
+        this.searchCategorie != null ? this.searchCategorie : "";
+      this.lookingJobType =
+        this.searchJobType != null ? this.searchJobType : "";
       return this.api.filter((job) => {
         return (
-          job.title.toLowerCase().includes(this.lookingKey.toLowerCase()) &&
+          job.title.toLowerCase().includes(this.lookingJobType.toLowerCase()) &&
           job.category
             .toLowerCase()
-            .includes(this.lookingCategory.toLowerCase()) &&
-          job.job_type.toLowerCase().includes(this.lookingArea.toLowerCase())
+            .includes(this.lookingCategorie.toLowerCase()) &&
+          job.job_type.toLowerCase().includes(this.lookingRegion.toLowerCase())
         );
       });
-    },
-    slicePost() {
-      if (this.showAll) {
-        return this.api.slice(this.sliceA, this.sliceB);
-      } else {
-        return this.api.slice(0, 4);
-      }
     },
 
     filteredCategory() {

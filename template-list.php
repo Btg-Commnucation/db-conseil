@@ -39,7 +39,7 @@ get_header();
                                     <option v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
                                 </select>
                                 <input v-model="searchJobType" type="text" name="post-type" id="post-type" placeholder="Intitulé du poste" aria-label="Intitulé du poste">
-                                <router-link class="rechercher-job" to="{ name: 'Resultats', params: { searchCaterogie, searchRegion, searchJobType } }"><?php the_field('texte_bouton_rechercher'); ?></router-link>
+                                <router-link class="rechercher-job" :to="{ name: 'Resultats', params: { searchCaterogie, searchRegion, searchJobType } }"><?php the_field('texte_bouton_rechercher'); ?></router-link>
                             </form>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ get_header();
                                 <p class="categorie">{{job.category}}</p>
                                 <h3>{{job.title}}</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
-                                <router-link class="card-link" to="/Resultats">En savoir plus</router-link>
+                                <router-link class="card-link" to="/Description">En savoir plus</router-link>
                             </div>
                         </div>
                     </div>
@@ -67,6 +67,8 @@ get_header();
             </section>
         </div>
     </script>
-    <?php get_template_part("layout/resultats.php"); ?>
+    
+    <?php get_template_part("layout/resultats"); ?>
+    
 </main>
 <?php get_footer(); ?>
