@@ -49,7 +49,7 @@
   justify-content: center;
   padding: 3.6rem 3.1rem 5.1rem 3.1rem;
   position: relative;
-  margin-bottom: -23rem;
+  margin-bottom: -22rem;
 
   h2 {
     color: white;
@@ -73,6 +73,26 @@
     border-radius: 5px;
     padding: 1.4rem 0.4rem;
     margin-right: 1rem;
-    width: 25%;
+    width: 24%;
+  }
+}
+
+.job {
+  padding-top: 15.5rem;
+}
+
+.rechercher-job {
+  font-size: 1.6rem;
+  background-color: abstracts.$yellow-700;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid abstracts.$yellow-700;
+  padding: 2.448rem 3.02rem 1.851rem 3.02rem;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &::before {
+    content: url("../img/little-white-symbols.svg");
+    margin-right: 0.5rem;
   }
 }
