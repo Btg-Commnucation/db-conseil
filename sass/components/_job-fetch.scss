@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 85%;
   }
 
   h1 {
@@ -25,7 +26,7 @@
     font-family: abstracts.$neutra-bold;
     font-weight: 700;
     position: relative;
-    width: 59%;
+    width: 39%;
     line-height: 7rem;
     text-align: center;
     margin-bottom: 4.1rem;
@@ -44,12 +45,19 @@
   background-color: abstracts.$blue-700;
   border-radius: 5px;
   display: flex;
+  width: 76%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 3.6rem 3.1rem 5.1rem 3.1rem;
   position: relative;
   margin-bottom: -22rem;
+
+  form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 
   h2 {
     color: white;
@@ -73,7 +81,7 @@
     border-radius: 5px;
     padding: 1.4rem 0.4rem;
     margin-right: 1rem;
-    width: 24%;
+    width: 25%;
   }
 }
 

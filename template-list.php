@@ -28,7 +28,7 @@ get_header();
                     <div class="container">
                         <h1><?php the_field('main_title'); ?></h1>
                         <div class="job-container">
-                            <h2>Je trouve mon poste</h2>
+                            <h2><?php the_field('titre_barre_recherche'); ?></h2>
                             <form action="">
                                 <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
                                     <option value="">Catégorie</option>
@@ -39,7 +39,7 @@ get_header();
                                     <option v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
                                 </select>
                                 <input v-model="searchJobType" type="text" name="post-type" id="post-type" placeholder="Intitulé du poste" aria-label="Intitulé du poste">
-                                <router-link class="rechercher-job" to="{ name: 'Resultats', params: { searchCaterogie, searchRegion, searchJobType } }">Rechercher</router-link>
+                                <router-link class="rechercher-job" to="{ name: 'Resultats', params: { searchCaterogie, searchRegion, searchJobType } }"><?php the_field('texte_bouton_rechercher'); ?></router-link>
                             </form>
                         </div>
                     </div>

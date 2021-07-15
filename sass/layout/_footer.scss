@@ -4,6 +4,21 @@ footer {
   background-color: abstracts.$grey-100;
   padding-top: 4.1rem;
 
+  .container {
+    position: relative;
+  }
+
+  .container::after {
+    content: url("../img/middle-yellow-symnols.svg");
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    height: -moz-fit-content;
+  }
+
   h2 {
     font-size: 2rem;
     font-family: abstracts.$neutra-bold;
@@ -11,7 +26,7 @@ footer {
   }
 
   .widget-container {
-    width: 20.5%;
+    width: 19.5%;
     font-size: 2rem;
     display: flex;
     flex-direction: column;
