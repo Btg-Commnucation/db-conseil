@@ -52,13 +52,14 @@ get_header();
                         <div v-for='job in api.slice(0,4)' class="card">
                             <strong>{{job.job_type}}</strong>
                             <div class="card-detail">
-                                <p>{{job.category}}</p>
+                                <p class="categorie">{{job.category}}</p>
                                 <h3>{{job.title}}</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
+                                <router-link class="card-link" to="/Resultats">En savoir plus</router-link>
                             </div>
                         </div>
                     </div>
-                    <button>Voir toutes nos offres</button>
+                    <button v-if="!showAll" v-on:click="showAll = !showAll" class="see-all__button">Voir toutes nos offres</button>
                 </div>
             </section>
         </div>

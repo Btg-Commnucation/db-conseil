@@ -9,6 +9,7 @@ const Home = {
       searchCategorie: "",
       searchRegion: "",
       searchJobType: "",
+      showAll: false,
     };
   },
   computed: {
