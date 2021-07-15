@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html <?php language_attributes( ); ?>>
 <head>
+    <?php $curl = curl_init('https://gorest.co.in/public/v1/posts');
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    $data = curl_exec($curl);
+    if ($data === false) {
+        var_dump(curl_error($curl));
+    } else {
+        $data = json_decode($data,  true);
+        $api = json_encode($data);
+    }
+    curl_close($curl);
+    ?>
+
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
+    <script>
+        const jsonApi = <?php echo $api ?>;
+        console.log(jsonApi);
+    </script>
 </head>
 <body <?php body_class(  ); ?>>
     <?php wp_body_open(); ?>
