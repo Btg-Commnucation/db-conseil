@@ -19,8 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
     <script>
-        const jsonApi = <?php echo $api ?>;
-        console.log(jsonApi);
+        const jsonApi = <?php echo $api ?>;;
     </script>
 </head>
 <body <?php body_class(  ); ?>>
