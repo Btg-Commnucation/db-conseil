@@ -25,15 +25,15 @@ get_header();
             <div class="container">
                 <h1><?php the_field('main_title'); ?></h1>
                 <form action="">
-                    <select name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
+                    <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
                         <option value="">Catégorie</option>
-                        <option v-for="categorie in filteredCategory" value="categorie">{{categorie}}</option>
+                        <option v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
                     </select>
-                    <select name="region" id="region" aria-label="Dans quelle région recherchez-vous ?">
+                    <select v-model="searchRegion" name="region" id="region" aria-label="Dans quelle région recherchez-vous ?">
                         <option value="">Région</option>
-                        <option v-for="region in filteredRegion" value="region">{{region}}</option>
+                        <option v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
                     </select>
-                    <input type="text" name="post-type" id="post-type" placeholder="Intitulé du poste" aria-label="Intitulé du poste">
+                    <input v-model="searchJobType" type="text" name="post-type" id="post-type" placeholder="Intitulé du poste" aria-label="Intitulé du poste">
                     <input type="submit" value="">
                 </form>
             </div>
