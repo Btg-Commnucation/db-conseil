@@ -19,6 +19,14 @@ const Home = {
     };
   },
   computed: {
+    slicePost() {
+      if (this.showAll) {
+        return this.api.slice(this.sliceA, this.sliceB);
+      } else {
+        return this.api.slice(0, 4);
+      }
+    },
+
     filteredCategory() {
       this.api.map((job) => {
         this.categorie.push(job.category);
@@ -26,6 +34,7 @@ const Home = {
       this.categorie.sort();
       return (this.categorie = [...new Set(this.categorie)]);
     },
+
     filteredRegion() {
       this.api.map((job) => {
         this.region.push(job.job_type);
@@ -33,6 +42,7 @@ const Home = {
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
     },
+
     pageCount() {
       this.pageNumber = Math.ceil(this.api.length / 8);
       while (this.i <= this.pageNumber) {
@@ -45,10 +55,11 @@ const Home = {
   methods: {
     nextPage(page) {
       window.scroll({
-        top: 0,
+        top: 618,
         left: 0,
         behavior: "smooth",
       });
+
       if (this.currentPage < page) {
         this.sliceA = this.sliceA + 8 * (page - this.currentPage);
         this.sliceB = this.sliceB + 8 * (page - this.currentPage);

@@ -49,7 +49,7 @@ get_header();
                 <div class="container">
                     <h2><?php the_field('titre_carte'); ?></h2>
                     <div class="card-container">
-                        <div v-for='job in api.slice(0,4)' class="card">
+                        <div v-for='job in slicePost' class="card">
                             <strong>{{job.job_type}}</strong>
                             <div class="card-detail">
                                 <p class="categorie">{{job.category}}</p>
