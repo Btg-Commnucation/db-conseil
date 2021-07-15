@@ -1,0 +1,11 @@
+@use '../abstracts';
+
+.gradient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent
+    linear-gradient(180deg, abstracts.$blue-700 0%, #2a539357 100%) 0% 0%
+    no-repeat padding-box;
+}

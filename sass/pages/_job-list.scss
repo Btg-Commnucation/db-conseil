@@ -1,0 +1,18 @@
+@use '../abstracts';
+
+.list-page {
+  .hero-banner {
+    position: relative;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: url(../img/descriptif.jpg);
+      width: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.32;
+    }
+  }
+}

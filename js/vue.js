@@ -29,6 +29,7 @@ const Home = {
   },
 };
 const Resultats = {
+  props: ["searchCaterogy", "searchRegion", "searchJobType"],
   template: "<h1>Resultats</h1>",
   name: "Resultats",
   data: () => {
@@ -50,7 +51,12 @@ const Description = {
 const router = new VueRouter({
   routes: [
     { path: "/", component: Home, name: "Home" },
-    { path: "/Resultats", component: Resultats, name: "Resultats" },
+    {
+      path: "/Resultats",
+      component: Resultats,
+      name: "Resultats",
+      props: true,
+    },
     { path: "/Description", component: Description, name: "Description" },
   ],
   scrollBehavior(to, from, savedPosition) {
