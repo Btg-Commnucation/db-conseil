@@ -103,7 +103,6 @@ const Resultats = {
       lookingJobType: "",
       pageNumber: 0,
       pagination: [],
-      i: 1,
       currentPage: 1,
       sliceA: 0,
       sliceB: 8,
@@ -147,15 +146,21 @@ const Resultats = {
     pageCount() {
       this.pageNumber = Math.ceil(this.filteredList.length / 8);
       if (this.pagination.length > this.pageNumber) {
-        while (this.pagination.length > this.pageNumer) {
+        let width = this.pagination.length - this.pageNumber;
+        let y = 0;
+        while (y <= width) {
           this.pagination.pop();
+          y = y + 1;
         }
+        return this.pagination;
+      } else {
+        let i = 1;
+        while (i <= this.pageNumber) {
+          this.pagination.push(i);
+          i = i + 1;
+        }
+        return this.pagination;
       }
-      while (this.i <= this.pageNumber) {
-        this.pagination.push(this.i);
-        this.i = this.i + 1;
-      }
-      return this.pagination;
     },
   },
   methods: {
