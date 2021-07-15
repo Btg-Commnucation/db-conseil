@@ -116,6 +116,7 @@ const Resultats = {
         this.searchCategorie != null ? this.searchCategorie : "";
       this.lookingJobType =
         this.searchJobType != null ? this.searchJobType : "";
+
       return this.api.filter((job) => {
         return (
           job.title.toLowerCase().includes(this.lookingJobType.toLowerCase()) &&

@@ -39,7 +39,7 @@ get_header();
                                     <option v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
                                 </select>
                                 <input v-model="searchJobType" type="text" name="post-type" id="post-type" placeholder="Intitulé du poste" aria-label="Intitulé du poste" autocomplete="off">
-                                <router-link :to="{ name: 'Resultats', params: {searchCategorie, searchRegion, searchJobType} }" class="rechercher-job" ><?php the_field('texte_bouton_rechercher'); ?></router-link>
+                                <router-link :to="{ name: 'Resultats', params: { searchCategorie, searchRegion, searchJobType }}" class="rechercher-job" ><?php the_field('texte_bouton_rechercher'); ?></router-link>
                             </form>
                         </div>
                     </div>
