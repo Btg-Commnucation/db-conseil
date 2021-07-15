@@ -13,6 +13,9 @@ const Home = {
       pageNumber: 0,
       pagination: [],
       i: 1,
+      currentPage: 1,
+      sliceA: 0,
+      sliceB: 8,
     };
   },
   computed: {
@@ -37,6 +40,24 @@ const Home = {
         this.i = this.i + 1;
       }
       return this.pagination;
+    },
+  },
+  methods: {
+    nextPage(page) {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+      if (this.currentPage < page) {
+        this.sliceA = this.sliceA + 8 * (page - this.currentPage);
+        this.sliceB = this.sliceB + 8 * (page - this.currentPage);
+        this.currentPage = page;
+      } else if (this.currentPage > page) {
+        this.sliceA = this.sliceA - 8 * (this.currentPage - page);
+        this.sliceB = this.sliceB - 8 * (this.currentPage - page);
+        this.currentPage = page;
+      }
     },
   },
 };

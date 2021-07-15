@@ -114,7 +114,15 @@
     padding: 0.9rem 1.5rem 0.9rem 1.5rem;
     width: 59px;
     text-align: center;
+    cursor: pointer;
     line-height: 3.8rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: abstracts.$blue-700;
+      color: white;
+      border: 1px solid abstracts.$blue-700;
+    }
 
     &:not(:last-of-type) {
       margin-right: 1.4rem;
