@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes( ); ?>>
 <head>
-    <?php $curl = curl_init('https://gorest.co.in/public/v1/posts');
+    <?php $curl = curl_init('https://remotive.io/api/remote-jobs?limit=60');
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     $data = curl_exec($curl);
