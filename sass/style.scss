@@ -2,3 +2,7 @@
 @use 'layout';
 @use 'pages';
 @use 'components';
+
+.display-none {
+  display: none;
+}
