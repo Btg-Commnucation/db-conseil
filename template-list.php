@@ -9,13 +9,13 @@ get_header();
     <div id="root">
         <div class="display-none">
             <router-link to="/">
-                <h2>Home</h2>
+                <p>Home</p>
             </router-link>
             <router-link to="/Resultats">
-                <h2>Résultats</h2>
+                <p>Résultats</p>
             </router-link>
             <router-link to="Description">
-                <h2>Description</h2>
+                <p>Description</p>
             </router-link>
         </div>
     </div>
