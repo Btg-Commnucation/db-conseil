@@ -61,11 +61,12 @@ get_header();
                     </div>
                     <button v-if="!showAll" v-on:click="showAll = !showAll" class="see-all__button">Voir toutes nos offres</button>
                     <ul v-if="showAll"  class="pagination">
-                        <li v-for="page in pageCount" v-on:click="nextPage(page)">{{page}}</li>
+                        <li v-for="page in pageCount" v-on:click="nextPage(page)" :class="activePage(page)">{{page}}</li>
                     </ul>
                 </div>
             </section>
         </div>
     </script>
+    <?php get_template_part("layout/resultats.php"); ?>
 </main>
 <?php get_footer(); ?>

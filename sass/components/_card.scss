@@ -130,3 +130,9 @@
     }
   }
 }
+
+.active-page {
+  background-color: abstracts.$blue-700;
+  color: white;
+  border: 1px solid abstracts.$blue-700;
+}

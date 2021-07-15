@@ -53,6 +53,11 @@ const Home = {
     },
   },
   methods: {
+    activePage(page) {
+      if (this.currentPage == page) {
+        return "active-page";
+      }
+    },
     nextPage(page) {
       window.scroll({
         top: 618,
@@ -72,14 +77,100 @@ const Home = {
     },
   },
 };
+
 const Resultats = {
   props: ["searchCaterogy", "searchRegion", "searchJobType"],
   template: "<h1>Resultats</h1>",
   name: "Resultats",
   data: () => {
     return {
-      api: jsonApi.data,
+      api: jsonApi.jobs,
+      categorie: [],
+      region: [],
+      lookingCategorie: "",
+      lookingRegion: "",
+      lookingJobType: "",
+      showAll: false,
+      pageNumber: 0,
+      pagination: [],
+      i: 1,
+      currentPage: 1,
+      sliceA: 0,
+      sliceB: 8,
     };
+  },
+  computed: {
+    filteredList() {
+      this.lookingArea = this.searchArea != null ? this.searchArea : "";
+      this.lookingCategory =
+        this.searchCategory != null ? this.searchCategory : "";
+      this.lookingKey = this.searchKey != null ? this.searchKey : "";
+      return this.api.filter((job) => {
+        return (
+          job.title.toLowerCase().includes(this.lookingKey.toLowerCase()) &&
+          job.category
+            .toLowerCase()
+            .includes(this.lookingCategory.toLowerCase()) &&
+          job.job_type.toLowerCase().includes(this.lookingArea.toLowerCase())
+        );
+      });
+    },
+    slicePost() {
+      if (this.showAll) {
+        return this.api.slice(this.sliceA, this.sliceB);
+      } else {
+        return this.api.slice(0, 4);
+      }
+    },
+
+    filteredCategory() {
+      this.api.map((job) => {
+        this.categorie.push(job.category);
+      });
+      this.categorie.sort();
+      return (this.categorie = [...new Set(this.categorie)]);
+    },
+
+    filteredRegion() {
+      this.api.map((job) => {
+        this.region.push(job.job_type);
+      });
+      this.region.sort();
+      return (this.region = [...new Set(this.region)]);
+    },
+
+    pageCount() {
+      this.pageNumber = Math.ceil(this.api.length / 8);
+      while (this.i <= this.pageNumber) {
+        this.pagination.push(this.i);
+        this.i = this.i + 1;
+      }
+      return this.pagination;
+    },
+  },
+  methods: {
+    activePage(page) {
+      if (this.currentPage == page) {
+        return "active-page";
+      }
+    },
+    nextPage(page) {
+      window.scroll({
+        top: 618,
+        left: 0,
+        behavior: "smooth",
+      });
+
+      if (this.currentPage < page) {
+        this.sliceA = this.sliceA + 8 * (page - this.currentPage);
+        this.sliceB = this.sliceB + 8 * (page - this.currentPage);
+        this.currentPage = page;
+      } else if (this.currentPage > page) {
+        this.sliceA = this.sliceA - 8 * (this.currentPage - page);
+        this.sliceB = this.sliceB - 8 * (this.currentPage - page);
+        this.currentPage = page;
+      }
+    },
   },
 };
 const Description = {
