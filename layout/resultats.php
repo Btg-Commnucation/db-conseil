@@ -31,6 +31,8 @@
         <section class="job">
             <div class="container">
                 <h2><?php the_field('titre_carte'); ?></h2>
+                <h4 v-if="filteredList.length >= 1" class="success">{{ filteredList.length }} résultat<span v-if="filteredList.length >= 2">s</span></h4>
+                <h4 v-if="filteredList.length < 1" class="error">Désolé, nous n'avons trouvé aucun résultat pour votre recherche</h4>
                 <div class="card-container">
                     <div v-for='job in filteredList.slice(sliceA, sliceB)' class="card">
                         <strong>{{job.job_type}}</strong>

@@ -133,7 +133,12 @@ const Resultats = {
     },
 
     pageCount() {
-      this.pageNumber = Math.ceil(this.api.length / 8);
+      this.pageNumber = Math.ceil(this.filteredList.length / 8);
+      if (this.pagination.length > this.pageNumber) {
+        while (this.pagination.length > this.pageNumer) {
+          this.pagination.pop();
+        }
+      }
       while (this.i <= this.pageNumber) {
         this.pagination.push(this.i);
         this.i = this.i + 1;
@@ -147,6 +152,7 @@ const Resultats = {
         return "active-page";
       }
     },
+
     nextPage(page) {
       window.scroll({
         top: 618,
