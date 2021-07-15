@@ -19,6 +19,17 @@ const Home = {
     };
   },
   computed: {
+    filteredList() {
+      return this.data.filter((job) => {
+        return (
+          job.title.toLowerCase().includes(this.searchKey.toLowerCase()) &&
+          job.category
+            .toLowerCase()
+            .includes(this.searchCategory.toLowerCase()) &&
+          job.job_type.toLowerCase().includes(this.searchArea.toLowerCase())
+        );
+      });
+    },
     slicePost() {
       if (this.showAll) {
         return this.api.slice(this.sliceA, this.sliceB);
