@@ -4,11 +4,12 @@
   .hero-banner {
     position: relative;
     width: 100%;
+    margin-bottom: 15.5rem;
 
-    &::before {
+    .background-image {
       position: absolute;
       z-index: -1;
-      content: url(../img/descriptif.jpg);
+      background-image: url(../img/descriptif.jpg);
       width: 100%;
       top: 0;
       left: 0;
