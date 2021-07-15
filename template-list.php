@@ -29,7 +29,7 @@ get_header();
                         <h1><?php the_field('main_title'); ?></h1>
                         <div class="job-container">
                             <h2><?php the_field('titre_barre_recherche'); ?></h2>
-                            <form action="">
+                            <form v-on:submit.prevent="onSubmit" action="">
                                 <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
                                     <option value="">Catégorie</option>
                                     <option v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
@@ -45,7 +45,22 @@ get_header();
                     </div>
                 </div>
             </section>
-            <section class="job"></section>
+            <section class="job">
+                <div class="container">
+                    <h2><?php the_field('titre_carte'); ?></h2>
+                    <div class="card-container">
+                        <div v-for='job in api.slice(0,4)' class="card">
+                            <strong>{{job.job_type}}</strong>
+                            <div class="card-detail">
+                                <p>{{job.category}}</p>
+                                <h3>{{job.title}}</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>Voir toutes nos offres</button>
+                </div>
+            </section>
         </div>
     </script>
 </main>
