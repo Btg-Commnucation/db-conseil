@@ -98,3 +98,26 @@
     margin-right: 0.9rem;
   }
 }
+
+.pagination {
+  margin-top: 4.5rem !important;
+  display: flex;
+  font-size: 2.6rem;
+  flex-direction: row;
+  color: abstracts.$grey-500;
+  list-style: none;
+  justify-content: center;
+
+  li {
+    border: 1px solid abstracts.$grey-500;
+    border-radius: 50%;
+    padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+    width: 59px;
+    text-align: center;
+    line-height: 3.8rem;
+
+    &:not(:last-of-type) {
+      margin-right: 1.4rem;
+    }
+  }
+}

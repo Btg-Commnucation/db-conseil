@@ -10,6 +10,9 @@ const Home = {
       searchRegion: "",
       searchJobType: "",
       showAll: false,
+      pageNumber: 0,
+      pagination: [],
+      i: 1,
     };
   },
   computed: {
@@ -26,6 +29,14 @@ const Home = {
       });
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
+    },
+    pageCount() {
+      this.pageNumber = Math.ceil(this.api.length / 8);
+      while (this.i <= this.pageNumber) {
+        this.pagination.push(this.i);
+        this.i = this.i + 1;
+      }
+      return this.pagination;
     },
   },
 };

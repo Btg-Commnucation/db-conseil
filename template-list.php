@@ -60,6 +60,9 @@ get_header();
                         </div>
                     </div>
                     <button v-if="!showAll" v-on:click="showAll = !showAll" class="see-all__button">Voir toutes nos offres</button>
+                    <ul v-if="showAll"  class="pagination">
+                        <li v-for="page in pageCount">{{page}}</li>
+                    </ul>
                 </div>
             </section>
         </div>
