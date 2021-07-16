@@ -28,4 +28,31 @@
       right: 0;
     }
   }
+
+  .adresse {
+    display: flex;
+    align-items: center;
+
+    .main-image {
+      max-width: 60%;
+    }
+
+    .adresse-detail {
+      margin-left: 6.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 20%;
+
+      p {
+        font-size: 2rem;
+        margin-top: 1.8rem;
+      }
+
+      strong {
+        font-family: abstracts.$neutra-bold;
+        font-weight: 700;
+      }
+    }
+  }
 }
