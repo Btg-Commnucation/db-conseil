@@ -77,7 +77,7 @@
   font-weight: 700;
   color: white;
   position: absolute;
-  bottom: -2rem;
+  bottom: -7em;
   background-color: abstracts.$blue-700;
   border-radius: 50%;
   width: 39px;
@@ -86,4 +86,8 @@
   border: 0px solid transparent;
   z-index: 1;
   cursor: pointer;
+}
+
+.changeBottom {
+  bottom: -10em;
 }

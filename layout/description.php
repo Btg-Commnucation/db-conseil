@@ -6,7 +6,7 @@
         <div class="gradient">
             <div class="container">
                 <h1><?php the_field('main_title'); ?></h1>
-                <div class="job-container">
+                <div class="job-container" :class="!startSearching && dimension">
                     <h2><?php the_field('titre_barre_recherche'); ?></h2>
                     <form v-if="startSearching" v-on:submit.prevent="onSubmit">
                         <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">

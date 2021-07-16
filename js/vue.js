@@ -233,6 +233,11 @@ const Description = {
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
     },
+    dimension() {
+      if (this.startSearching === false) {
+        return "changeBottom";
+      }
+    },
   },
   methods: {
     showSearchForm() {
