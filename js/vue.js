@@ -123,11 +123,11 @@ const Resultats = {
 
       return this.api.filter((job) => {
         return (
-          job.title.toLowerCase().includes(this.lookingJobType.toLowerCase()) &&
-          job.category
+          job.name.toLowerCase().includes(this.lookingJobType.toLowerCase()) &&
+          job.race
             .toLowerCase()
             .includes(this.lookingCategorie.toLowerCase()) &&
-          job.job_type.toLowerCase().includes(this.lookingRegion.toLowerCase())
+          job.gender.toLowerCase().includes(this.lookingRegion.toLowerCase())
         );
       });
     },

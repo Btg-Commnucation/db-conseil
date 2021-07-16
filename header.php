@@ -3,7 +3,7 @@
 <head>
 <?php
 
-    $url = "https://the-one-api.dev/v2/character?limit=200";
+    $url = "https://the-one-api.dev/v2/character?limit=100";
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_URL, $url);
