@@ -55,7 +55,7 @@ get_header();
                                 <p class="categorie">{{job.category}}</p>
                                 <h3>{{job.title}}</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
-                                <router-link class="card-link" to="/Description">En savoir plus</router-link>
+                                <router-link class="card-link" :to="{ name: 'Description', param: { job } }">En savoir plus</router-link>
                             </div>
                         </div>
                     </div>
@@ -69,6 +69,7 @@ get_header();
     </script>
     
     <?php get_template_part("layout/resultats"); ?>
+    <?php get_template_part("layout/descriptif"); ?>
     
 </main>
 <?php get_footer(); ?>

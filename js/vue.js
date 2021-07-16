@@ -195,12 +195,19 @@ const Resultats = {
   },
 };
 const Description = {
-  template: "<h1>Description</h1>",
+  props: ["job"],
+  template: "#descriptif",
   name: "Description",
   data: () => {
     return {
-      api: jsonApi.data,
+      data: jsonApi.data,
     };
+  },
+  computed: {
+    displayingOffer() {
+      this.job != null ? (this.data = this.job) : (this.data = jsonApi.data[0]);
+      return this.data;
+    },
   },
 };
 
@@ -213,7 +220,12 @@ const router = new VueRouter({
       name: "Resultats",
       props: true,
     },
-    { path: "/Description", component: Description, name: "Description" },
+    {
+      path: "/Description",
+      component: Description,
+      name: "Description",
+      props: true,
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     return {
