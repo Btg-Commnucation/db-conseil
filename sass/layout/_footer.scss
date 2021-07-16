@@ -17,6 +17,10 @@ footer {
     margin: auto;
     height: fit-content;
     height: -moz-fit-content;
+
+    @media screen and (max-width: 451px) {
+      display: none;
+    }
   }
 
   h2 {
