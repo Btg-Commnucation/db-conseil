@@ -200,8 +200,10 @@ const Description = {
   name: "Description",
   data: () => {
     return {
-      jobs: jsonApi.data,
+      jobs: jsonApi.jobs,
       displayPost: "",
+      categorie: [],
+      region: [],
       searchCategorie: "",
       searchRegion: "",
       searchJobType: "",

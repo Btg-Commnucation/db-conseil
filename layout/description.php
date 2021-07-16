@@ -1,7 +1,7 @@
 <script type="text/x-template" id="description">
 
 <div>
-    <section class="hero-banner">
+    <aside class="hero-banner">
         <div class="background-image"></div>
         <div class="gradient">
             <div class="container">
@@ -23,17 +23,38 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="job-descriptif">
-        <router-link to="/"><?php the_field('retour_aux_offres'); ?></router-link>
-        <div class="title">
-            <div class="title-container">
-                <h2>{{job.title}}</h2>
-                <p>{{job.category}}</p>
-            </div>
-            <strong>{{job.job_type}}</strong>
+    </aside>
+    <article class="job-description">
+        <div class="container">
+            <router-link to="/"><?php the_field('retour_aux_offres'); ?></router-link>
+            <section class="title">
+                <div class="title-container">
+                    <h2>{{job.title}}</h2>
+                    <p>{{job.category}}</p>
+                </div>
+                <strong>{{job.job_type}}</strong>
+            </section>
+            <section class="details">
+                <h3><?php the_field('type_doffre'); ?></h3>
+                <ul>
+                    <li>{{displayingOffer.company_name}}</li>
+                    <li>{{displayingOffer.job_type}}</li>
+                    <li>{{displayingOffer.candidate_required_location}}</li>
+                </ul>
+            </section>
+
+            <section class="information">
+                <div class="part-one">
+                    <h3><?php the_field('titre_information_un'); ?></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
+                </div>
+                <div class="part-two">
+                    <h3><?php the_field('titre_information_deux'); ?></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
+                </div>
+            </section>
         </div>
-    </section>
+    </article>
 </div>
 
 </script>
