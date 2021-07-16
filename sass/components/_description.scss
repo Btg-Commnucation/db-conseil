@@ -1,4 +1,54 @@
+@use '../abstracts';
 .job-description {
   margin-bottom: 12rem;
   padding-top: 15.5rem;
+
+  a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 4.2rem;
+    display: flow-root;
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      text-transform: uppercase;
+      font-family: abstracts.$neutra-bold;
+      font-size: 3.2rem;
+      font-weight: 700;
+    }
+
+    strong {
+      align-self: flex-end;
+      background-color: abstracts.$yellow-600;
+      color: white;
+      font-family: abstracts.$neutra-bold;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      padding: 0.95rem 1.8rem;
+      border: 0px solid transparent;
+      border-radius: 5px;
+    }
+  }
+
+  .details {
+    margin-top: 7.5rem;
+
+    ul {
+      margin: 0 !important;
+      list-style: circle;
+      font-size: 2rem;
+    }
+  }
+
+  h3 {
+    font-family: abstracts.$neutra-bold;
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+  }
 }
