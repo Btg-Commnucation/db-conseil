@@ -76,4 +76,14 @@
   font-family: abstracts.$neutra-bold;
   font-weight: 700;
   color: white;
+  position: absolute;
+  bottom: -2rem;
+  background-color: abstracts.$blue-700;
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
+  text-align: center;
+  border: 0px solid transparent;
+  z-index: 1;
+  cursor: pointer;
 }
