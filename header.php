@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html <?php language_attributes( ); ?>>
 <head>
-    <?php $curl = curl_init('https://remotive.io/api/remote-jobs?limit=60');
-    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+<?php
+
+    $url = "https://the-one-api.dev/v2/character?limit=200";
+
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-    $data = curl_exec($curl);
-    if ($data === false) {
-        var_dump(curl_error($curl));
+
+    $headers = array(
+    "Accept: application/json",
+    "Authorization: Bearer T1YC-rSPre1FwuxxRpzS",
+    );
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+    //for debug only!
+    curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+    curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+    $resp = curl_exec($curl);
+    if($resp === false) {
+        var_dump($resp);
     } else {
-        $data = json_decode($data,  true);
-        $api = json_encode($data);
+     $resp = json_decode($resp, true);
+     $sendingData = json_encode($resp);
     }
     curl_close($curl);
-    ?>
+
+?>
 
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
     <script>
-        const jsonApi = <?php echo $api ?>;;
+        const jsonApi = <?php echo $sendingData ?>;;
     </script>
 </head>
 <body <?php body_class(  ); ?>>

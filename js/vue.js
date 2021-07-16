@@ -3,7 +3,7 @@ const Home = {
   name: "Home",
   data: () => {
     return {
-      api: jsonApi.jobs,
+      api: jsonApi.docs,
       categorie: [],
       region: [],
       searchCategorie: "",
@@ -40,7 +40,7 @@ const Home = {
 
     filteredCategory() {
       this.api.map((job) => {
-        this.categorie.push(job.category);
+        this.categorie.push(job.race);
       });
       this.categorie.sort();
       return (this.categorie = [...new Set(this.categorie)]);
@@ -48,7 +48,7 @@ const Home = {
 
     filteredRegion() {
       this.api.map((job) => {
-        this.region.push(job.job_type);
+        this.region.push(job.gender);
       });
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
@@ -95,7 +95,7 @@ const Resultats = {
   name: "Resultats",
   data: () => {
     return {
-      api: jsonApi.jobs,
+      api: jsonApi.docs,
       categorie: [],
       region: [],
       lookingCategorie: "",
@@ -134,7 +134,7 @@ const Resultats = {
 
     filteredCategory() {
       this.api.map((job) => {
-        this.categorie.push(job.category);
+        this.categorie.push(job.race);
       });
       this.categorie.sort();
       return (this.categorie = [...new Set(this.categorie)]);
@@ -142,7 +142,7 @@ const Resultats = {
 
     filteredRegion() {
       this.api.map((job) => {
-        this.region.push(job.job_type);
+        this.region.push(job.gender);
       });
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
@@ -194,13 +194,14 @@ const Resultats = {
     },
   },
 };
+
 const Description = {
   props: ["job"],
   template: "#description",
   name: "Description",
   data: () => {
     return {
-      jobs: jsonApi.jobs,
+      jobs: jsonApi.docs,
       displayPost: "",
       categorie: [],
       region: [],
@@ -218,7 +219,7 @@ const Description = {
     },
     filteredCategory() {
       this.jobs.map((job) => {
-        this.categorie.push(job.category);
+        this.categorie.push(job.race);
       });
       this.categorie.sort();
       return (this.categorie = [...new Set(this.categorie)]);
@@ -226,7 +227,7 @@ const Description = {
 
     filteredRegion() {
       this.jobs.map((job) => {
-        this.region.push(job.job_type);
+        this.region.push(job.gender);
       });
       this.region.sort();
       return (this.region = [...new Set(this.region)]);

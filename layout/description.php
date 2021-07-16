@@ -29,17 +29,17 @@
             <router-link to="/"><?php the_field('retour_aux_offres'); ?></router-link>
             <section class="title">
                 <div class="title-container">
-                    <h2>{{displayingOffer.title}}</h2>
-                    <p>{{displayingOffer.category}}</p>
+                    <h2>{{displayingOffer.name}}</h2>
+                    <p>{{displayingOffer.race}}</p>
                 </div>
-                <strong>{{displayingOffer.job_type}}</strong>
+                <strong>{{displayingOffer.gender}}</strong>
             </section>
             <section class="details">
                 <h3><?php the_field('type_doffre'); ?></h3>
                 <ul>
-                    <li>Type : {{displayingOffer.job_type}}</li>
-                    <li>Nom de l'entreprise : {{displayingOffer.company_name}}</li>
-                    <li>Localisation :{{displayingOffer.candidate_required_location}}</li>
+                    <li>Type : {{displayingOffer.gender}}</li>
+                    <li>Nom de l'entreprise : {{displayingOffer.spouse}}</li>
+                    <li>Localisation :{{displayingOffer.birk}}</li>
                 </ul>
             </section>
 

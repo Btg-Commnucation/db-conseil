@@ -35,10 +35,10 @@
                 <h4 v-if="filteredList.length < 1" class="error">Désolé, nous n'avons trouvé aucun résultat pour votre recherche</h4>
                 <div class="card-container">
                     <div v-for='job in filteredList.slice(sliceA, sliceB)' class="card">
-                        <strong>{{job.job_type}}</strong>
+                        <strong>{{job.gender}}</strong>
                         <div class="card-detail">
-                            <p class="categorie">{{job.category}}</p>
-                            <h3>{{job.title}}</h3>
+                            <p class="categorie">{{job.race}}</p>
+                            <h3>{{job.name}}</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend
                                 efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui.
                                 Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
