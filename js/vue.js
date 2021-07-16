@@ -196,17 +196,38 @@ const Resultats = {
 };
 const Description = {
   props: ["job"],
-  template: "#descriptif",
+  template: "#description",
   name: "Description",
   data: () => {
     return {
-      data: jsonApi.data,
+      jobs: jsonApi.data,
+      displayPost: "",
+      searchCategorie: "",
+      searchRegion: "",
+      searchJobType: "",
     };
   },
   computed: {
     displayingOffer() {
-      this.job != null ? (this.data = this.job) : (this.data = jsonApi.data[0]);
-      return this.data;
+      this.job != null
+        ? (this.displayPost = this.job)
+        : (this.displayPost = this.jobs[0]);
+      return this.displayPost;
+    },
+    filteredCategory() {
+      this.jobs.map((job) => {
+        this.categorie.push(job.category);
+      });
+      this.categorie.sort();
+      return (this.categorie = [...new Set(this.categorie)]);
+    },
+
+    filteredRegion() {
+      this.jobs.map((job) => {
+        this.region.push(job.job_type);
+      });
+      this.region.sort();
+      return (this.region = [...new Set(this.region)]);
     },
   },
 };
