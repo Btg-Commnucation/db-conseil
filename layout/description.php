@@ -8,7 +8,7 @@
                 <h1><?php the_field('main_title'); ?></h1>
                 <div class="job-container">
                     <h2><?php the_field('titre_barre_recherche'); ?></h2>
-                    <form v-on:submit.prevent="onSubmit">
+                    <form v-if="startSearching" v-on:submit.prevent="onSubmit">
                         <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
                             <option value="">Catégorie</option>
                             <option v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
@@ -20,6 +20,9 @@
                         <input v-model="searchJobType" type="text" name="post-type" id="post-type" placeholder="Intitulé du poste" aria-label="Intitulé du poste" autocomplete="off">
                         <router-link :to="{ name: 'Resultats', params: { searchCategorie, searchRegion, searchJobType }}" class="rechercher-job" ><?php the_field('texte_bouton_rechercher'); ?></router-link>
                     </form>
+                </div>
+                <div v-if="!startSearching" v-on:click="showSearchForm" class="plus">
+                    <strong>+</strong>
                 </div>
             </div>
         </div>

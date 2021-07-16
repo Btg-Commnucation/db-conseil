@@ -208,6 +208,7 @@ const Description = {
       searchCategorie: "",
       searchRegion: "",
       searchJobType: "",
+      startSearching: false,
     };
   },
   computed: {
@@ -231,6 +232,11 @@ const Description = {
       });
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
+    },
+  },
+  methods: {
+    showSearchForm() {
+      return (this.startSearching = !this.startSearching);
     },
   },
 };
