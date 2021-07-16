@@ -27,7 +27,7 @@
             </div>
         </div>
     </aside>
-    <article class="job-description">
+    <article class="job-description" :class="startSearching && 'openSearch'">
         <div class="container">
             <router-link to="/"><?php the_field('retour_aux_offres'); ?></router-link>
             <section class="title">
