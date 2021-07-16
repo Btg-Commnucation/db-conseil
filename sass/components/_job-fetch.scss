@@ -38,6 +38,23 @@
       left: 0;
       right: 0;
     }
+
+    @media screen and (max-width: 918px) {
+      width: 43%;
+    }
+    @media screen and (max-width: 834px) {
+      width: 47%;
+    }
+    @media screen and (max-width: 762px) {
+      width: 52%;
+    }
+    @media screen and (max-width: 689px) {
+      width: 100%;
+
+      &::before {
+        top: -100%;
+      }
+    }
   }
 }
 
@@ -53,12 +70,31 @@
   position: absolute;
   bottom: -18em;
 
+  @media screen and (max-width: 1420px) {
+    width: 85%;
+  }
+  @media screen and (max-width: 1263px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1074px) {
+    bottom: -23em;
+  }
+
   form {
     width: 100%;
     display: flex;
     margin-top: 4.1rem;
     padding-bottom: 2rem;
     justify-content: space-between;
+
+    @media screen and (max-width: 1074px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5em;
+    }
   }
 
   h2 {
@@ -84,11 +120,19 @@
     padding: 1.4rem 0.4rem;
     margin-right: 1rem;
     width: 25%;
+
+    @media screen and (max-width: 1074px) {
+      width: unset;
+    }
   }
 }
 
 .job {
   padding-top: 15.5rem;
+
+  @media screen and (max-width: 1074px) {
+    padding-top: 24.5rem;
+  }
 }
 
 .rechercher-job {
@@ -104,5 +148,12 @@
   &::before {
     content: url("../img/little-white-symbols.svg");
     margin-right: 0.5rem;
+  }
+
+  @media screen and (max-width: 1074px) {
+    width: fit-content;
+    width: -moz-fit-content;
+    justify-self: center;
+    align-items: center;
   }
 }

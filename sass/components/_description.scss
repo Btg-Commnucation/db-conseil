@@ -5,6 +5,13 @@
 
   .container {
     max-width: 65%;
+
+    @media screen and (max-width: 1420px) {
+      max-width: 73%;
+    }
+    @media screen and (max-width: 1263px) {
+      max-width: 85%;
+    }
   }
 
   a {
