@@ -115,6 +115,11 @@ const Resultats = {
         this.searchCategorie != null ? this.searchCategorie : "";
       this.lookingJobType =
         this.searchJobType != null ? this.searchJobType : "";
+      this.sliceA = 0;
+      this.sliceB = 8;
+      this.currentPage = 1;
+      this.pagination = [];
+      this.pageNumber = 0;
 
       return this.api.filter((job) => {
         return (
