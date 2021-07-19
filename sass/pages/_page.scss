@@ -11,7 +11,7 @@
       content: url("../img/dot-width-blue.svg");
       position: absolute;
       right: 23%;
-      top: 18.5%;
+      top: 21%;
     }
 
     &::after {
@@ -93,6 +93,69 @@
 
     .right-side {
       width: 67%;
+    }
+  }
+
+  .the-team {
+    background-color: abstracts.$yellow-600;
+    padding-top: 4.2rem;
+    padding-bottom: 7.9rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: url("../img/width-white-symbols.svg");
+      position: absolute;
+      left: 0;
+      top: -40%;
+    }
+
+    .container {
+      max-width: 69%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    aside {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.32rem;
+
+      .dot-image {
+        margin: 0 3.3rem;
+        margin-bottom: 8rem;
+      }
+    }
+
+    #pauline,
+    #stephanie {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .img-container {
+        border: 1px solid white;
+        padding: 0.8rem;
+        margin-bottom: 2.5rem;
+      }
+
+      a {
+        font-size: 2rem;
+        font-family: abstracts.$neutra-bold;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: abstracts.$blue-700;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: url("../img/linkedin.svg");
+          padding-right: 2rem;
+        }
+      }
     }
   }
 }

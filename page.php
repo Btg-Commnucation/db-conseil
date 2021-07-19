@@ -38,7 +38,8 @@
                    </div> 
                    <a href="<?php the_field('linkedin_pauline'); ?>" rel="noopener noreferrer" target="_blank"><?php the_field('pauline'); ?></a>
                 </div>
-                <div id="sephanie">
+                <img class="dot-image" src="<?php echo get_template_directory_uri(); ?>/img/dot-width-white.svg" alt="DB Conseils, qui sommes-nous ?">
+                <div id="stephanie">
                     <div class="img-container">
                         <?php $image_stephanie = get_field('image_stephanie'); ?>
                         <img src="<?php echo esc_url($image_stephanie['url']); ?>" alt="<?php echo esc_attr($image_stephanie['alt']); ?>">
