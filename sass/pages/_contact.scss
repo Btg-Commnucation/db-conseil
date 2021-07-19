@@ -101,6 +101,10 @@
     max-width: 73%;
     position: relative;
 
+    @media screen and (max-width: 697px) {
+      max-width: 85%;
+    }
+
     &::after {
       content: url(../img/middle-yellow-symnols.svg);
       position: absolute;
@@ -109,6 +113,10 @@
       margin: auto;
       height: fit-content;
       height: -moz-fit-content;
+
+      @media screen and (max-width: 1198px) {
+        display: none;
+      }
     }
   }
 
@@ -126,6 +134,29 @@
     gap: 4.6rem;
     row-gap: 4.6rem;
     column-gap: 2.9rem;
+
+    @media screen and (max-width: 1635px) {
+      column-gap: 2rem;
+    }
+    @media screen and (max-width: 1598px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media screen and (max-width: 1060px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (max-width: 697px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      column-gap: unset;
+      row-gap: 3.3rem;
+      gap: 3.3rem;
+    }
+  }
+
+  .wpcf7-radio label {
+    margin-right: 0 !important;
   }
 
   input[type="radio"],
@@ -138,6 +169,10 @@
     flex-direction: column;
     align-items: flex-start;
     font-family: abstracts.$neutra-bold;
+
+    @media screen and (max-width: 697px) {
+      width: 100%;
+    }
 
     span label {
       margin-right: 0;
@@ -168,6 +203,10 @@
     border-bottom: 1px solid abstracts.$blue-700;
     width: 86%;
 
+    @media screen and (max-width: 1181px) {
+      width: 100%;
+    }
+
     &::placeholder {
       color: abstracts.$blue-700;
       opacity: 0.82;
@@ -176,6 +215,13 @@
 
   .message {
     grid-column: 1 / 5;
+
+    @media screen and (max-width: 1598px) {
+      grid-column: 1 / 4;
+    }
+    @media screen and (max-width: 1060px) {
+      grid-column: 1 / 3;
+    }
   }
 
   .message,
@@ -216,11 +262,22 @@
     border-radius: 5px;
     width: fit-content;
     width: -moz-fit-content;
-    max-width: 45%;
-    max-height: 72%;
     font-family: abstracts.$neutra-book;
-    display: flow-root;
+    display: flex;
+    flex-direction: row;
     cursor: pointer;
+
+    @media screen and (max-width: 1598px) {
+      grid-column: 2 / 4;
+    }
+    @media screen and (max-width: 1060px) {
+      grid-column: 1 / 3;
+      grid-row: unset;
+    }
+
+    @media screen and (max-width: 697px) {
+      align-self: center;
+    }
 
     &::before {
       content: url(../img/little-blue-symbols.svg);
@@ -228,7 +285,17 @@
     }
 
     input {
-      display: none;
+      position: absolute;
+      background-color: transparent;
+      border-bottom: none;
+      color: transparent;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .ajax-loader {
+      position: absolute !important;
+      right: -5%;
     }
   }
 
@@ -241,6 +308,17 @@
     max-width: 90%;
     justify-self: flex-end;
     grid-row: 5;
+
+    @media screen and (max-width: 1598px) {
+      grid-column: 2 / 4;
+    }
+    @media screen and (max-width: 1060px) {
+      grid-column: 1 / 3;
+      grid-row: unset;
+    }
+    @media screen and (max-width: 697px) {
+      max-width: 100%;
+    }
 
     input {
       margin-top: 1rem;
