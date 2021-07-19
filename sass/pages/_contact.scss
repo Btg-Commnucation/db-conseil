@@ -15,7 +15,7 @@
     font-family: "Neutra Bold", sans-serif;
     font-weight: 700;
     position: relative;
-    width: 42%;
+    width: 29%;
     line-height: 6rem;
     text-align: center;
     margin-bottom: 5.5rem;
@@ -23,7 +23,7 @@
     &::before {
       content: url(../img/little-yellow-horizon-symbols.svg);
       position: absolute;
-      top: -50%;
+      top: -35%;
       left: 0;
       right: 0;
     }
@@ -68,6 +68,7 @@
   }
 
   form {
+    margin-top: 5.2rem;
     display: flex;
     flex-wrap: wrap;
   }
