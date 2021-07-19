@@ -98,6 +98,7 @@
 
   .the-team {
     background-color: abstracts.$yellow-600;
+    margin-top: 6.3rem;
     padding-top: 4.2rem;
     padding-bottom: 7.9rem;
     position: relative;
@@ -155,6 +156,16 @@
           content: url("../img/linkedin.svg");
           padding-right: 2rem;
         }
+      }
+    }
+
+    article {
+      margin-top: 5.2rem;
+      font-size: 2rem;
+      opacity: 82%;
+
+      strong {
+        font-family: abstracts.$neutra-bold;
       }
     }
   }
