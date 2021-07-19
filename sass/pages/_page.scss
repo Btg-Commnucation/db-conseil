@@ -14,11 +14,7 @@
   }
 
   .left-side {
-    margin-right: 3rem;
-  }
-
-  .right-side {
-    width: 70%;
+    max-width: 57%;
   }
 
   h1 {
@@ -28,7 +24,6 @@
     line-height: 7rem;
     text-align: center;
     position: relative;
-    max-width: 94%;
 
     &::before {
       content: url("../img/little-yellow-horizon-symbols.svg");
@@ -41,10 +36,13 @@
 
   h2 {
     margin-top: 7.3rem;
-    margin-bottom: 1.8rem;
     font-size: 3.2rem;
     font-family: abstracts.$neutra-bold;
     text-transform: uppercase;
+  }
+
+  .short-text {
+    margin-bottom: 3.6rem;
   }
 
   h3 {
@@ -52,8 +50,16 @@
     font-family: abstracts.$neutra-bold;
     text-transform: uppercase;
 
+    &:not(:first-of-type) {
+      margin-top: 4.6rem;
+    }
+
     &:before {
       content: url("../img/little-yellow-symbols.svg");
     }
+  }
+
+  p {
+    margin-top: 2rem;
   }
 }
