@@ -11,7 +11,7 @@
       content: url("../img/dot-width-blue.svg");
       position: absolute;
       right: 23%;
-      top: 21%;
+      top: 17%;
     }
 
     &::after {
@@ -171,14 +171,45 @@
   }
 
   .post-recruit {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    a {
+      font-size: 1.8rem;
+      color: white;
+      background-color: abstracts.$blue-700;
+      padding: 2rem 4rem;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+      border-radius: 10px;
+      position: absolute;
+      bottom: -9%;
+      right: 25%;
+
+      &::before {
+        content: url(../img/little-white-symbols.svg);
+      }
+    }
 
     .postule {
+      padding-bottom: 5.7rem;
       background-color: abstracts.$blue-700;
       color: white;
       padding-left: 19.4rem;
       padding-top: 1.9rem;
       padding-right: 1.7rem;
+      position: relative;
+
+      a {
+        background-color: abstracts.$yellow-600;
+        color: abstracts.$blue-700;
+
+        &::before {
+          content: url(../img/little-blue-symbols.svg);
+        }
+      }
 
       h2 {
         display: flex;
@@ -187,6 +218,30 @@
 
         &::before {
           content: url("../img/dot-little-white.svg");
+          padding-bottom: 2.1rem;
+        }
+      }
+    }
+
+    .recrute {
+      padding-right: 22.3rem;
+      padding-left: 4rem;
+      padding-top: 1.9rem;
+      position: relative;
+      padding-bottom: 7.6rem;
+
+      a {
+        right: unset;
+        left: 25%;
+      }
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        &::before {
+          content: url("../img/dot-little-blue.svg");
           padding-bottom: 2.1rem;
         }
       }
