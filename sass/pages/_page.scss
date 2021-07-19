@@ -169,4 +169,27 @@
       }
     }
   }
+
+  .post-recruit {
+    display: flex;
+
+    .postule {
+      background-color: abstracts.$blue-700;
+      color: white;
+      padding-left: 19.4rem;
+      padding-top: 1.9rem;
+      padding-right: 1.7rem;
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        &::before {
+          content: url("../img/dot-little-white.svg");
+          padding-bottom: 2.1rem;
+        }
+      }
+    }
+  }
 }

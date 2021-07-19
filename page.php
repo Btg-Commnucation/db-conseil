@@ -52,5 +52,21 @@
             </article>
         </div>
     </section>
+    <section class="post-recruit">
+        <div class="postule">
+            <h2><?php the_field('titre_fond_bleu'); ?></h2>
+            <div class="texte-fond">
+                <?php the_field('texte_fond_bleu'); ?>
+            </div>
+            <a href="<?php the_field('lien_fond_bleu'); ?>"><?php the_field('texte_lien_fond_bleu'); ?></a>
+        </div>
+        <div class="recrute">
+            <h2><?php the_field('titre_fond_blanc'); ?></h2>
+            <div class="texte-fond">
+                <?php the_field('texte_fond_blanc'); ?>
+            </div>
+            <a href="<?php the_field('lien_fond_blanc'); ?>"><?php the_field('texte_lien_fond_blanc'); ?></a>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>
