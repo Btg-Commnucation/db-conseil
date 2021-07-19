@@ -35,6 +35,8 @@
 
     .main-image {
       max-width: 60%;
+      position: relative;
+      bottom: -4em;
     }
 
     .adresse-detail {
@@ -58,8 +60,8 @@
 }
 
 .contact-form {
-  margin-top: 10.4rem;
-
+  padding-top: 10.4rem;
+  background-color: white;
   h2 {
     font-size: 3.2rem;
     font-family: abstracts.$neutra-bold;
@@ -69,12 +71,77 @@
 
   form {
     margin-top: 5.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4.6rem;
+    row-gap: 4.6rem;
+    column-gap: 2.9rem;
+  }
+
+  label {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: abstracts.$neutra-bold;
+
+    span label {
+      margin-right: 0;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        padding-left: 0.8rem;
+      }
+
+      &:first-of-type {
+        margin-right: 1.6rem;
+      }
+    }
+  }
+
+  input,
+  span {
+    font-family: abstracts.$neutra-book;
+    font-size: 2.2rem;
+    color: abstracts.$blue-700;
+    font-weight: 400;
+  }
+
+  input {
+    border: 0px solid transparent;
+    border-bottom: 1px solid abstracts.$blue-700;
+    max-width: 311px;
+
+    &::placeholder {
+      color: abstracts.$blue-700;
+      opacity: 0.82;
+    }
+  }
+
+  .message {
+    grid-column: 1 / 5;
   }
 
   .message,
   textarea {
     width: 100%;
+  }
+
+  textarea:focus,
+  input:focus {
+    color: abstracts.$blue-700;
+    outline-color: abstracts.$blue-700;
+  }
+
+  textarea {
+    border: 1px solid abstracts.$blue-700;
+
+    &::placeholder {
+      font-family: abstracts.$neutra-bold;
+      font-size: 1.6rem;
+      color: abstracts.$blue-700;
+      padding-top: 2.1rem;
+    }
   }
 }
