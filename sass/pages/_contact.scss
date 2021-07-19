@@ -9,6 +9,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 565px) {
+      max-width: 85%;
+    }
   }
 
   h1 {
@@ -28,16 +32,37 @@
       left: 0;
       right: 0;
     }
+
+    @media screen and (max-width: 1635px) {
+      width: 52%;
+    }
+
+    @media screen and (max-width: 1069px) {
+      width: 97%;
+    }
+    @media screen and (max-width: 573px) {
+      width: 100%;
+    }
   }
 
   .adresse {
     display: flex;
     align-items: center;
+    @media screen and (max-width: 1069px) {
+      flex-direction: column-reverse;
+    }
 
     .main-image {
       max-width: 60%;
       position: relative;
       bottom: -4em;
+
+      @media screen and (max-width: 1417px) {
+        max-width: 66%;
+      }
+      @media screen and (max-width: 1069px) {
+        max-width: 100%;
+      }
     }
 
     .adresse-detail {
@@ -46,6 +71,13 @@
       flex-direction: column;
       justify-content: center;
       max-width: 20%;
+
+      @media screen and (max-width: 1381px) {
+        max-width: 25%;
+      }
+      @media screen and (max-width: 1069px) {
+        max-width: 100%;
+      }
 
       p {
         font-size: 2rem;
