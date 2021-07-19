@@ -4,6 +4,24 @@
   padding-top: 7.4rem;
   padding-bottom: 8.1rem;
   background-color: abstracts.$grey-100;
+  position: relative;
+
+  .hero-banner {
+    &::before {
+      content: url("../img/dot-width-blue.svg");
+      position: absolute;
+      right: 23%;
+      top: 35%;
+    }
+
+    &::after {
+      content: url("../img/width-yellow-symbols.svg");
+      position: absolute;
+      right: -5%;
+      top: 1%;
+    }
+  }
+
   .container {
     max-width: 71%;
   }
