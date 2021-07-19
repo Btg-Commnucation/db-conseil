@@ -2,12 +2,13 @@
 
 .cabinet {
   padding-top: 7.4rem;
+  padding-bottom: 8.1rem;
   background-color: abstracts.$grey-100;
   .container {
     max-width: 71%;
   }
 
-  .header {
+  .article-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,5 +62,18 @@
 
   p {
     margin-top: 2rem;
+  }
+
+  .bottom-article {
+    margin-top: 5.4rem;
+
+    .left-side {
+      width: unset;
+      margin-right: 9rem;
+    }
+
+    .right-side {
+      width: 67%;
+    }
   }
 }
