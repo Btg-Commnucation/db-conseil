@@ -27,7 +27,7 @@
     font-family: abstracts.$neutra-bold;
     font-weight: 700;
     position: relative;
-    width: 39%;
+    width: 21%;
     line-height: 7rem;
     text-align: center;
 
@@ -39,14 +39,35 @@
       right: 0;
     }
 
+    @media screen and (max-width: 1739px) {
+      width: 23%;
+    }
+    @media screen and (max-width: 1587px) {
+      width: 26%;
+    }
+    @media screen and (max-width: 1404px) {
+      width: 29%;
+    }
+    @media screen and (max-width: 1259px) {
+      width: 32%;
+    }
+    @media screen and (max-width: 1141px) {
+      width: 36%;
+    }
+    @media screen and (max-width: 1014px) {
+      width: 40%;
+    }
     @media screen and (max-width: 918px) {
       width: 43%;
     }
-    @media screen and (max-width: 834px) {
+    @media screen and (max-width: 848px) {
       width: 47%;
     }
-    @media screen and (max-width: 762px) {
+    @media screen and (max-width: 776px) {
       width: 52%;
+    }
+    @media screen and (max-width: 700px) {
+      width: 59%;
     }
     @media screen and (max-width: 689px) {
       width: 100%;
@@ -55,7 +76,7 @@
         top: -100%;
       }
     }
-    @media screen and (max-width: 664px) {
+    @media screen and (max-width: 687px) {
       &::before {
         top: -50%;
       }

@@ -104,22 +104,8 @@
   border: 0px solid transparent;
   z-index: 1;
   cursor: pointer;
-
-  @media screen and (max-width: 689px) {
-    bottom: -8em;
-  }
-  @media screen and (max-width: 664px) {
-    bottom: -7em;
-  }
 }
 
 .changeBottom {
   bottom: -10em;
-
-  @media screen and (max-width: 689px) {
-    bottom: -12em;
-  }
-  @media screen and (max-width: 664px) {
-    bottom: -10em;
-  }
 }
