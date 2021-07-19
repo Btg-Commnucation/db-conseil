@@ -157,13 +157,13 @@ ul {
 /* Set text selection color & background */
 
 ::-moz-selection {
-  color: #000;
-  background-color: #fdc42d;
+  color: abstracts.$blue-700;
+  background-color: abstracts.$yellow-600;
 }
 
 ::selection {
-  color: #000;
-  background-color: #fdc42d;
+  color: abstracts.$blue-700;
+  background-color: abstracts.$yellow-600;
 }
 
 /* Set font-family, base font-size and line-height */
