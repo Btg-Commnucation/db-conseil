@@ -11,7 +11,24 @@
       content: url("../img/dot-width-blue.svg");
       position: absolute;
       right: 23%;
-      top: 17%;
+      top: 17.5%;
+
+      @media screen and (max-width: 1723px) {
+        top: 17%;
+        right: 25%;
+      }
+
+      @media screen and (max-width: 1651px) {
+        right: 19%;
+      }
+
+      @media screen and (max-width: 1468px) {
+        right: 22%;
+      }
+
+      @media screen and (max-width: 1368px) {
+        display: none;
+      }
     }
 
     &::after {
@@ -19,11 +36,25 @@
       position: absolute;
       right: -5%;
       top: 1%;
+
+      @media screen and (max-width: 1651px) {
+        right: -11%;
+      }
+      @media screen and (max-width: 1368px) {
+        display: none;
+      }
     }
   }
 
   .container {
     max-width: 71%;
+
+    @media screen and (max-width: 1651px) {
+      max-width: 80%;
+    }
+    @media screen and (max-width: 1381px) {
+      max-width: 85%;
+    }
   }
 
   .article-container {
@@ -31,10 +62,24 @@
     justify-content: space-between;
     align-items: center;
     font-size: 2rem;
+
+    @media screen and (max-width: 1468px) {
+      column-gap: 3rem;
+    }
+    @media screen and (max-width: 1176px) {
+      flex-direction: column;
+    }
   }
 
   .left-side {
     max-width: 57%;
+
+    @media screen and (max-width: 1381px) {
+      max-width: 63%;
+    }
+    @media screen and (max-width: 1176px) {
+      max-width: unset;
+    }
   }
 
   h1 {
@@ -89,6 +134,10 @@
     .left-side {
       width: unset;
       margin-right: 9rem;
+
+      @media screen and (max-width: 1468px) {
+        margin-right: 2rem;
+      }
     }
 
     .right-side {
