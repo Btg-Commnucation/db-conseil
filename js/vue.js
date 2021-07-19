@@ -264,8 +264,8 @@ const router = new VueRouter({
   ],
   scrollBehavior(to, from, savedPosition) {
     return {
-      x: 618,
-      y: 0,
+      x: 0,
+      y: 600,
       behavior: "smooth",
     };
   },
