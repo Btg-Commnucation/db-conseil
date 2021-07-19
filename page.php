@@ -27,5 +27,29 @@
             </div>
         </div>
     </section>
+    <section class="the-team">
+        <div class="container">
+            <h2><?php the_field('titre_qui_sommes_nous'); ?></h2>
+            <aside>
+                <div id="pauline">
+                   <div class="img-container">
+                       <?php $image_pauline = get_field('image_pauline'); ?>
+                       <img src="<?php echo esc_url($image_pauline['url']); ?>" alt="<?php echo esc_attr($image_pauline['alt']); ?>">
+                   </div> 
+                   <a href="<?php the_field('linkedin_pauline'); ?>" rel="noopener noreferrer" target="_blank"><?php the_field('pauline'); ?></a>
+                </div>
+                <div id="sephanie">
+                    <div class="img-container">
+                        <?php $image_stephanie = get_field('image_stephanie'); ?>
+                        <img src="<?php echo esc_url($image_stephanie['url']); ?>" alt="<?php echo esc_attr($image_stephanie['alt']); ?>">
+                    </div>
+                    <a href="<?php the_field('linkedin_stephanie'); ?>" rel="noopener noreferrer" target="_blank"><?php the_field('stephanie'); ?></a>
+                </div>
+            </aside>
+            <article>
+                <?php the_field('texte_qui_sommes_nous'); ?>
+            </article>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>
