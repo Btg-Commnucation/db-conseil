@@ -42,3 +42,6 @@ register_sidebar( array(
 	'id' => 'mentions-footer',
 	'name' => 'Mentions du bas de page',
 ) );
+
+// Remove contact Form 7 auto p
+add_filter('wpcf7_autop_or_not', '__return_false');

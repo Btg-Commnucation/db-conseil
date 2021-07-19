@@ -56,3 +56,24 @@
     }
   }
 }
+
+.contact-form {
+  margin-top: 10.4rem;
+
+  h2 {
+    font-size: 3.2rem;
+    font-family: abstracts.$neutra-bold;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .message,
+  textarea {
+    width: 100%;
+  }
+}
