@@ -18,7 +18,9 @@ get_header();
                 <p>Description</p>
             </router-link>
         </div>
-        <router-view></router-view>
+        <transition name="component-fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
     </div>
     <script type="text/x-template" id="home">
         <div>
