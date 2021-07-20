@@ -1,0 +1,45 @@
+@use '../abstracts';
+
+.postule-recrute {
+  padding-top: 8.5rem;
+  background-color: white;
+  position: relative;
+
+  &::before {
+    content: url("../img/dot-width-blue.svg");
+    position: absolute;
+    top: 6%;
+    left: 1%;
+    transform: scaleX(-1);
+  }
+
+  .hero-banner {
+    .container {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-family: abstracts.$neutra-bold;
+    font-weight: 700;
+    line-height: 7rem;
+    text-align: center;
+    position: relative;
+    max-width: 54%;
+
+    &::before {
+      content: url("../img/little-yellow-horizon-symbols.svg");
+      position: absolute;
+      top: -50%;
+      left: 0;
+      right: 0;
+
+      @media screen and (max-width: 741px) {
+        top: -30%;
+      }
+    }
+  }
+}
