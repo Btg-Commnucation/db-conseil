@@ -266,6 +266,12 @@
   .post-recruit {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: white;
+
+    @media screen and (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     a {
       font-size: 1.8rem;
@@ -283,6 +289,14 @@
 
       &::before {
         content: url(../img/little-white-symbols.svg);
+      }
+
+      @media screen and (max-width: 750px) {
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: fit-content;
+        width: -moz-fit-content;
       }
     }
 
@@ -346,6 +360,10 @@
       a {
         right: unset;
         left: 25%;
+        @media screen and (max-width: 750px) {
+          right: 0;
+          left: 0;
+        }
       }
 
       h2 {
