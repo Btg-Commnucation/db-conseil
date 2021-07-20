@@ -1,3 +1,14 @@
+<?php
+
+/*
+
+Template Name: Je postule
+
+*/
+
+
+?>
+
 <?php get_header(); ?>
 
 <main class="postule-recrute">
@@ -6,7 +17,7 @@
             <h1><?php the_title(); ?></h1>
         </div>
     </section>
-    <div id="postule">
+    <div id="root">
         <div class="display-none">
             <router-link to="/">
                 <p>Home</p>
@@ -14,7 +25,11 @@
             <router-link to="/Resultats">
                 <p>Rechercher</p>
             </router-link>
+            <router-link to="/Description">
+                <p>Description</p>
+            </router-link>
         </div>
+        <router-view></router-view>
     </div>
 
 

@@ -54,7 +54,7 @@
                 </div><ul id="%1$s" class="%2$s" >%3$s</ul>',
             ) ); ?>
             <div class="form-button__container">
-                <a href="#">Je postule</a>
+                <a href="http://localhost/db-conseil/je-postule">Je postule</a>
                 <a href="#">Je recrute</a>
             </div>
         </div>

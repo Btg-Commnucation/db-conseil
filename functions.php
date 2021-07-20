@@ -12,7 +12,6 @@ function pdw_load_stylesheets_and_scripts() {
     wp_enqueue_script( 'vuecdn', 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js', array(), '1.0', true);
 	wp_enqueue_script('vuerouter', 'https://unpkg.com/vue-router/dist/vue-router.js', array(), 1.0, true);
     wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vue.js', array(), '1.0', true);
-    wp_enqueue_script( 'postule', get_template_directory_uri() . '/js/postule.js', array(), '1.0', true);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array(), '1.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'pdw_load_stylesheets_and_scripts' );
