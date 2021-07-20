@@ -42,6 +42,40 @@
       }
     }
   }
+
+  .job-container {
+    bottom: unset;
+    top: 20%;
+  }
+
+  .changeBottom {
+    bottom: unset;
+    top: 21%;
+  }
+
+  .plus {
+    bottom: unset;
+    top: 13em;
+  }
+
+  .job-description.openSearch {
+    margin-top: 22.5rem;
+  }
+
+  .resultat-job {
+    position: initial;
+    width: 100%;
+    margin-top: 5rem;
+
+    form {
+      justify-content: center;
+    }
+  }
+
+  .job {
+    margin-top: 7.2rem;
+    padding-top: 0;
+  }
 }
 
 .job h4 {

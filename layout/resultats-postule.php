@@ -1,7 +1,7 @@
 <script type="text/x-template" id="resultats">
     <div>
         <div class="container">
-            <div class="job-container">
+            <div class="job-container resultat-job">
                 <h2><?php the_field('titre_barre_recherche'); ?></h2>
                 <form v-on:submit.prevent="onSubmit">
                     <select v-model="searchCategorie" name="categorie">
@@ -24,7 +24,6 @@
         </div>
         <section class="job">
             <div class="container">
-                <h2><?php the_field('titre_carte_description'); ?></h2>
                 <h4 v-if="filteredList.length >= 1" class="success">{{ filteredList.length }} offre<span v-if="filteredList.length >= 2">s</span> correspond <span v-if="filteredList.length >= 2" >ent</span> à votre demande</h4>
                 <h4 v-if="filteredList.length < 1" class="error">Désolé, nous n'avons trouvé aucun résultat pour votre recherche</h4>
                 <div class="card-container">
