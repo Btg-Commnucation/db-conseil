@@ -24,6 +24,26 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    <section class="accompagnement">
+        <div class="container">
+            <h2><?php the_field('titre_partie_deux') ?></h2>
+            <?php if ( have_rows('etape_accompagnement') ) : ?>
+                <ul>
+                    <?php while ( have_rows('etape_accompagnement') ) : the_row(); ?>
+                        <li>
+                            <div class="etape-image-container">
+                                <?php $imageEtape = get_sub_field('image'); ?>
+                                <img src="<?php echo esc_url($imageEtape['url']) ?>" alt="<?php echo esc_attr($imageEtape['alt']); ?>">
+                            </div>
+                            <h3><?php the_sub_field('titre_etape'); ?></h3>
+                            <h3><?php the_sub_field('nom_etape'); ?></h3>
+                            <p><?php the_sub_field('texte_etape'); ?></p>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+            <?php endif; ?>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

@@ -8,11 +8,21 @@
   .container {
     display: flex;
     max-width: 75%;
+
+    @media screen and (max-width: 1315px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .image-container {
     margin-right: 4.6rem;
-    width: 100%;
+    width: 115%;
+
+    @media screen and (max-width: 1315px) {
+      width: unset;
+    }
 
     img {
       position: relative;
@@ -28,7 +38,7 @@
     text-align: center;
     position: relative;
     text-align: center;
-    max-width: 81%;
+    max-width: 100%;
     margin: auto;
     margin-bottom: 8.6rem;
 
@@ -39,7 +49,7 @@
       left: 0;
       right: 0;
 
-      @media screen and (max-width: 741px) {
+      @media screen and (max-width: 1315px) {
         top: -30%;
       }
     }
@@ -59,5 +69,9 @@
     &:not(:last-of-type) {
       margin-bottom: 2.6rem;
     }
+  }
+
+  .hero-banner__content {
+    padding-bottom: 7rem;
   }
 }
