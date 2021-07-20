@@ -12,7 +12,12 @@
 
   .image-container {
     margin-right: 4.6rem;
-    width: 80%;
+    width: 100%;
+
+    img {
+      position: relative;
+      bottom: -2em;
+    }
   }
 
   h1 {
