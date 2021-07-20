@@ -74,4 +74,12 @@
   .hero-banner__content {
     padding-bottom: 7rem;
   }
+
+  .accompagnement {
+    padding-top: 11.1rem;
+
+    .container {
+      flex-direction: column;
+    }
+  }
 }
