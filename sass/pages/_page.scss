@@ -298,6 +298,12 @@
       @media screen and (max-width: 1464px) {
         padding-left: 13.4rem;
       }
+      @media screen and (max-width: 1229px) {
+        padding-left: 7.4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        padding-left: 4.4rem;
+      }
 
       a {
         background-color: abstracts.$yellow-600;
@@ -329,6 +335,12 @@
 
       @media screen and (max-width: 1464px) {
         padding-right: 13.4rem;
+      }
+      @media screen and (max-width: 1229px) {
+        padding-right: 7.4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        padding-right: 4.4rem;
       }
 
       a {
