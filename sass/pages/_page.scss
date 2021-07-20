@@ -5,6 +5,7 @@
   padding-bottom: 8.1rem;
   background-color: abstracts.$grey-100;
   position: relative;
+  overflow-x: hidden;
 
   .hero-banner {
     &::before {
@@ -79,6 +80,7 @@
     }
     @media screen and (max-width: 1176px) {
       max-width: unset;
+      margin-bottom: 4.6rem;
     }
   }
 
@@ -96,6 +98,10 @@
       top: -50%;
       left: 0;
       right: 0;
+
+      @media screen and (max-width: 741px) {
+        top: -30%;
+      }
     }
   }
 
@@ -131,6 +137,10 @@
   .bottom-article {
     margin-top: 5.4rem;
 
+    @media screen and (max-width: 1176px) {
+      flex-direction: column-reverse;
+    }
+
     .left-side {
       width: unset;
       margin-right: 9rem;
@@ -138,10 +148,18 @@
       @media screen and (max-width: 1468px) {
         margin-right: 2rem;
       }
+      @media screen and (max-width: 1170px) {
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-top: 4.6rem;
+      }
     }
 
     .right-side {
       width: 67%;
+      @media screen and (max-width: 1176px) {
+        width: 100%;
+      }
     }
   }
 
@@ -158,6 +176,12 @@
       position: absolute;
       left: 0;
       top: -40%;
+      @media screen and (max-width: 1503px) {
+        top: -52%;
+      }
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
     }
 
     .container {
@@ -165,6 +189,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media screen and (max-width: 1180px) {
+        max-width: 80%;
+      }
+      @media screen and (max-width: 1000px) {
+        max-width: 85%;
+      }
     }
 
     aside {
@@ -173,9 +204,18 @@
       justify-content: center;
       margin-top: 2.32rem;
 
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+      }
+
       .dot-image {
         margin: 0 3.3rem;
         margin-bottom: 8rem;
+        @media screen and (max-width: 800px) {
+          margin: 0;
+          margin-bottom: 4rem;
+          margin-top: 4rem;
+        }
       }
     }
 
@@ -212,6 +252,10 @@
       margin-top: 5.2rem;
       font-size: 2rem;
       opacity: 82%;
+
+      @media screen and (max-width: 1180px) {
+        margin-top: 4.2rem;
+      }
 
       strong {
         font-family: abstracts.$neutra-bold;
@@ -251,6 +295,10 @@
       padding-right: 1.7rem;
       position: relative;
 
+      @media screen and (max-width: 1464px) {
+        padding-left: 13.4rem;
+      }
+
       a {
         background-color: abstracts.$yellow-600;
         color: abstracts.$blue-700;
@@ -278,6 +326,10 @@
       padding-top: 1.9rem;
       position: relative;
       padding-bottom: 7.6rem;
+
+      @media screen and (max-width: 1464px) {
+        padding-right: 13.4rem;
+      }
 
       a {
         right: unset;
