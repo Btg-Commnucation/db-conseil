@@ -85,7 +85,6 @@ Template Name: Je postule
         </section>
     </div>
     </script>
-        <?php get_template_part('layout/resultats-postule'); ?>
         <?php get_template_part('layout/description-postule'); ?>
     </main>
     

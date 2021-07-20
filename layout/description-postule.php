@@ -1,28 +1,6 @@
 <script type="text/x-template" id="description">
 
 <div>
-    <aside class="hero-banner">
-        <div class="container">
-            <div class="job-container" :class="!startSearching && dimension">
-                <h2><?php the_field('titre_barre_recherche'); ?></h2>
-                <form v-if="startSearching" v-on:submit.prevent="onSubmit">
-                    <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
-                        <option value="">Catégorie</option>
-                        <option v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
-                    </select>
-                    <select v-model="searchRegion" name="region" id="region" aria-label="Dans quelle région recherchez-vous ?">
-                        <option value="">Région</option>
-                        <option v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
-                    </select>
-                    <input v-model="searchJobType" type="text" name="post-type" id="post-type" placeholder="Intitulé du poste" aria-label="Intitulé du poste" autocomplete="off">
-                    <router-link :to="{ name: 'Resultats', params: { searchCategorie, searchRegion, searchJobType }}" class="rechercher-job" ><?php the_field('texte_bouton_rechercher'); ?></router-link>
-                </form>
-            </div>
-            <div v-if="!startSearching" v-on:click="showSearchForm" class="plus">
-                <strong>+</strong>
-            </div>
-        </div>
-    </aside>
     <article class="job-description" :class="startSearching && 'openSearch'">
         <div class="container">
             <a href="<?php the_field('lien_offres'); ?>"><?php the_field('texte_lien_offres'); ?></a>
