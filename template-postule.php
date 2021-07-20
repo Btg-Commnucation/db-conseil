@@ -38,6 +38,8 @@ Template Name: Je postule
 
 
     <script type="text/x-template" id="home">
+    <div>
+
         <section class="job">
             <div class="container">
                 <h2><?php the_field('titre_carte'); ?></h2>
@@ -54,9 +56,37 @@ Template Name: Je postule
                 </div>
             </div>
         </section>
+        <section class="postuler-job"></section>
+        <section class="bottom-part">
+            <div class="container">
+                <h2><?php the_field('titre_bottom') ?></h2>
+                <p><?php the_field('texte_bottom') ?></p>
+                <div class="article-bottom">
+                    <aside>
+                        <?php $image = get_field('image'); ?>
+                        <img src="<?php echo esc_url($image['url']) ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                    </aside>
+                    <article>
+                        <?php if( have_rows('nos_qualites') ) : ?>
+                            <?php while( have_rows('nos_qualites') ) : the_row(); ?>
+                                <div class="texte-card">
+                                    <h3><?php the_sub_field('titre'); ?></h3>
+                                    <p><?php the_sub_field('texte'); ?></p>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        <div class="lien-container">
+                            <a href="<?php the_field('lien_bottom') ?>"><?php the_field('texte_lien') ?></a>
+                            <p><?php the_field('texte_post_lien'); ?></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </div>
     </script>
-    <?php get_template_part('layout/resultats-postule'); ?>
-    <?php get_template_part('layout/description-postule'); ?>
-</main>
-
-<?php get_footer(); ?>
+        <?php get_template_part('layout/resultats-postule'); ?>
+        <?php get_template_part('layout/description-postule'); ?>
+    </main>
+    
+    <?php get_footer(); ?>
