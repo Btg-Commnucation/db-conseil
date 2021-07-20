@@ -29,7 +29,10 @@ Template Name: Je postule
                 <p>Description</p>
             </router-link>
         </div>
-        <router-view></router-view>
+
+        <transition name="component-fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
     </div>
 
 
@@ -45,13 +48,14 @@ Template Name: Je postule
                             <p class="categorie">{{job.race}}</p>
                             <h3>{{job.name}}</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
-                        
+                            <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </script>
+    <?php get_template_part('layout/resultats.php'); ?>
 </main>
 
 <?php get_footer(); ?>
