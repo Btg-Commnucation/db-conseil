@@ -11,6 +11,10 @@
     top: 6%;
     left: 1%;
     transform: scaleX(-1);
+
+    @media screen and (max-width: 1090px) {
+      display: none;
+    }
   }
 
   .hero-banner {
@@ -30,6 +34,13 @@
     position: relative;
     max-width: 54%;
 
+    @media screen and (max-width: 1090px) {
+      max-width: 75%;
+    }
+    @media screen and (max-width: 932px) {
+      max-width: 100%;
+    }
+
     &::before {
       content: url("../img/little-yellow-horizon-symbols.svg");
       position: absolute;
@@ -37,7 +48,13 @@
       left: 0;
       right: 0;
 
-      @media screen and (max-width: 741px) {
+      @media screen and (max-width: 1295px) {
+        top: -30%;
+      }
+      @media screen and (max-width: 1090px) {
+        top: -50%;
+      }
+      @media screen and (max-width: 699px) {
         top: -30%;
       }
     }
