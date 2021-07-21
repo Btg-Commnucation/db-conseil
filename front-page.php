@@ -50,5 +50,20 @@
             <a href="<?php the_field('lien_fond_blanc'); ?>"><?php the_field('texte_lien_fond_blanc'); ?></a>
         </div>
     </section>
+    <section class="temoignages">
+        <div class="container">
+            <h2><?php the_field('titre_temoignages'); ?></h2>
+            <div class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 01</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 <?php get_footer(); ?>
