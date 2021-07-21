@@ -1,9 +1,35 @@
 @use '../abstracts';
 
-.recrute {
+main.recrute {
   padding-top: 6.8rem;
   margin-bottom: 11.6rem;
   background-color: abstracts.$grey-100;
+  overflow-x: hidden;
+
+  .hero-banner {
+    position: relative;
+
+    &::before {
+      content: url("../img/dot-width-blue.svg");
+      position: absolute;
+      top: 72%;
+      left: -6%;
+
+      @media screen and (max-width: 1315px) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: url("../img/width-yellow-symbols.svg");
+      position: absolute;
+      top: 8%;
+
+      @media screen and (max-width: 1315px) {
+        display: none;
+      }
+    }
+  }
 
   .container {
     display: flex;

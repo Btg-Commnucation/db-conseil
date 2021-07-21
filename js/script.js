@@ -21,5 +21,8 @@ if (windowWidth <= 700) {
 const splide = document.querySelector(".splide");
 
 if (splide != null) {
-  new Splide(".splide").mount();
+  new Splide(".splide", {
+    type: "loop",
+    autoplay: true,
+  }).mount();
 }
