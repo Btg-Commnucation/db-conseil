@@ -4,6 +4,7 @@
   .hero-banner {
     position: relative;
     width: 100%;
+    z-index: 1;
   }
 
   .background-image {
@@ -47,6 +48,7 @@
   .job {
     position: relative;
     overflow-x: hidden;
+    z-index: 0;
     &::before {
       content: url("../img/width-yellow-symbols.svg");
       position: absolute;
@@ -284,10 +286,18 @@
         }
       }
 
+      .texte-fond {
+        font-size: 2rem;
+      }
+
       h2 {
         display: flex;
         flex-direction: column;
+        font-size: 3.2rem;
+        font-family: abstracts.$neutra-bold;
         margin-top: 0;
+        text-transform: uppercase;
+        margin-bottom: 3.2rem;
 
         &::before {
           content: url("../img/dot-little-blue.svg");
