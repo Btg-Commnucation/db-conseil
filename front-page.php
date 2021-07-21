@@ -32,6 +32,7 @@
                 <a href="<?php the_field('lien_page_cabinet'); ?>"><?php the_field('texte_lien_page_cabinet'); ?></a>
             </article>
         </div>
+        <span class="telescope"></span>
     </section>
 </main>
 <?php get_footer(); ?>
