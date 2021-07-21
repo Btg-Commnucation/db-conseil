@@ -71,7 +71,6 @@
                                             <strong><?php the_sub_field('nom_et_profession_premier_temoignage'); ?></strong>
                                         </article>
                                     </div>
-                                    <span class="separator"></span>
                                     <div class="temoignages-container">
                                         <?php $imageDeuxiemeTemoin = get_sub_field('photo_deuxieme_temoignage'); ?>
                                         <div class="slider-image__container">

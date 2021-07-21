@@ -109,7 +109,7 @@
     article {
       display: flex;
       flex-direction: column;
-      :is(p, a, strong, ul, ol, li) {
+      :is(p, strong, ul, ol, li) {
         opacity: 82%;
       }
       a {
@@ -272,6 +272,7 @@
 
   .temoignages {
     padding-top: 10.5rem;
+    padding-bottom: 7.1rem;
 
     .title-container {
       width: 100%;
@@ -293,6 +294,7 @@
     .splide__arrows {
       display: none;
     }
+
     .splide {
       li {
         display: flex;
@@ -305,14 +307,53 @@
           align-items: center;
         }
 
+        .temoignages-container:first-of-type {
+          &::after {
+            content: url("../img/middle-yellow-symnols.svg");
+            margin-left: 3rem;
+            margin-right: 3rem;
+          }
+        }
+
         .slider-image__container {
           flex: 1 0 10em;
-          margin: auto;
+          img {
+            margin: auto;
+          }
         }
 
         article {
           margin-left: 2rem;
-          flex: 1 0 30em;
+          flex: 1 0 19em;
+          font-size: 2rem;
+
+          &::before {
+            content: url("../img/double-blue-quote.svg");
+            margin-bottom: 1.9rem;
+          }
+
+          strong {
+            font-family: abstracts.$neutra-bold;
+            padding-top: 2rem;
+            display: flow-root;
+          }
+        }
+      }
+
+      .splide__pagination {
+        margin-top: 5.1rem;
+        column-gap: 0.5rem;
+      }
+
+      .splide__pagination__page {
+        border: 1px solid abstracts.$blue-700;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: white;
+
+        &.is-active {
+          background-color: abstracts.$blue-700;
         }
       }
     }
