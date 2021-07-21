@@ -269,4 +269,23 @@
       }
     }
   }
+
+  .temoignages {
+    .splide {
+      li {
+        display: flex;
+        flex-wrap: wrap;
+
+        .temoignages-container {
+          flex: 1 0 48em;
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        article {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
 }

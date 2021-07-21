@@ -18,7 +18,7 @@ if (windowWidth <= 700) {
   const menuBtnBurger = document.querySelector(".menu-btn__burger");
 }
 
-const splide = docmuent.querySelector(".splide");
+const splide = document.querySelector(".splide");
 
 if (splide != null) {
   new Splide(".splide").mount();

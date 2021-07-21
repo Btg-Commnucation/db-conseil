@@ -59,18 +59,22 @@
                         <ul class="splide__list">
                             <?php while ( have_rows('temoignages') ) : the_row(); ?>
                                 <li class="splide__slide">
-                                    <div>
+                                    <div class="temoignages-container">
                                         <?php $imagePremierTemoin = get_sub_field('photo_premier_temoignage'); ?>
-                                        <img src="<?php echo esc_url($imagePremierTemoin['url']); ?>" alt="<?php echo esc_attr($imagePremierTemoi['alt']); ?>">
+                                        <div class="slider-image__container">
+                                            <img src="<?php echo esc_url($imagePremierTemoin['url']); ?>" alt="<?php echo esc_attr($imagePremierTemoin['alt']); ?>">
+                                        </div>
                                         <article>
                                             <p><?php the_sub_field('texte_premier_temoignage'); ?></p>
                                             <strong><?php the_sub_field('nom_et_profession_premier_temoignage'); ?></strong>
                                         </article>
                                     </div>
                                     <span class="separator"></span>
-                                    <div>
+                                    <div class="temoignages-container">
                                         <?php $imageDeuxiemeTemoin = get_sub_field('photo_deuxieme_temoignage'); ?>
-                                        <img src="<?php echo esc_url($imageDeuxiemeTemoin['url']) ?>" alt="<?php echo esc_attr($imageDeuxiemeTemoin['alt']); ?>">
+                                        <div class="slider-image__container">
+                                            <img src="<?php echo esc_url($imageDeuxiemeTemoin['url']) ?>" alt="<?php echo esc_attr($imageDeuxiemeTemoin['alt']); ?>">
+                                        </div>
                                         <article>
                                             <p><?php the_sub_field('texte_deuxieme_temoignage'); ?></p>
                                             <strong><?php the_sub_field('nom_et_profession_deuxieme_temoignage'); ?></strong>
