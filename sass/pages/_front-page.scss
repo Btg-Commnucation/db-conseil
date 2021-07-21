@@ -53,6 +53,22 @@
       flex-wrap: wrap;
       column-gap: 2.6rem;
       row-gap: 2.6rem;
+      overflow-x: hidden;
+      &::before {
+        content: url("../img/dot-width-blue.svg");
+        position: absolute;
+        z-index: 1;
+        bottom: -9%;
+        right: 23%;
+      }
+
+      &::after {
+        content: url("../img/width-yellow-symbols.svg");
+        position: absolute;
+        z-index: 1;
+        right: -6%;
+        bottom: -34%;
+      }
     }
 
     aside {
@@ -134,7 +150,7 @@
       background: url("../img/telescope.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      width: 78.4%;
+      width: 82%;
       height: 376px;
       position: absolute;
       bottom: -37%;
