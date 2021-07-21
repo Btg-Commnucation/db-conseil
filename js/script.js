@@ -24,5 +24,6 @@ if (splide != null) {
   new Splide(".splide", {
     type: "loop",
     autoplay: true,
+    interval: 8000,
   }).mount();
 }
