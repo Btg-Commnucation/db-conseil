@@ -109,6 +109,9 @@
     article {
       display: flex;
       flex-direction: column;
+      :is(p, a, strong, ul, ol, li) {
+        opacity: 82%;
+      }
       a {
         margin-top: 4.7rem;
         font-size: 1.8rem;
