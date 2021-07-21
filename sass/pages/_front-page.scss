@@ -74,6 +74,19 @@
       }
     }
 
+    h2 {
+      margin-top: 0;
+      margin-bottom: 2.7rem;
+    }
+
+    ul {
+      margin-left: 3.5rem !important;
+
+      li {
+        list-style: disc !important;
+      }
+    }
+
     aside,
     article {
       flex: 1 0 20em;
