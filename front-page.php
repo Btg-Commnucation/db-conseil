@@ -10,5 +10,7 @@
     </div>
 
     <?php get_template_part('layout/job-front'); ?>
+    <?php get_template_part('layout/description-front'); ?>
+    <?php get_template_part('layout/resultats'); ?>
 </main>
 <?php get_footer(); ?>
