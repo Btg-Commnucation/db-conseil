@@ -30,7 +30,6 @@
         </section>
         <section class="job">
             <div class="container">
-                <h2><?php the_field('titre_carte'); ?></h2>
                 <h4 v-if="filteredList.length >= 1" class="success">{{ filteredList.length }} offre<span v-if="filteredList.length >= 2">s</span> correspond <span v-if="filteredList.length >= 2">ent</span> à votre demande</h4>
                 <h4 v-if="filteredList.length < 1" class="error">Désolé, nous n'avons trouvé aucun résultat pour votre recherche</h4>
                 <div class="card-container">
