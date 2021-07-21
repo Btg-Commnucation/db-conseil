@@ -141,4 +141,132 @@
       left: 0;
     }
   }
+
+  .post-recruit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 28.5rem;
+    background-color: white;
+
+    @media screen and (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      font-size: 1.8rem;
+      color: white;
+      background-color: abstracts.$blue-700;
+      padding: 2rem 4rem;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+      border-radius: 10px;
+      position: absolute;
+      bottom: -9%;
+      right: 25%;
+
+      &::before {
+        content: url(../img/little-white-symbols.svg);
+      }
+
+      @media screen and (max-width: 750px) {
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: fit-content;
+        width: -moz-fit-content;
+      }
+    }
+
+    .postule {
+      padding-bottom: 5.7rem;
+      background-color: abstracts.$blue-700;
+      color: white;
+      padding-left: 19.4rem;
+      padding-top: 1.9rem;
+      padding-right: 1.7rem;
+      position: relative;
+
+      @media screen and (max-width: 1464px) {
+        padding-left: 13.4rem;
+      }
+      @media screen and (max-width: 1229px) {
+        padding-left: 7.4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        padding-left: 4.4rem;
+      }
+
+      a {
+        background-color: abstracts.$yellow-600;
+        color: abstracts.$blue-700;
+
+        &::before {
+          content: url(../img/little-blue-symbols.svg);
+        }
+      }
+
+      .texte-fond {
+        font-size: 2rem;
+      }
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        font-size: 3.2rem;
+        font-family: abstracts.$neutra-bold;
+        text-transform: uppercase;
+        margin-bottom: 2.7rem;
+        margin-top: 0;
+
+        &::before {
+          content: url("../img/dot-little-white.svg");
+          padding-bottom: 2.1rem;
+        }
+      }
+    }
+
+    .recrute {
+      padding-right: 22.3rem;
+      padding-left: 4rem;
+      padding-top: 1.9rem;
+      position: relative;
+      padding-bottom: 7.6rem;
+      background-color: white;
+      margin-bottom: 0;
+
+      @media screen and (max-width: 1464px) {
+        padding-right: 13.4rem;
+      }
+      @media screen and (max-width: 1229px) {
+        padding-right: 7.4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        padding-right: 4.4rem;
+      }
+
+      a {
+        right: unset;
+        left: 25%;
+        @media screen and (max-width: 750px) {
+          right: 0;
+          left: 0;
+        }
+      }
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        &::before {
+          content: url("../img/dot-little-blue.svg");
+          padding-bottom: 2.1rem;
+        }
+      }
+    }
+  }
 }
