@@ -17,12 +17,12 @@
             <aside>
                 <div id="stephanie">
                     <?php $imageStephanie = get_field('image_membre_un'); ?>
-                    <img src="" alt="">
+                    <img src="<?php echo esc_url($imageStephanie['url']); ?>" alt="<?php echo esc_attr($imageStephanie['alt']); ?>">
                     <a href="<?php the_field('lien_linkedin_membre_un'); ?>"><?php the_field('nom_membre_un'); ?></a>
                 </div>
                 <div id="pauline">
                     <?php $imagePauline = get_field('image_membre_deux'); ?>
-                    <img src="" alt="">
+                    <img src="<?php echo esc_url($imagePauline['url']); ?>" alt="<?php echo esc_attr($imagePauline['alt']); ?>">
                     <a href="<?php the_field('lien_linkedin_membre_deux'); ?>"><?php the_field('nom_membre_deux'); ?></a>
                 </div>
             </aside>
