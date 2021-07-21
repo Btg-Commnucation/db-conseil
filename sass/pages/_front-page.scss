@@ -1,0 +1,41 @@
+@use '../abstracts';
+
+.front-page {
+  .hero-banner {
+    position: relative;
+    width: 100%;
+  }
+
+  .background-image {
+    position: absolute;
+    z-index: -1;
+    background-image: url(../img/test.jpg);
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 24em;
+    opacity: 0.32;
+  }
+
+  h1 {
+    width: 35% !important;
+  }
+
+  .offres-link {
+    align-self: center;
+    margin-top: 4.5rem;
+    background-color: #2a5393;
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 1px solid #2a5393;
+    padding: 2.448rem 4.68rem 1.9rem 2.98rem;
+    text-decoration: none;
+
+    &::before {
+      content: url(../img/little-white-symbols.svg);
+      margin-right: 0.9rem;
+    }
+  }
+}

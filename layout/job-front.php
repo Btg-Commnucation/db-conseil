@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="<?php the_field('lien_toutes_offres'); ?>"><?php the_field('texte_toutes_offres'); ?></a>
+                <a class="offres-link" href="<?php the_field('lien_toutes_offres'); ?>"><?php the_field('texte_toutes_offres'); ?></a>
             </div>
         </section>
     </div>
