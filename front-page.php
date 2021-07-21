@@ -6,7 +6,7 @@
             <router-link to="/Description"></router-link>
             <router-link to="/Resultats"></router-link>
         </div>
-        <transition nampe="component-fade" mode="out-in">
+        <transition name="component-fade" mode="out-in">
             <router-view></router-view>
         </transition>
     </div>
