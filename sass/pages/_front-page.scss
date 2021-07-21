@@ -48,11 +48,13 @@
     .container {
       display: flex;
       flex-wrap: wrap;
+      column-gap: 2.6rem;
     }
 
     aside {
       display: flex;
       flex-wrap: wrap;
+      column-gap: 2.6rem;
 
       div {
         text-align: center;
@@ -90,6 +92,27 @@
     aside,
     article {
       flex: 1 0 20em;
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      a {
+        margin-top: 4.7rem;
+        font-size: 1.8rem;
+        color: #fff;
+        background-color: #2a5393;
+        padding: 2rem 4rem;
+        text-decoration: none;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-radius: 10px;
+        align-self: center;
+
+        &::before {
+          content: url(../img/little-white-symbols.svg);
+        }
+      }
     }
   }
 }
