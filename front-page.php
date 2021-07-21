@@ -6,7 +6,9 @@
             <router-link to="/Description"></router-link>
             <router-link to="/Resultats"></router-link>
         </div>
-        <router-view></router-view>
+        <transition nampe="component-fade" mode="out-in">
+            <router-view></router-view>
+        </transition>
     </div>
 
     <?php get_template_part('layout/job-front'); ?>
