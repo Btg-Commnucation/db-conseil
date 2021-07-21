@@ -271,6 +271,9 @@
   }
 
   .temoignages {
+    .splide__arrows {
+      display: none;
+    }
     .splide {
       li {
         display: flex;
@@ -282,8 +285,13 @@
           flex-wrap: wrap;
         }
 
+        .slider-image__container {
+          flex: 1 0 10em;
+        }
+
         article {
           margin-left: 2rem;
+          flex: 1 0 30em;
         }
       }
     }
