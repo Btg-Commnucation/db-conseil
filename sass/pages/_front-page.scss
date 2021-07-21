@@ -271,6 +271,25 @@
   }
 
   .temoignages {
+    padding-top: 10.5rem;
+
+    .title-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-size: 3.2rem;
+      font-family: abstracts.$neutra-bold;
+      text-transform: uppercase;
+
+      &::before {
+        content: url("../img/little-blue-symbols.svg");
+      }
+    }
+
     .splide__arrows {
       display: none;
     }
@@ -283,10 +302,12 @@
           flex: 1 0 48em;
           display: flex;
           flex-wrap: wrap;
+          align-items: center;
         }
 
         .slider-image__container {
           flex: 1 0 10em;
+          margin: auto;
         }
 
         article {

@@ -52,7 +52,9 @@
     </section>
     <section class="temoignages">
         <div class="container">
-            <h2><?php the_field('titre_temoignages'); ?></h2>
+            <div class="title-container">
+                <h2><?php the_field('titre_temoignages'); ?></h2>
+            </div>
             <?php if ( have_rows('temoignages') ) : ?>
                 <div class="splide">
                     <div class="splide__track">
