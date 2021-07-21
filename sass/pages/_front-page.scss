@@ -43,4 +43,40 @@
       margin-right: 0.9rem;
     }
   }
+
+  .cabinet {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    aside {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        text-align: center;
+        flex: 1 0 25%;
+
+        a {
+          margin-top: 2.2rem;
+          font-size: 2rem;
+          text-decoration: none;
+          color: abstracts.$blue-700;
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: url("../img/linkedin.svg");
+            padding-right: 1.4rem;
+          }
+        }
+      }
+    }
+
+    aside,
+    article {
+      flex: 1 0 20em;
+    }
+  }
 }
