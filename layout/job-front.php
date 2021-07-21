@@ -41,7 +41,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend
                                 efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui.
                                 Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
-                            <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus
+                            <router-link class="card-link" :to="{ name: 'Description', params: { job } }"><?php the_field('texte_bouton_en_savoir_plus'); ?>
                             </router-link>
                         </div>
                     </div>

@@ -40,8 +40,10 @@
 <body <?php body_class(  ); ?>>
     <?php wp_body_open(); ?>
     <header>
-        <img class="horizontal" src="<?php echo get_template_directory_uri(); ?>/img/top-logo.svg" alt="DB Conseil, Un accompagnement sur-mesure">
-        <img class="vertical" src="<?php echo get_template_directory_uri(); ?>/img/top-logo-verti.svg" alt="DB Conseil, Un accompagnement sur-mesure">
+        <a class="homeurl" href="<?php echo home_url(); ?>">
+            <img class="horizontal" src="<?php echo get_template_directory_uri(); ?>/img/top-logo.svg" alt="DB Conseil, Un accompagnement sur-mesure">
+            <img class="vertical" src="<?php echo get_template_directory_uri(); ?>/img/top-logo-verti.svg" alt="DB Conseil, Un accompagnement sur-mesure">
+        </a>
         <div class="main-menu__container">
             <?php wp_nav_menu( array(
                 'theme_location' => 'main',
