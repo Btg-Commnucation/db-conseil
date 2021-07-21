@@ -44,6 +44,17 @@
     }
   }
 
+  .job {
+    position: relative;
+    overflow-x: hidden;
+    &::before {
+      content: url("../img/width-yellow-symbols.svg");
+      position: absolute;
+      top: 6%;
+      left: -15%;
+    }
+  }
+
   .cabinet {
     padding-bottom: 11.2rem;
     position: relative;
