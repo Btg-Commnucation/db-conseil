@@ -35,7 +35,7 @@
     <section class="postuler-job">
         <div class="container">
             <h2>Postuler à ce poste</h2>
-            <form action="template-validate.php" class="postule-contact" method="post">
+            <form action="<?php echo get_template_directory_uri(); ?>/../template-validate.php" class="postule-contact" method="post">
                 <div class="civilite">
                     <p>Civilité :</p>
                     <div class="civilite-container">
