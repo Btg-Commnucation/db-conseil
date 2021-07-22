@@ -62,14 +62,16 @@ Template Name: Je postule
                 <form action="" class="postule-contact" method="post">
                     <div class="civilite">
                         <p>Civilité :</p>
-                        <label for="madame">
-                            <input name="madame" id="madame" aria-label="Madame" type="radio">
-                            Madame
-                        </label>
-                        <label for="monsieur">
-                            <input name="monsieur" id="monsieur" aria-label="monsieur" type="radio">
-                            Monsieur
-                        </label>
+                        <div class="civilite-container">
+                            <label for="madame">
+                                <input name="madame" id="madame" aria-label="Madame" type="radio">
+                                Madame
+                            </label>
+                            <label for="monsieur">
+                                <input name="monsieur" id="monsieur" aria-label="monsieur" type="radio">
+                                Monsieur
+                            </label>
+                        </div>
 
                     </div>
                     <label for="name">
@@ -123,6 +125,11 @@ Template Name: Je postule
                     <label for="motive">
                         <input type="file" name="motive" id="motive" aria-label="Envoyer un fichier" accept=".doc,.docx,.pdf">
                         (Fichier de maximum 2mo - Formats acceptés : pdf / doc / docx.)
+                    </label>
+                    <input type="submit" value="Envoyer ma candidature">
+                    <label for="consentement">
+                        <input type="checkbox" name="consentement" id="consentement" aria-label="J'accepte le traitement de mes données">
+                        J'accepte que mes données soient traitées par DB conseils. Elles ne seront pas revendues ou échangées avec un tiers.
                     </label>
                 </form>
             </div>

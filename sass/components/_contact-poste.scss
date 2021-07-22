@@ -5,4 +5,17 @@
   gap: 4.6rem;
   row-gap: 4.6rem;
   column-gap: 2.9rem;
+
+  label,
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Neutra Bold", sans-serif;
+  }
+
+  .civilite-container {
+    display: flex;
+    column-gap: 1.3rem;
+  }
 }
