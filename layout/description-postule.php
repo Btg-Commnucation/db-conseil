@@ -35,7 +35,7 @@
     <section class="postuler-job">
         <div class="container">
             <h2>Postuler à ce poste</h2>
-            <form action="" class="postule-contact" method="post">
+            <form action="../postule.php" class="postule-contact" method="post">
                 <div class="civilite">
                     <p>Civilité :</p>
                     <div class="civilite-container">
@@ -104,7 +104,7 @@
                         <input type="submit" id="envoyer" name="envoyer" value="Envoyer">
                     </label>
                     <label for="consentement">
-                        <input type="checkbox" name="consentement" id="consentement" aria-label="J'accepte le traitement de mes données">
+                        <input type="checkbox" name="consentement" id="consentement" aria-label="J'accepte le traitement de mes données" required>
                         J'accepte que mes données soient traitées par DB conseils. Elles ne seront pas revendues ou échangées avec un tiers.
                     </label>
                 </div>
