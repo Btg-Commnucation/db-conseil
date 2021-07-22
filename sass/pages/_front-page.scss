@@ -23,6 +23,32 @@
     @media screen and (max-width: 1709px) {
       width: 39% !important;
     }
+    @media screen and (max-width: 1533px) {
+      width: 43% !important;
+    }
+    @media screen and (max-width: 1391px) {
+      width: 48% !important;
+    }
+    @media screen and (max-width: 1246px) {
+      width: 53% !important;
+    }
+    @media screen and (max-width: 1128px) {
+      width: 59% !important;
+    }
+    @media screen and (max-width: 1013px) {
+      width: 66% !important;
+    }
+    @media screen and (max-width: 906px) {
+      width: 100% !important;
+    }
+    @media screen and (max-width: 598px) {
+      &::before {
+        top: -25% !important;
+      }
+    }
+    @media screen and (max-width: 379px) {
+      font-size: 5rem;
+    }
   }
 
   .back-offre {
@@ -57,6 +83,12 @@
       position: absolute;
       top: 6%;
       left: -15%;
+      @media screen and (max-width: 1420px) {
+        left: -25%;
+      }
+      @media screen and (max-width: 1263px) {
+        z-index: -1;
+      }
     }
   }
 
