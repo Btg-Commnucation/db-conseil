@@ -64,11 +64,11 @@ Template Name: Je postule
                         <p>Civilité :</p>
                         <div class="civilite-container">
                             <label for="madame">
-                                <input name="madame" id="madame" aria-label="Madame" type="radio">
+                                <input name="civilite" id="madame" aria-label="Madame" value="madame" type="radio">
                                 Madame
                             </label>
                             <label for="monsieur">
-                                <input name="monsieur" id="monsieur" aria-label="monsieur" type="radio">
+                                <input name="civilite" id="monsieur" aria-label="monsieur" value="monsieur" type="radio">
                                 Monsieur
                             </label>
                         </div>

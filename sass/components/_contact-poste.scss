@@ -8,14 +8,35 @@
 
   label,
   div {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-family: "Neutra Bold", sans-serif;
   }
 
+  input {
+    margin-top: 1.8rem;
+    border: 0px solid transparent;
+    border-bottom: 1px solid #2a5393;
+    width: 86%;
+  }
+
   .civilite-container {
     display: flex;
+    flex-direction: row;
     column-gap: 1.3rem;
+
+    label {
+      width: fit-content;
+      width: -moz-fit-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      input {
+        margin-right: 0.8rem;
+      }
+    }
   }
 }
