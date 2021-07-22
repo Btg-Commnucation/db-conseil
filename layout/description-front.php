@@ -137,6 +137,11 @@
             </form>
         </div>
     </section>
+    <section class="photo-bot">
+        <div class="gradient-bottom"></div>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/bottom-img.jpg" alt="DB Conseils cabinet de recrutement">
+        <div class="gradient-second"></div>
+    </section>
 </div>
 
 </script>
