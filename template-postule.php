@@ -122,11 +122,13 @@ Template Name: Je postule
                         <input type="file" name="cv" id="cv" aria-label="Envoyer un fichier" accept=".doc,.docx,.pdf">
                         (Fichiers de maximum 2mo - Formats acceptés : pdf / doc / docx.)
                     </label>
-                    <input type="submit" value="Envoyer ma candidature">
-                    <label for="consentement">
-                        <input type="checkbox" name="consentement" id="consentement" aria-label="J'accepte le traitement de mes données">
-                        J'accepte que mes données soient traitées par DB conseils. Elles ne seront pas revendues ou échangées avec un tiers.
-                    </label>
+                    <div class="send">
+                        <input type="submit" value="Envoyer ma candidature">
+                        <label for="consentement">
+                            <input type="checkbox" name="consentement" id="consentement" aria-label="J'accepte le traitement de mes données">
+                            J'accepte que mes données soient traitées par DB conseils. Elles ne seront pas revendues ou échangées avec un tiers.
+                        </label>
+                    </div>
                 </form>
             </div>
         </section>
