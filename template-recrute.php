@@ -44,6 +44,17 @@ get_header(); ?>
             <?php endif; ?>
         </div>
     </section>
+    <section class="contact-form">
+        <div class="container">
+            <h2><?php the_field('titre_formulaire_de_contact'); ?></h2>
+            <?php echo do_shortcode('[contact-form-7 id="55" title="Formulaire de contact 1"]'); ?>
+        </div>
+    </section>
+    <section class="photo-bot">
+        <div class="gradient-bottom"></div>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/bottom-img.jpg" alt="DB Conseils cabinet de recrutement">
+        <div class="gradient-second"></div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
