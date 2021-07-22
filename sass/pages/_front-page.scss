@@ -432,13 +432,18 @@
     .splide {
       li {
         display: flex;
-        flex-wrap: wrap;
+
+        @media screen and (max-width: 1209px) {
+          flex-direction: column;
+          row-gap: 6.6rem;
+        }
 
         .temoignages-container {
-          flex: 1 0 48em;
           display: flex;
-          flex-wrap: wrap;
           align-items: center;
+          @media screen and (max-width: 725px) {
+            flex-direction: column;
+          }
         }
 
         .temoignages-container:first-of-type {
@@ -446,11 +451,18 @@
             content: url("../img/middle-yellow-symnols.svg");
             margin-left: 3rem;
             margin-right: 3rem;
+
+            @media screen and (max-width: 1206px) {
+              display: none;
+            }
           }
         }
 
         .slider-image__container {
-          flex: 1 0 10em;
+          width: 55%;
+          @media screen and (max-width: 1360px) {
+            width: 80%;
+          }
           img {
             margin: auto;
           }
@@ -458,7 +470,6 @@
 
         article {
           margin-left: 2rem;
-          flex: 1 0 19em;
           font-size: 2rem;
 
           &::before {
