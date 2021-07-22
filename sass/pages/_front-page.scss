@@ -1,6 +1,7 @@
 @use '../abstracts';
 
 .front-page {
+  overflow: hidden;
   .hero-banner {
     position: relative;
     width: 100%;
@@ -96,6 +97,7 @@
     padding-bottom: 11.2rem;
     position: relative;
     overflow-x: unset;
+
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -108,6 +110,25 @@
         z-index: 1;
         bottom: -9%;
         right: 23%;
+        @media screen and (max-width: 1637px) {
+          right: 27%;
+        }
+        @media screen and (max-width: 1448px) {
+          right: 32%;
+        }
+        @media screen and (max-width: 1235px) {
+          right: 18%;
+          bottom: -5%;
+        }
+        @media screen and (max-width: 1109px) {
+          right: 23%;
+        }
+        @media screen and (max-width: 1001px) {
+          right: 27%;
+        }
+        @media screen and (max-width: 898px) {
+          display: none;
+        }
       }
 
       &::after {
@@ -116,6 +137,13 @@
         z-index: 1;
         right: -6%;
         bottom: -34%;
+        @media screen and (max-width: 1235px) {
+          right: -25%;
+          bottom: -18%;
+        }
+        @media screen and (max-width: 898px) {
+          display: none;
+        }
       }
     }
 
@@ -123,12 +151,15 @@
       display: flex;
       flex-wrap: wrap;
       column-gap: 2.6rem;
+      position: relative;
 
       div {
         text-align: center;
-        flex: 1 0 25%;
+        flex: 1 0 48%;
         width: fit-content;
         width: -moz-fit-content;
+        height: fit-content;
+        height: -moz-fit-content;
         display: flex;
         flex-direction: column;
 
@@ -149,6 +180,10 @@
             padding-right: 1.4rem;
           }
         }
+      }
+
+      #pauline {
+        margin-top: 5rem;
       }
     }
 
@@ -173,6 +208,8 @@
     article {
       display: flex;
       flex-direction: column;
+      position: relative;
+      z-index: 2;
       :is(p, strong, ul, ol, li) {
         opacity: 82%;
       }
@@ -203,6 +240,13 @@
       position: absolute;
       bottom: -37%;
       left: 0;
+      @media screen and (max-width: 1235px) {
+        bottom: -24%;
+        width: 100%;
+      }
+      @media screen and (max-width: 764px) {
+        bottom: -15%;
+      }
     }
   }
 
