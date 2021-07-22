@@ -1,4 +1,12 @@
-<?php get_header(); ?>
+<?php 
+/*
+
+Template Name: Valide
+
+*/
+
+
+get_header(); ?>
 
 <main class="validate">
     <div class="container">
