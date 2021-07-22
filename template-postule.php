@@ -123,7 +123,10 @@ Template Name: Je postule
                         (Fichiers de maximum 2mo - Formats acceptés : pdf / doc / docx.)
                     </label>
                     <div class="send">
-                        <input type="submit" value="Envoyer ma candidature">
+                        <label for="envoyer">
+                            Envoyer ma candidature
+                            <input type="submit" id="envoyer" name="envoyer" value="Envoyer">
+                        </label>
                         <label for="consentement">
                             <input type="checkbox" name="consentement" id="consentement" aria-label="J'accepte le traitement de mes données">
                             J'accepte que mes données soient traitées par DB conseils. Elles ne seront pas revendues ou échangées avec un tiers.

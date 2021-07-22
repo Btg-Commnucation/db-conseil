@@ -94,6 +94,7 @@
       font-weight: 400;
       display: flex;
       flex-direction: row;
+      font-size: 1.8rem;
       input {
         align-self: flex-start;
         width: fit-content;
@@ -101,6 +102,44 @@
         margin-top: 0.5em;
         width: -moz-fit-content;
       }
+    }
+  }
+
+  label[for="envoyer"] {
+    align-self: flex-end;
+    justify-self: flex-end;
+    grid-column: 3/5;
+    grid-row: 4;
+    font-size: 1.8rem;
+    background-color: #fdc42d;
+    padding: 2.448rem 4.68rem 1.9rem 2.98rem;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: 0px solid transparent;
+    border-radius: 5px;
+    width: fit-content;
+    width: -moz-fit-content;
+    font-family: "Neutra Book", sans-serif;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+
+    &::before {
+      content: url(../img/little-blue-symbols.svg);
+      z-index: 10;
+    }
+
+    input {
+      position: absolute;
+      background-color: transparent;
+      border-bottom: none;
+      color: transparent;
+      left: 0;
+      right: 0;
+      margin: auto;
     }
   }
 }
