@@ -60,6 +60,7 @@
     </article>
     <section class="postuler-job">
         <div class="container">
+            <h2>Postuler à ce poste</h2>
             <form action="" class="postule-contact" method="post">
                 <div class="civilite">
                     <p>Civilité :</p>
@@ -139,6 +140,7 @@
     <section class="photo-bot">
         <div class="gradient-bottom"></div>
         <img src="<?php echo get_template_directory_uri(); ?>/img/bottom-img.jpg" alt="DB Conseils cabinet de recrutement">
+        <div class="gradient-second"></div>
     </section>
 </div>
 
