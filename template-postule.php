@@ -122,10 +122,6 @@ Template Name: Je postule
                         <input type="file" name="cv" id="cv" aria-label="Envoyer un fichier" accept=".doc,.docx,.pdf">
                         (Fichiers de maximum 2mo - Formats acceptés : pdf / doc / docx.)
                     </label>
-                    <label for="motive">
-                        <input type="file" name="motive" id="motive" aria-label="Envoyer un fichier" accept=".doc,.docx,.pdf">
-                        (Fichier de maximum 2mo - Formats acceptés : pdf / doc / docx.)
-                    </label>
                     <input type="submit" value="Envoyer ma candidature">
                     <label for="consentement">
                         <input type="checkbox" name="consentement" id="consentement" aria-label="J'accepte le traitement de mes données">
