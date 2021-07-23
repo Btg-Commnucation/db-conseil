@@ -67,6 +67,14 @@ header {
       row-gap: 1rem;
     }
 
+    @media screen and (max-width: 613px) {
+      margin-left: 2rem;
+    }
+
+    @media screen and (max-width: 377px) {
+      margin-left: 1rem;
+    }
+
     a {
       font-size: 1.8rem;
       color: white;
