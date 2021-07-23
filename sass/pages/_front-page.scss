@@ -77,7 +77,6 @@
 
   .job {
     position: relative;
-    overflow-x: hidden;
     z-index: 0;
     &::before {
       content: url("../img/width-yellow-symbols.svg");
