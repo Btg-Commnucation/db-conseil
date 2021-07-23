@@ -340,6 +340,10 @@
 
       .texte-fond {
         font-size: 2rem;
+
+        p:not(:first-of-type) {
+          margin-top: 2.5rem;
+        }
       }
 
       h2 {
@@ -389,6 +393,9 @@
 
       .texte-fond {
         font-size: 2rem;
+        p:not(:first-of-type) {
+          margin-top: 2.5rem;
+        }
       }
 
       h2 {
