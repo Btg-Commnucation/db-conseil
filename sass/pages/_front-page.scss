@@ -241,6 +241,11 @@
           content: url(../img/little-white-symbols.svg);
         }
       }
+
+      p:first-of-type {
+        margin-top: 0;
+        margin-bottom: 3.6rem;
+      }
     }
 
     .telescope {
