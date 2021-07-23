@@ -17,4 +17,4 @@ get_header(); ?>
     </div>
 </main>
 
-<?php get_foter(); ?>
+<?php get_footer(); ?>
