@@ -3,7 +3,7 @@
 <head>
 <?php
 
-    $url = "https://the-one-api.dev/v2/character?limit=100";
+    $url = "https://dbconseils.nicoka.com/api/jobs";
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_URL, $url);
@@ -11,7 +11,7 @@
 
     $headers = array(
     "Accept: application/json",
-    "Authorization: Bearer T1YC-rSPre1FwuxxRpzS",
+    "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5IiwiZXhwIjoxNjU4NTYzNzk5fQ.uob8dFkKgR-IkAYPnTlbe6eRqX2pSwOxA6eUe0Nz214",
     );
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
     //for debug only!

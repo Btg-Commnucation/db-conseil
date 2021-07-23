@@ -34,13 +34,11 @@
                 <h4 v-if="filteredList.length < 1" class="error">Désolé, nous n'avons trouvé aucun résultat pour votre recherche</h4>
                 <div class="card-container">
                     <div v-for='job in filteredList.slice(sliceA, sliceB)' class="card">
-                        <strong>{{job.gender}}</strong>
+                        <strong>{{job.county}}</strong>
                         <div class="card-detail">
-                            <p class="categorie">{{job.race}}</p>
-                            <h3>{{job.name}}</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend
-                                efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui.
-                                Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
+                            <p class="categorie">{{job.industyLabel}}</p>
+                            <h3>{{job.label}}</h3>
+                            <p>{{job.description}}</p>
                             <router-link class="card-link" :to="{ name: 'Description', param: { job } }">En savoir plus</router-link>
                         </div>
                     </div>

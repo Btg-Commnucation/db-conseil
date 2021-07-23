@@ -3,7 +3,7 @@ const Home = {
   name: "Home",
   data: () => {
     return {
-      api: jsonApi.docs,
+      api: jsonApi.data,
       categorie: [],
       region: [],
       searchCategorie: "",
@@ -20,13 +20,13 @@ const Home = {
   },
   computed: {
     filteredList() {
-      return this.data.filter((job) => {
+      return this.api.filter((job) => {
         return (
-          job.title.toLowerCase().includes(this.searchKey.toLowerCase()) &&
-          job.category
+          job.label.toLowerCase().includes(this.searchJobType.toLowerCase()) &&
+          job.industryLabel
             .toLowerCase()
-            .includes(this.searchCategory.toLowerCase()) &&
-          job.job_type.toLowerCase().includes(this.searchArea.toLowerCase())
+            .includes(this.searchCategorie.toLowerCase()) &&
+          job.county.toLowerCase().includes(this.searchRegion.toLowerCase())
         );
       });
     },
@@ -40,7 +40,7 @@ const Home = {
 
     filteredCategory() {
       this.api.map((job) => {
-        this.categorie.push(job.race);
+        this.categorie.push(job.industryLabel);
       });
       this.categorie.sort();
       return (this.categorie = [...new Set(this.categorie)]);
@@ -48,7 +48,7 @@ const Home = {
 
     filteredRegion() {
       this.api.map((job) => {
-        this.region.push(job.gender);
+        this.region.push(job.county);
       });
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
@@ -95,7 +95,7 @@ const Resultats = {
   name: "Resultats",
   data: () => {
     return {
-      api: jsonApi.docs,
+      api: jsonApi.data,
       categorie: [],
       region: [],
       lookingCategorie: "",
@@ -123,18 +123,18 @@ const Resultats = {
 
       return this.api.filter((job) => {
         return (
-          job.name.toLowerCase().includes(this.lookingJobType.toLowerCase()) &&
-          job.race
+          job.label.toLowerCase().includes(this.lookingJobType.toLowerCase()) &&
+          job.industryLabel
             .toLowerCase()
             .includes(this.lookingCategorie.toLowerCase()) &&
-          job.gender.toLowerCase().includes(this.lookingRegion.toLowerCase())
+          job.county.toLowerCase().includes(this.lookingRegion.toLowerCase())
         );
       });
     },
 
     filteredCategory() {
       this.api.map((job) => {
-        this.categorie.push(job.race);
+        this.categorie.push(job.industryLabel);
       });
       this.categorie.sort();
       return (this.categorie = [...new Set(this.categorie)]);
@@ -142,7 +142,7 @@ const Resultats = {
 
     filteredRegion() {
       this.api.map((job) => {
-        this.region.push(job.gender);
+        this.region.push(job.county);
       });
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
@@ -201,7 +201,7 @@ const Description = {
   name: "Description",
   data: () => {
     return {
-      jobs: jsonApi.docs,
+      jobs: jsonApi.data,
       displayPost: "",
       categorie: [],
       region: [],
@@ -220,7 +220,7 @@ const Description = {
     },
     filteredCategory() {
       this.jobs.map((job) => {
-        this.categorie.push(job.race);
+        this.categorie.push(job.industryLabel);
       });
       this.categorie.sort();
       return (this.categorie = [...new Set(this.categorie)]);
@@ -228,7 +228,7 @@ const Description = {
 
     filteredRegion() {
       this.jobs.map((job) => {
-        this.region.push(job.gender);
+        this.region.push(job.county);
       });
       this.region.sort();
       return (this.region = [...new Set(this.region)]);
