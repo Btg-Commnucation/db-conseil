@@ -43,7 +43,7 @@ main.recrute {
 
   .image-container {
     margin-right: 4.6rem;
-    width: 115%;
+    width: 124%;
 
     @media screen and (max-width: 1315px) {
       width: unset;
@@ -65,7 +65,7 @@ main.recrute {
     text-align: center;
     max-width: 100%;
     margin: auto;
-    margin-bottom: 8.6rem;
+    margin-bottom: 5.6rem;
 
     &::before {
       content: url("../img/little-yellow-horizon-symbols.svg");
@@ -84,15 +84,17 @@ main.recrute {
     font-size: 3.2rem;
     font-family: abstracts.$neutra-bold;
     text-transform: uppercase;
-    margin-bottom: 2.7rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
   }
 
   p {
     font-size: 2rem;
     opacity: 82%;
+    line-height: 2.5rem;
 
     &:not(:last-of-type) {
-      margin-bottom: 2.6rem;
+      margin-bottom: 1.6rem;
     }
   }
 

@@ -37,10 +37,6 @@ register_sidebar( array(
 	'name' => 'Menu du bas de page',
 ) );
 register_sidebar( array(
-	'id' => 'footer-text',
-	'name' => 'Texte du bas de page',
-) );
-register_sidebar( array(
 	'id' => 'mentions-footer',
 	'name' => 'Mentions du bas de page',
 ) );

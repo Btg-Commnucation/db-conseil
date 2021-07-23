@@ -11,9 +11,6 @@
             <div class="widget-container">
                 <?php dynamic_sidebar( 'nav-menu' ); ?>
             </div>
-            <div class="widget-container">
-                <?php dynamic_sidebar( 'footer-text' ); ?>
-            </div>
         </section>
     </div>
     <section class="mentions">

@@ -131,6 +131,15 @@
   h3 {
     font-size: 2rem;
     font-family: abstracts.$neutra-bold;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: url("../img/little-yellow-symbols.svg");
+      position: absolute;
+      left: -4%;
+      top: 5%;
+    }
   }
 
   .article-bottom {

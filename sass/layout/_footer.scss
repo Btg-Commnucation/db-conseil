@@ -11,13 +11,20 @@ footer {
   .container::after {
     content: url("../img/middle-yellow-symnols.svg");
     position: absolute;
-    right: 0;
+    right: 17%;
     top: 0;
     bottom: 0;
     margin: auto;
     height: fit-content;
     height: -moz-fit-content;
 
+    @media screen and (max-width: 1097px) {
+      top: 39%;
+      right: 39%;
+    }
+    @media screen and (max-width: 730px) {
+      top: -2%;
+    }
     @media screen and (max-width: 451px) {
       display: none;
     }
