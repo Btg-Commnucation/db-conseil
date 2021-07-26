@@ -125,15 +125,19 @@ const Resultats = {
       this.pagination = [];
       this.pageNumber = 0;
 
-      return this.api.filter((job) => {
-        return (
-          job.label.toLowerCase().includes(this.lookingJobType.toLowerCase()) &&
-          job.industryLabel
-            .toLowerCase()
-            .includes(this.lookingCategorie.toLowerCase()) &&
-          job.county.toLowerCase().includes(this.lookingRegion.toLowerCase())
-        );
-      });
+      return this.api
+        .filter((job) => {
+          return (
+            job.label
+              .toLowerCase()
+              .includes(this.lookingJobType.toLowerCase()) &&
+            job.industryLabel
+              .toLowerCase()
+              .includes(this.lookingCategorie.toLowerCase()) &&
+            job.county.toLowerCase().includes(this.lookingRegion.toLowerCase())
+          );
+        })
+        .sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
     },
 
     filteredCategory() {
