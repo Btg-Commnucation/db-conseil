@@ -2,6 +2,10 @@
 
 .job {
   margin-bottom: 12rem;
+
+  @media screen and (max-width: 750px) {
+    margin-bottom: 7rem;
+  }
   .container {
     max-width: 65%;
     display: flex;
