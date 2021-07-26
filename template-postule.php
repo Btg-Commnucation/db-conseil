@@ -45,10 +45,10 @@ Template Name: Je postule
                 <h2><?php the_field('titre_carte'); ?></h2>
                 <div class="card-container">
                     <div v-for='job in slicePost' class="card">
-                        <strong>{{job.gender}}</strong>
+                        <strong>{{job.counter}}</strong>
                         <div class="card-detail">
-                            <p class="categorie">{{job.race}}</p>
-                            <h3>{{job.name}}</h3>
+                            <p class="categorie">{{job.industryLabel}}</p>
+                            <h3>{{job.label}}</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
                             <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
                         </div>
