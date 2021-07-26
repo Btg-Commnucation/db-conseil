@@ -32,9 +32,13 @@ const Home = {
     },
     slicePost() {
       if (this.showAll) {
-        return this.api.slice(this.sliceA, this.sliceB);
+        return this.api
+          .slice(this.sliceA, this.sliceB)
+          .sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
       } else {
-        return this.api.slice(0, 4);
+        return this.api
+          .slice(0, 4)
+          .sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
       }
     },
 
