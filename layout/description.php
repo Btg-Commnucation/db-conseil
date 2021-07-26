@@ -34,7 +34,7 @@
                 <div class="title-container">
                     <h2>{{displayingOffer.label}}</h2>
                     <p>{{displayingOffer.industryLabel}}</p>
-                    <span v-if="displayingOffer">REF : {{displayingOffer.reference}}</span>
+                    <span v-if="displayingOffer.reference">REF : {{displayingOffer.reference}}</span>
                 </div>
                 <strong>{{displayingOffer.county}}</strong>
             </section>

@@ -8,7 +8,7 @@
                 <div class="title-container">
                     <h2>{{displayingOffer.label}}</h2>
                     <p>{{displayingOffer.industryLabel}}</p>
-                    <span v-if="displayOffer">REF : {{displayingOffer.reference}}</span>
+                    <span v-if="displayOffer.reference">REF : {{displayingOffer.reference}}</span>
                 </div>
                 <strong>{{displayingOffer.county}}</strong>
             </section>
