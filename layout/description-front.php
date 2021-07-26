@@ -34,6 +34,7 @@
                 <div class="title-container">
                     <h2>{{displayingOffer.label}}</h2>
                     <p>{{displayingOffer.industryLabel}}</p>
+                    <span>REF : {{displayingOffer.reference}}</span>
                 </div>
                 <strong>{{displayingOffer.county}}</strong>
             </section>

@@ -45,6 +45,18 @@
       font-weight: 700;
     }
 
+    p {
+      font-family: abstracts.$neutra-bold;
+      text-transform: uppercase;
+      opacity: 80%;
+    }
+
+    span {
+      margin-top: 2rem;
+      font-size: 2rem;
+      opacity: 82%;
+    }
+
     strong {
       align-self: flex-end;
       background-color: abstracts.$yellow-600;
