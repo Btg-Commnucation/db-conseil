@@ -42,7 +42,7 @@
                 <ul>
                     <li>Ville : {{displayingOffer.city}}</li>
                     <li>Nom de l'entreprise : {{displayingOffer.company}}</li>
-                    <li>Niveau d'étude requis :{{displayingOffer.educationLevel}}</li>
+                    <li>Niveau d'étude requis : {{displayingOffer.educationLevel}}</li>
                 </ul>
             </section>
 
