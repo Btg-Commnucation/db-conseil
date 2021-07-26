@@ -49,12 +49,14 @@
       font-family: abstracts.$neutra-bold;
       text-transform: uppercase;
       opacity: 80%;
+      margin-top: 2.3rem;
     }
 
     span {
       margin-top: 2rem;
       font-size: 2rem;
       opacity: 82%;
+      display: flow-root;
     }
 
     strong {
