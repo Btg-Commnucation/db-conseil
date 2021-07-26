@@ -161,9 +161,11 @@
       grid-column: 1;
     }
 
-    .consentement {
+    .consentement label {
       font-family: "Neutra Book", sans-serif;
       font-size: 2.2rem;
+      display: flex;
+      flex-direction: row;
       color: #2a5393;
       font-weight: 400;
       display: flex;
