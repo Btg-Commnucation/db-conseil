@@ -33,7 +33,7 @@
                 <h4 v-if="filteredList.length >= 1" class="success">{{ filteredList.length }} offre<span v-if="filteredList.length >= 2">s</span> correspond <span v-if="filteredList.length >= 2">ent</span> à votre demande</h4>
                 <h4 v-if="filteredList.length < 1" class="error">Désolé, nous n'avons trouvé aucun résultat pour votre recherche</h4>
                 <div class="card-container">
-                    <div v-for='job in filteredList.slice(sliceA, sliceB)' v-if="!job.closing_reasonid" class="card">
+                    <div v-for='job in filteredList.slice(sliceA, sliceB)' class="card">
                         <strong>{{job.county}}</strong>
                         <div class="card-detail">
                             <p class="categorie">{{job.industyLabel}}</p>

@@ -33,7 +33,7 @@
             <div class="container">
                 <h2><?php the_field('titre_carte'); ?></h2>
                 <div class="card-container">
-                    <div v-for='job in slicePost' v-if="!job.closing_reasonid" class="card">
+                    <div v-for='job in slicePost' class="card">
                         <strong>{{job.county}}</strong>
                         <div class="card-detail">
                             <p class="categorie">{{job.industryLabel}}</p>
