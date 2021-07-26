@@ -45,7 +45,7 @@ Template Name: Je postule
                 <h2><?php the_field('titre_carte'); ?></h2>
                 <div class="card-container">
                     <div v-for='job in slicePost' class="card">
-                        <strong>{{job.counter}}</strong>
+                        <strong>{{job.county}}</strong>
                         <div class="card-detail">
                             <p class="categorie">{{job.industryLabel}}</p>
                             <h3>{{job.label}}</h3>
