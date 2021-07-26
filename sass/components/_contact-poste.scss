@@ -14,7 +14,7 @@
   }
 }
 
-.postule-contact {
+#wpcf7-f223-o1 form {
   margin-top: 5.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -38,7 +38,7 @@
   }
 
   label,
-  div {
+  div:not(.wpcf7-response-output) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@
     }
   }
 
-  label[for="message"] {
+  .message {
     grid-column: 1 / 5;
 
     @media screen and (max-width: 1200px) {
@@ -108,6 +108,10 @@
     @media screen and (max-width: 765px) {
       grid-column: 1;
     }
+
+    span {
+      width: 100%;
+    }
   }
 
   textarea {
@@ -115,7 +119,7 @@
     width: 100%;
   }
 
-  label[for="cv"] {
+  .cv {
     grid-column: 1 / 4;
     display: flex;
     flex-direction: row;
@@ -157,7 +161,7 @@
       grid-column: 1;
     }
 
-    label[for="consentement"] {
+    .consentement {
       font-family: "Neutra Book", sans-serif;
       font-size: 2.2rem;
       color: #2a5393;
@@ -175,7 +179,7 @@
     }
   }
 
-  label[for="envoyer"] {
+  .envoyer {
     align-self: flex-end;
     justify-self: flex-end;
     grid-column: 3/5;
@@ -224,5 +228,10 @@
       right: 0;
       margin: auto;
     }
+  }
+
+  .ajax-loader {
+    position: absolute !important;
+    right: -5% !important;
   }
 }
