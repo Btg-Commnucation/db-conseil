@@ -142,6 +142,10 @@
       width: fit-content;
       width: -moz-fot-content;
       margin-top: 0;
+
+      @media screen and (max-width: 420px) {
+        margin-right: 0;
+      }
     }
   }
 
