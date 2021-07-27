@@ -120,6 +120,10 @@ footer {
     margin-top: 5rem;
     padding: 2.1rem 0 3.8rem 0;
 
+    @media screen and (max-width: 550px) {
+      margin-top: 1rem;
+    }
+
     a {
       text-decoration: none;
       color: abstracts.$blue-700;
