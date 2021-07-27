@@ -428,6 +428,10 @@
     padding-top: 10.5rem;
     padding-bottom: 7.1rem;
 
+    @media screen and (max-width: 450px) {
+      padding-bottom: 4rem;
+    }
+
     .title-container {
       width: 100%;
       display: flex;

@@ -6,6 +6,9 @@
   @media screen and (max-width: 1000px) {
     margin-bottom: 7rem;
   }
+  @media screen and (max-width: 450px) {
+    margin-bottom: 4rem;
+  }
   .container {
     max-width: 65%;
     display: flex;
