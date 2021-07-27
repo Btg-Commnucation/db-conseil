@@ -17,6 +17,15 @@
     left: 0;
     height: 24em;
     opacity: 0.32;
+
+    &::after {
+      content: url("../img/width-opacity-symbols.svg");
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: fit-content;
+      width: -moz-fit-content;
+    }
   }
 
   h1 {
