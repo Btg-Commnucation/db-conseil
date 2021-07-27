@@ -315,7 +315,7 @@
       grid-column: 2 / 4;
     }
     @media screen and (max-width: 1060px) {
-      grid-column: 1 / 4;
+      grid-column: 1 / 3;
       grid-row: unset;
     }
     @media screen and (max-width: 697px) {
@@ -331,14 +331,6 @@
       align-items: flex-start;
       justify-content: center;
       font-size: 1.8rem;
-    }
-  }
-}
-
-#wpcf7-f55-o1 {
-  .consentement {
-    @media screen and (max-width: 1060px) {
-      grid-column: 1 / 4;
     }
   }
 }
