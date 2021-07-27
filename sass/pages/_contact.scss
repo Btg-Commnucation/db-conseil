@@ -77,6 +77,8 @@
       }
       @media screen and (max-width: 1069px) {
         max-width: 100%;
+        margin-left: 0;
+        text-align: center;
       }
 
       p {
@@ -329,6 +331,14 @@
       align-items: flex-start;
       justify-content: center;
       font-size: 1.8rem;
+    }
+  }
+}
+
+#wpcf7-f55-o1 {
+  .consentement {
+    @media screen and (max-width: 1060px) {
+      grid-column: 1 / 4;
     }
   }
 }
