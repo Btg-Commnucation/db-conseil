@@ -16,6 +16,11 @@
       padding-top: 43.5rem;
     }
   }
+  @media screen and (max-width: 379px) {
+    &.openSearch {
+      padding-top: 47.5rem;
+    }
+  }
 
   .container {
     max-width: 65%;

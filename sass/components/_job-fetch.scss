@@ -81,6 +81,9 @@
         top: -50%;
       }
     }
+    @media screen and (max-width: 365px) {
+      top: -24%;
+    }
   }
 }
 
@@ -181,6 +184,9 @@
 
   @media screen and (max-width: 590px) {
     padding-top: 43.5rem;
+  }
+  @media screen and (max-width: 379px) {
+    padding-top: 47.5rem;
   }
 }
 
