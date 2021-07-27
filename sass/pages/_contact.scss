@@ -31,6 +31,10 @@
       top: -35%;
       left: 0;
       right: 0;
+
+      @media screen and (max-width: 412px) {
+        top: -23%;
+      }
     }
 
     @media screen and (max-width: 1635px) {
