@@ -80,9 +80,15 @@
     width: 100%;
     height: auto;
     flex-direction: column;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     align-items: center;
     text-align: center;
-    transform: translateY(128px);
+    transform: translateY(137px);
+
+    @media screen and (max-width: 820px) {
+      transform: translateY(182px);
+    }
 
     li {
       display: flex !important;
