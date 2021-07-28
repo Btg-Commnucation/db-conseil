@@ -14,6 +14,9 @@
       left: 0;
       height: 24em;
       opacity: 0.32;
+      @media screen and (max-width: 500px) {
+        overflow: hidden;
+      }
 
       &::after {
         content: url("../img/width-opacity-symbols.svg");
@@ -24,7 +27,7 @@
         width: -moz-fit-content;
 
         @media screen and (max-width: 450px) {
-          width: 100%;
+          display: none;
         }
       }
     }
