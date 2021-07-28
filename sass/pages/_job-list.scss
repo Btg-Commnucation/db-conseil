@@ -22,6 +22,10 @@
         margin: auto;
         width: fit-content;
         width: -moz-fit-content;
+
+        @media screen and (max-width: 450px) {
+          width: 100%;
+        }
       }
     }
   }
