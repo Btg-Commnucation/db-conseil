@@ -90,6 +90,10 @@
       transform: translateY(182px);
     }
 
+    @media screen and (max-width: 450px) {
+      transform: translateY(155px);
+    }
+
     li {
       display: flex !important;
       margin: 0;
