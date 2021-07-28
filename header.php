@@ -56,8 +56,8 @@
                 </div><ul id="%1$s" class="%2$s" hidden>%3$s</ul>',
             ) ); ?>
             <div class="form-button__container">
-                <a href="http://db-conseils.local/je-postule/">Je postule</a>
-                <a href="http://db-conseils.local/je-recrute/">Je recrute</a>
+                <a href="<?php echo site_url('/je-postule'); ?>">Je postule</a>
+                <a href="<?php echo site_url('/votre-cabinet-de-recrutement-sur-mesure'); ?>">Je recrute</a>
             </div>
         </div>
     </header>
