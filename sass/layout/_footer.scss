@@ -8,28 +8,6 @@ footer {
     position: relative;
   }
 
-  .container::after {
-    content: url("../img/middle-yellow-symnols.svg");
-    position: absolute;
-    right: 17%;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: fit-content;
-    height: -moz-fit-content;
-
-    @media screen and (max-width: 1097px) {
-      top: 39%;
-      right: 39%;
-    }
-    @media screen and (max-width: 730px) {
-      top: -2%;
-    }
-    @media screen and (max-width: 451px) {
-      display: none;
-    }
-  }
-
   h2 {
     font-size: 2rem;
     font-family: abstracts.$neutra-bold;
@@ -118,7 +96,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
-    padding: 2.1rem 0 3.8rem 0;
+    padding: 2.1rem 0 2.1rem 0;
 
     @media screen and (max-width: 550px) {
       margin-top: 1rem;
@@ -134,6 +112,7 @@ footer {
 .hero-footer {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
   z-index: 1;

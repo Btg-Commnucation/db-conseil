@@ -1,7 +1,7 @@
 @use '../abstracts';
 
 .cabinet {
-  padding-top: 7.4rem;
+  padding-top: 13.3rem;
   padding-bottom: 8.1rem;
   background-color: abstracts.$grey-100;
   position: relative;
@@ -84,6 +84,10 @@
     }
   }
 
+  .right-side {
+    align-self: flex-start;
+  }
+
   h1 {
     font-size: 6rem;
     font-family: abstracts.$neutra-bold;
@@ -150,7 +154,7 @@
 
     .left-side {
       width: unset;
-      margin-right: 9rem;
+      margin-right: 4rem;
 
       @media screen and (max-width: 1468px) {
         margin-right: 2rem;
