@@ -65,7 +65,7 @@
     font-family: abstracts.$neutra-bold;
     font-size: 1.5rem;
     text-transform: uppercase;
-    padding: 0.95rem 1.8rem;
+    padding: 0.7rem 1.8rem;
     border: 0px solid transparent;
     border-radius: 5px;
   }
@@ -80,6 +80,11 @@
     font-weight: 700;
   }
 
+  .categorie {
+    text-transform: uppercase;
+    opacity: 82%;
+  }
+
   .card-link {
     color: abstracts.$blue-700;
     font-family: abstracts.$neutra-bold;
@@ -89,10 +94,13 @@
     margin-top: 2.1rem;
     font-weight: 700;
     text-underline-offset: 0.7rem;
+    display: flex;
+    align-items: center;
 
     &::before {
       content: url(../img/little-blue-symbols.svg);
       margin-right: 0.9rem;
+      line-height: 0;
     }
   }
 

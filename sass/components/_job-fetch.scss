@@ -201,10 +201,13 @@
   padding: 2.448rem 3.02rem 1.851rem 3.02rem;
   text-decoration: none;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 
   &::before {
     content: url("../img/little-white-symbols.svg");
     margin-right: 0.5rem;
+    line-height: 0;
   }
 
   @media screen and (max-width: 1074px) {
