@@ -65,7 +65,7 @@ Template Name: Je postule
         <section class="bottom-part">
             <div class="container">
                 <h2><?php the_field('titre_bottom') ?></h2>
-                <p><?php the_field('texte_bottom') ?></p>
+                <i><?php the_field('texte_bottom') ?></i>
                 <div class="article-bottom">
                     <aside>
                         <?php $image = get_field('image'); ?>

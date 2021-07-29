@@ -24,6 +24,7 @@ $logo_image = get_field('logo');
     <section class="contact-form">
         <div class="container">
             <h2><?php the_field('titre_formulaire_de_contact'); ?></h2>
+            <p><?php the_field('petit_texte'); ?></p>
             <?php echo do_shortcode('[contact-form-7 id="55" title="Formulaire de contact 1"]'); ?>
         </div>
     </section>

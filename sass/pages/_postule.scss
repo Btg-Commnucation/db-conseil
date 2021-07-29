@@ -8,7 +8,7 @@
   &::before {
     content: url("../img/dot-width-blue.svg");
     position: absolute;
-    top: 6%;
+    top: 3.5%;
     left: 1%;
     transform: scaleX(-1);
 
@@ -123,11 +123,13 @@
     margin-bottom: 3rem;
   }
 
-  p {
+  p,
+  i {
     font-size: 1.8rem;
   }
   p,
-  h3 {
+  h3,
+  i {
     opacity: 86%;
   }
 
