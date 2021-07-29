@@ -97,7 +97,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3.6rem 3.1rem 3.1rem 3.1rem;
+  padding: 3.6rem 3.1rem 5.8rem 3.1rem;
   position: absolute;
   bottom: -20em;
 
@@ -158,9 +158,10 @@
     color: abstracts.$blue-700;
     border: 0px solid transparent;
     border-radius: 5px;
-    padding: 1.4rem 0.4rem;
+    padding: 0rem 1rem;
     margin-right: 1rem;
     width: 25%;
+    max-height: 2.8em;
 
     @media screen and (max-width: 1074px) {
       width: unset;
@@ -197,8 +198,10 @@
   background-color: abstracts.$yellow-700;
   border-radius: 10px;
   color: white;
+  display: flex;
+  align-items: center;
   border: 1px solid abstracts.$yellow-700;
-  padding: 2.448rem 3.02rem 1.851rem 3.02rem;
+  padding: 1.5rem 3.02rem 1rem 3.02rem;
   text-decoration: none;
   text-transform: uppercase;
 
