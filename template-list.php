@@ -47,7 +47,7 @@ get_header();
                     </div>
                 </div>
             </section>
-            <section class="job">
+            <section class="job symbols-offer">
                 <div class="container">
                     <h2><?php the_field('titre_carte'); ?></h2>
                     <div class="card-container">

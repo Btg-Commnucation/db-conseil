@@ -188,6 +188,46 @@
   }
 }
 
+#root {
+  overflow: hidden;
+}
+
+.symbols-offer {
+  position: relative;
+
+  &::after {
+    content: url("../img/width-yellow-symbols.svg");
+    position: absolute;
+    top: -73%;
+    right: -16%;
+
+    @media screen and (max-width: 1655px) {
+      right: -22%;
+    }
+    @media screen and (max-width: 1446px) {
+      right: -27%;
+    }
+    @media screen and (max-width: 1371px) {
+      right: -32%;
+    }
+    @media screen and (max-width: 1263px) {
+      right: -34%;
+      top: -12%;
+      z-index: -1;
+    }
+    @media screen and (max-width: 1122px) {
+      right: -40%;
+    }
+    @media screen and (max-width: 1043px) {
+      inset: 0;
+      margin: auto;
+      width: fit-content;
+      width: -moz-fit-content;
+      top: 35%;
+    }
+  }
+}
+
 .rechercher-job {
   font-size: 1.6rem;
   background-color: abstracts.$yellow-700;
