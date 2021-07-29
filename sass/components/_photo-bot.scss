@@ -1,6 +1,11 @@
 .photo-bot {
   position: relative;
-
+  background-image: url("../img/bottom-img.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  height: 308px;
+  background-repeat: no-repeat;
+  background-size: cover;
   .gradient-bottom {
     position: absolute;
     width: 100%;
