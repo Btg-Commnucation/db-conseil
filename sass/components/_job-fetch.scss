@@ -109,11 +109,10 @@
   }
 
   @media screen and (max-width: 1074px) {
-    bottom: -23em;
+    bottom: -34em;
   }
-
-  @media screen and (max-width: 590px) {
-    bottom: -35em;
+  @media screen and (max-width: 435px) {
+    bottom: -38em;
   }
 
   form {
@@ -121,11 +120,11 @@
     display: flex;
     margin-top: 4.1rem;
     padding-bottom: 2rem;
-    justify-content: space-between;
+    justify-content: center;
 
     @media screen and (max-width: 1074px) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 1.5em;
@@ -163,7 +162,7 @@
     width: 25%;
 
     @media screen and (max-width: 1074px) {
-      width: unset;
+      width: 100%;
     }
 
     @media screen and (max-width: 590px) {
@@ -178,17 +177,14 @@
 }
 
 .job {
-  padding-top: 15.5rem;
+  padding-top: 20.5rem;
 
   @media screen and (max-width: 1074px) {
-    padding-top: 24.5rem;
-  }
-
-  @media screen and (max-width: 590px) {
     padding-top: 43.5rem;
   }
-  @media screen and (max-width: 379px) {
-    padding-top: 47.5rem;
+
+  @media screen and (max-width: 435px) {
+    padding-top: 49.5rem;
   }
 }
 

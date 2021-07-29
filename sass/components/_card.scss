@@ -123,11 +123,14 @@
   text-transform: uppercase;
   border-radius: 10px;
   border: 1px solid abstracts.$blue-700;
-  padding: 2.448rem 4.68rem 1.9rem 2.98rem;
+  padding: 1.5rem 3rem 1.5rem 2.68rem;
+  display: flex;
+  align-items: center;
 
   &::before {
     content: url("../img/little-white-symbols.svg");
     margin-right: 0.9rem;
+    line-height: 0;
   }
 }
 

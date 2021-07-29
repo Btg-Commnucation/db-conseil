@@ -84,23 +84,12 @@
     padding-bottom: 5rem;
     align-items: center;
     text-align: center;
-    transform: translateY(137px);
-
-    @media screen and (max-width: 820px) {
-      transform: translateY(182px);
-    }
-
-    @media screen and (max-width: 450px) {
-      transform: translateY(155px);
-    }
-
+    transform: translateY(204px);
     li {
       display: flex !important;
       margin: 0;
 
-      &:not(:last-of-type) {
-        margin-bottom: 2rem;
-      }
+      margin-bottom: 2rem;
     }
   }
 

@@ -14,18 +14,16 @@ header {
     align-items: center;
 
     @media screen and (max-width: 1150px) {
-      width: 60%;
+      width: unset;
       justify-content: space-between;
     }
     @media screen and (max-width: 820px) {
       justify-content: space-around;
     }
-    @media screen and (max-width: 520px) {
-      width: auto;
-    }
   }
   #main-menu {
     display: flex;
+    align-items: center;
     li:not(:last-of-type) {
       margin-right: 4.4rem;
     }
@@ -41,25 +39,20 @@ header {
     }
   }
 
-  .vertical {
-    display: none;
-    @media screen and (max-width: 520px) {
-      display: inline-block;
-    }
-  }
-
-  @media screen and (max-width: 520px) {
-    .horizontal {
-      display: none;
-    }
-  }
-
   .homeurl {
     display: inline-block;
   }
 
   .form-button__container {
     margin-left: 4.4rem;
+    display: flex;
+
+    @media screen and (max-width: 1150px) {
+      margin-left: 0;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
 
     @media screen and (max-width: 820px) {
       display: flex;
@@ -67,27 +60,23 @@ header {
       row-gap: 1rem;
     }
 
-    @media screen and (max-width: 613px) {
-      margin-left: 2rem;
-    }
-
-    @media screen and (max-width: 377px) {
-      margin-left: 1rem;
-    }
-
     a {
       font-size: 1.8rem;
-      color: white;
+      color: white !important;
       background-color: abstracts.$blue-700;
       padding: 1rem 1rem 1rem 1rem;
       text-decoration: none;
-      font-weight: 400;
+      font-family: abstracts.$neutra-book !important;
+      font-weight: 400 !important;
       text-transform: uppercase;
       position: relative;
       border-radius: 5px;
+      display: flex;
+      align-items: center;
 
       &::before {
         content: url(../img/little-white-symbols.svg);
+        line-height: 0;
       }
 
       &:last-of-type {
@@ -97,7 +86,7 @@ header {
 
     a:first-of-type {
       margin-right: 2.3rem;
-      @media screen and (max-width: 724px) {
+      @media screen and (max-width: 1150px) {
         margin-right: 0;
       }
     }
