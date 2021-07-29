@@ -53,13 +53,13 @@
                     <div class="menu-btn__burger">
                     </div>
                 </div><ul id="%1$s" class="%2$s" hidden>%3$s<div class="form-button__container">
-                <a href="/je-postule" >Je postule</a>
-                <a href="/votre-cabinet-de-recrutement-sur-mesure" >Je recrute</a>
+                <a rel="noopener noreferrer" href="/je-postule" >Je postule</a>
+                <a rel="noopener noreferrer" href="/votre-cabinet-de-recrutement-sur-mesure" >Je recrute</a>
             </div></ul>',
             ) ); ?>
             <!-- <div class="form-button__container">
-                <a href="<?php echo site_url('/je-postule'); ?>">Je postule</a>
-                <a href="<?php echo site_url('/votre-cabinet-de-recrutement-sur-mesure'); ?>">Je recrute</a>
+                <a rel="noopener noreferrer" href="<?php echo site_url('/je-postule'); ?>">Je postule</a>
+                <a rel="noopener noreferrer" href="<?php echo site_url('/votre-cabinet-de-recrutement-sur-mesure'); ?>">Je recrute</a>
             </div> -->
         </div>
     </header>

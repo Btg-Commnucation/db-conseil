@@ -3,7 +3,7 @@
 <div>
     <article class="job-description" :class="startSearching && 'openSearch'">
         <div class="container">
-            <a href="<?php the_field('lien_offres'); ?>"><?php the_field('texte_lien_offres'); ?></a>
+            <a rel="noopener noreferrer" href="<?php the_field('lien_offres'); ?>"><?php the_field('texte_lien_offres'); ?></a>
             <section class="title">
                 <div class="title-container">
                     <h2>{{displayingOffer.label}}</h2>

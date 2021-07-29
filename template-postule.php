@@ -81,7 +81,7 @@ Template Name: Je postule
                             <?php endwhile; ?>
                         <?php endif; ?>
                         <div class="lien-container">
-                            <a href="<?php the_field('lien_bottom') ?>"><?php the_field('texte_lien') ?></a>
+                            <a rel="noopener noreferrer" href="<?php the_field('lien_bottom') ?>"><?php the_field('texte_lien') ?></a>
                             <p><?php the_field('texte_post_lien'); ?></p>
                         </div>
                     </article>
