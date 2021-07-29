@@ -125,6 +125,12 @@ const Resultats = {
       this.pagination = [];
       this.pageNumber = 0;
 
+      window.scroll({
+        top: 618,
+        left: 0,
+        behavior: "smooth",
+      });
+
       return this.api
         .filter((job) => {
           return (
