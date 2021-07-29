@@ -298,14 +298,14 @@
       font-size: 1.8rem;
       color: white;
       background-color: abstracts.$blue-700;
-      padding: 2rem 4rem;
+      padding: 1.5rem 4rem;
       text-decoration: none;
       font-weight: 400;
       text-transform: uppercase;
       position: relative;
       border-radius: 10px;
       position: absolute;
-      bottom: -9%;
+      bottom: -6%;
       right: 25%;
 
       &::before {
@@ -377,6 +377,7 @@
       }
       @media screen and (max-width: 1000px) {
         padding-right: 4.4rem;
+        padding-top: 4rem;
       }
 
       a {
