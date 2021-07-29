@@ -1,7 +1,7 @@
 @use '../abstracts';
 
 .contact {
-  padding-top: 6.5rem;
+  padding-top: 11rem;
   background-color: abstracts.$grey-100;
   .container {
     display: flex;
@@ -20,7 +20,7 @@
     font-family: "Neutra Bold", sans-serif;
     font-weight: 700;
     position: relative;
-    width: 34%;
+    width: 65%;
     line-height: 6rem;
     text-align: center;
     margin-bottom: 5.5rem;
@@ -28,10 +28,16 @@
     &::before {
       content: url(../img/little-yellow-horizon-symbols.svg);
       position: absolute;
-      top: -35%;
+      top: -55%;
       left: 0;
       right: 0;
 
+      @media screen and (max-width: 724px) {
+        top: -35%;
+      }
+      @media screen and (max-width: 618px) {
+        top: -24%;
+      }
       @media screen and (max-width: 412px) {
         top: -23%;
       }
@@ -94,6 +100,13 @@
         font-family: abstracts.$neutra-bold;
         font-weight: 700;
       }
+
+      @media screen and (max-width: 931px) {
+        img {
+          max-width: 75%;
+          align-self: center;
+        }
+      }
     }
   }
 }
@@ -132,6 +145,7 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 2.7rem;
+    text-align: center;
   }
 
   p {
