@@ -123,6 +123,8 @@
     font-size: 2rem;
     font-family: abstracts.$neutra-bold;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 
     &:not(:first-of-type) {
       margin-top: 4.6rem;
@@ -130,6 +132,8 @@
 
     &:before {
       content: url("../img/little-yellow-symbols.svg");
+      line-height: 0;
+      margin-right: 0.3em;
     }
   }
 
