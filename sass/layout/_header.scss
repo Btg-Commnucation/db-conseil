@@ -13,7 +13,7 @@ header {
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1175px) {
       width: unset;
       justify-content: space-between;
     }
@@ -47,7 +47,7 @@ header {
     margin-left: 4.4rem;
     display: flex;
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1175px) {
       margin-left: 0;
       justify-content: center;
       text-align: center;
@@ -86,7 +86,7 @@ header {
 
     a:first-of-type {
       margin-right: 2.3rem;
-      @media screen and (max-width: 1150px) {
+      @media screen and (max-width: 1175px) {
         margin-right: 0;
       }
     }
