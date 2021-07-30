@@ -56,6 +56,9 @@
     border: 0px solid transparent;
     border-bottom: 1px solid #2a5393;
     width: 86%;
+    font-family: abstracts.$neutra-book;
+    color: abstracts.$blue-700;
+    font-size: 2.2rem;
     background-color: transparent;
     @media screen and (max-width: 1580) {
       width: 100%;
@@ -114,8 +117,13 @@
     }
   }
 
-  .civilite {
-    margin-top: 0.9em;
+  .civilite-container {
+    margin-top: 1.3em;
+
+    label {
+      font-family: abstracts.$neutra-book;
+      font-weight: 400;
+    }
 
     .first {
       margin-left: 0;

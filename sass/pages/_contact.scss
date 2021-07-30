@@ -215,14 +215,20 @@
       }
     }
 
-    .civilite {
-      margin-top: 0.9em;
+    .civilite-container {
+      margin-top: 1.3em;
+
+      label {
+        font-family: abstracts.$neutra-book;
+        font-weight: 400;
+      }
     }
   }
 
   input,
   span {
-    font-family: abstracts.$neutra-book;
+    font-family: abstracts.$neutra-book !important;
+    color: abstracts.$blue-700;
     font-size: 2.2rem;
     color: abstracts.$blue-700;
     font-weight: 400;
