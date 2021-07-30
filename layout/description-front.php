@@ -33,7 +33,7 @@
     </aside>
     <article class="job-description" :class="startSearching && 'openSearch'">
         <div class="container">
-            <a class="back-offre" href="http://localhost/db-conseil/nos-offres"><?php the_field('retour_aux_offres'); ?></a>
+            <a class="back-offre" href="/db-conseils/nos-offres"><?php the_field('retour_aux_offres'); ?></a>
             <section class="title">
                 <div class="title-container">
                     <h2>{{displayingOffer.label}}</h2>

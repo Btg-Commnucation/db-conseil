@@ -66,7 +66,7 @@ main.recrute {
     text-align: center;
     max-width: 100%;
     margin: auto;
-    margin-bottom: 5.6rem;
+    margin-bottom: 12.6rem;
 
     &::before {
       content: url("../img/little-yellow-horizon-symbols.svg");
@@ -104,6 +104,7 @@ main.recrute {
 
   .hero-banner__content {
     padding-bottom: 7rem;
+    align-self: center;
     @media screen and (max-width: 800px) {
       padding-bottom: 3rem;
     }

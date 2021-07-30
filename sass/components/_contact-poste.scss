@@ -114,18 +114,27 @@
     }
   }
 
+  .civilite {
+    margin-top: 0.9em;
+
+    .first {
+      margin-left: 0;
+    }
+  }
+
   textarea {
     margin-top: 1.8rem;
     width: 100%;
     background-color: transparent;
+    border: 1px solid abstracts.$blue-700;
   }
 
   .cv {
     grid-column: 1 / 4;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 1.8rem;
-    align-items: center;
+    align-items: flex-start;
     font-family: abstracts.$neutra-book;
 
     @media screen and (max-width: 950px) {
