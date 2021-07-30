@@ -13,7 +13,7 @@ header {
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 1175px) {
+    @media screen and (max-width: 1330px) {
       width: unset;
       justify-content: space-between;
     }
@@ -25,7 +25,11 @@ header {
     display: flex;
     align-items: center;
     li:not(:last-of-type) {
-      margin-right: 4.4rem;
+      margin-right: 6.3rem;
+    }
+
+    li:last-of-type {
+      margin-right: 8.3rem;
     }
 
     a {
