@@ -182,8 +182,10 @@
     @media screen and (max-width: 765px) {
       grid-column: 1;
     }
+  }
 
-    .consentement label {
+  .consentement {
+    label {
       font-family: "Neutra Book", sans-serif;
       font-size: 2.2rem;
       display: flex;
@@ -197,10 +199,17 @@
         align-self: flex-start;
         width: fit-content;
         margin-right: 0.8rem;
-        margin-top: 0.5em;
+        margin-top: 0.3em;
         width: -moz-fit-content;
       }
     }
+    span {
+      margin-left: 0;
+    }
+  }
+
+  label.cv {
+    margin-bottom: 0.5em;
   }
 
   .envoyer {
