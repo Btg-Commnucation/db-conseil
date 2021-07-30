@@ -95,6 +95,10 @@
 
   .job-container {
     bottom: -24em;
+
+    @media screen and (max-width: 1074px) {
+      bottom: -38em;
+    }
   }
   .plus {
     bottom: -10.5em;
@@ -122,7 +126,7 @@
   }
 
   .cabinet {
-    padding-bottom: 11.2rem;
+    padding-bottom: 15.2rem;
     position: relative;
     overflow-x: unset;
 
@@ -166,8 +170,8 @@
         content: url("../img/width-yellow-symbols.svg");
         position: absolute;
         z-index: 1;
-        right: -5%;
-        bottom: -34%;
+        right: -4%;
+        bottom: -29%;
         @media screen and (max-width: 1798px) {
           right: -6%;
         }
