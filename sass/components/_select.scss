@@ -1,0 +1,23 @@
+@use '../abstracts';
+
+select {
+  appearance: none;
+  outline: none;
+  border: 1px solid abstracts.$blue-700;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  &::after {
+    content: "";
+    background-color: abstracts.$blue-700;
+    width: 0.8em;
+    height: 0.5em;
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
