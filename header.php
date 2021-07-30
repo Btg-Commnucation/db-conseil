@@ -53,8 +53,8 @@
                     <div class="menu-btn__burger">
                     </div>
                 </div><ul id="%1$s" class="%2$s" hidden>%3$s<div class="form-button__container">
-                <a rel="noopener noreferrer" href="/je-postule" >Je postule</a>
-                <a rel="noopener noreferrer" href="/votre-cabinet-de-recrutement-sur-mesure" >Je recrute</a>
+                <a rel="noopener noreferrer" href="/db-conseils/je-postule" >Je postule</a>
+                <a rel="noopener noreferrer" href="/db-conseils/votre-cabinet-de-recrutement-sur-mesure" >Je recrute</a>
             </div></ul>',
             ) ); ?>
             <!-- <div class="form-button__container">
