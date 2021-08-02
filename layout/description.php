@@ -56,6 +56,18 @@
                     <h3><?php the_field('titre_information_un'); ?></h3>
                     <p>{{displayingOffer.description}}</p>
                 </div>
+                <div v-if="displayingOffer.requirements" class="part-one">
+                    <h3>Exigences</h3>
+                    <p>{{displayingOffer.requirements}}</p>
+                </div>
+                <div v-if="displayingOffer.benefits" class="part-one">
+                    <h3>Avantages</h3>
+                    <p>{{displayingOffer.benefits}}</p>
+                </div>
+                <div v-if="displayingOffer.salary_left || displayingOffer.salary_right" class="part-one">
+                    <h3>Salaire</h3>
+                    <p>{{displayingOffer.salary_left}} - {{displayingOffer.salary_right}}</p>
+                </div>
             </section>
         </div>
     </article>
