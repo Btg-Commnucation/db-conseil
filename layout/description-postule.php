@@ -15,9 +15,16 @@
             <section class="details">
                 <h3><?php the_field('type_doffre'); ?></h3>
                 <ul>
-                    <li>Ville : {{displayingOffer.city}}</li>
-                    <li>Nom de l'entreprise : {{displayingOffer.company}}</li>
-                    <li>Niveau d'étude requis :{{displayingOffer.educationLevel}}</li>
+                    <li v-if="displayingOffer.city">Ville : {{displayingOffer.city}}</li>
+                    <li v-if="displayingOffer.company">Nom de l'entreprise : {{displayingOffer.company}}</li>
+                    <li v-if="displayingOffer.educationLevel">Niveau d'étude requis : {{displayingOffer.educationLevel}}</li>
+                    <li v-if="displayingOffer.contract_type">
+                        Type de contract : <span v-if="displayingOffer.contract_type == 1">CDI</span><span v-if="displayingOffer.contract_type == 2">Freelance</span><span v-if="displayingOffer.contract_type == 3">Stage</span><span v-if="displayingOffer.contract_type == 4">CDD</span>
+                    </li>
+                    <li v-if="displayingOffer.contract_durationid">Durée du contract : {{displayingOffer.contract_durationid}} mois</li>
+                    <li v-if="displayingOffer.employment_type">
+                        Horaires : <span v-if="displayingOffer.employment_type == 99">Mi-temps</span><span v-if="displayingOffer.employment_type == 1">Temps plein</span><span v-if="displayingOffer.employment_type == 100">3 / 4 temps</span>
+                    </li>
                 </ul>
             </section>
 
