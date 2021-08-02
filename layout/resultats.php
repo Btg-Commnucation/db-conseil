@@ -11,13 +11,13 @@
                             <div class="select">
                                 <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
                                     <option value="">Catégorie</option>
-                                    <option v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
+                                    <option class="deroulant" v-for="categorie in filteredCategory" v-bind:value="categorie">- {{categorie}}</option>
                                 </select>
                             </div>
                             <div class="select">
                                 <select v-model="searchRegion" name="region" id="region" aria-label="Dans quelle région recherchez-vous ?">
                                     <option value="">Région</option>
-                                    <option v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
+                                    <option class="deroulant" v-for="region in filteredRegion" v-bind:value="region">- {{region}}</option>
                                 </select>
                             </div>
                             <input v-model="searchJobType" type="text" name="post-type" id="post-type"
