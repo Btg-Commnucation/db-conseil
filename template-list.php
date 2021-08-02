@@ -60,7 +60,8 @@ get_header();
                             <div class="card-detail">
                                 <p class="categorie">{{job.industryLabel}}</p>
                                 <h3>{{job.label}}</h3>
-                                <p>{{job.description}}</p>
+                                <p v-if="job.description.length<208">{{job.description}}</p>
+                                <p v-else>{{job.description.substring(0, 208)+"..."}}</p>
                                 <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
                             </div>
                         </div>

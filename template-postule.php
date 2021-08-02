@@ -49,7 +49,8 @@ Template Name: Je postule
                         <div class="card-detail">
                             <p class="categorie">{{job.industryLabel}}</p>
                             <h3>{{job.label}}</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
+                            <p v-if="job.description.length<208">{{job.description}}</p>
+                            <p v-else>{{job.description.substring(0, 208)+"..."}}</p>
                             <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
                         </div>
                     </div>
