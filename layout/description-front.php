@@ -66,7 +66,7 @@
                 </div>
                 <div v-if="displayingOffer.salary_left || displayingOffer.salary_right" class="part-one">
                     <h3>Salaire</h3>
-                    <p>{{displayingOffer.salary_left}} - {{displayingOffer.salary_right}}</p>
+                    <p>{{displayingOffer.salary_left}} - {{displayingOffer.salary_right}} {{displayingOffer.currency}} par<span v-if="displayingOffer.salary_time_unit == 3 "> an</span> <span v-if="displayingOffer.salary_time_unit == 4"> heure</span><span v-if="displayingOffer.salary_time_unit == 2"> jour</span><span v-if="displayingOffer.salary_time_unit == 1"> mois</span></p>
                 </div>
             </section>
         </div>
