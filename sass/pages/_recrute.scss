@@ -68,6 +68,13 @@ main.recrute {
     margin: auto;
     margin-bottom: 12.6rem;
 
+    @media screen and (max-width: 1369px) {
+      font-size: 5.5rem;
+    }
+    @media screen and (max-width: 1315px) {
+      font-size: 6rem;
+    }
+
     &::before {
       content: url("../img/little-yellow-horizon-symbols.svg");
       position: absolute;
