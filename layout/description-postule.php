@@ -25,6 +25,9 @@
                     <li v-if="displayingOffer.employment_type">
                         Horaires : <span v-if="displayingOffer.employment_type == 99">Mi-temps</span><span v-if="displayingOffer.employment_type == 1">Temps plein</span><span v-if="displayingOffer.employment_type == 100">3 / 4 temps</span>
                     </li>
+                    <li v-if="displayingOffer.mobilityid || displayingOffer.mobilityid != 999">
+                        Mobilité : <span v-if="displayingOffer.mobilityid == 1">Départementale</span><span v-if="displayingOffer.mobilityid == 2">Régionale</span><span v-if="displayingOffer.mobilityid == 3">Nationale</span><span v-if="displayingOffer.mobilityid == 4">Union européenne</span><span v-if="displayingOffer.mobilityid == 5">Internationale</span>
+                    </li>
                 </ul>
             </section>
 
