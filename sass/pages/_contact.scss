@@ -20,7 +20,7 @@
     font-family: "Neutra Bold", sans-serif;
     font-weight: 700;
     position: relative;
-    width: 65%;
+    width: 80%;
     line-height: 6rem;
     text-align: center;
     margin-bottom: 5.5rem;
@@ -43,14 +43,13 @@
       }
     }
 
-    @media screen and (max-width: 1635px) {
-      width: 52%;
+    @media screen and (max-width: 1229px) {
+      width: 95%;
     }
-
     @media screen and (max-width: 1069px) {
       width: 97%;
     }
-    @media screen and (max-width: 573px) {
+    @media screen and (max-width: 1000px) {
       width: 100%;
     }
   }
