@@ -10,7 +10,7 @@
                     <p>{{displayingOffer.industryLabel}}</p>
                     <span v-if="displayingOffer.reference">REF : {{displayingOffer.reference}}</span>
                 </div>
-                <strong>{{displayingOffer.county}}</strong>
+                <strong>{{displayingOffer.address_state}}</strong>
             </section>
             <section class="details">
                 <h3><?php the_field('type_doffre'); ?></h3>

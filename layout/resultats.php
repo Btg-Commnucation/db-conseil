@@ -35,7 +35,7 @@
                 <h4 v-if="filteredList.length < 1" class="error">Désolé, nous n'avons trouvé aucun résultat pour votre recherche</h4>
                 <div class="card-container">
                     <div v-for='job in filteredList.slice(sliceA, sliceB)' class="card">
-                        <strong>{{job.county}}</strong>
+                        <strong>{{job.address_state}}</strong>
                         <div class="card-detail">
                             <p class="categorie">{{job.industyLabel}}</p>
                             <h3>{{job.label}}</h3>

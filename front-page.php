@@ -47,7 +47,7 @@
                 <h2><?php the_field('titre_carte'); ?></h2>
                 <div class="card-container">
                     <div v-for='job in slicePost' class="card">
-                        <strong>{{job.county}}</strong>
+                        <strong>{{job.address_state}}</strong>
                         <div class="card-detail">
                             <p class="categorie">{{job.industryLabel}}</p>
                             <h3>{{job.label}}</h3>
