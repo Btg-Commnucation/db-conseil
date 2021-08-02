@@ -31,7 +31,7 @@
     </article>
     <section class="postuler-job">
         <div class="container">
-            <h2>Postuler à ce poste</h2>
+            <h2>Postuler à cette offre</h2>
             <?php echo do_shortcode('[contact-form-7 id="223" title="Postuler au poste"]'); ?>
         </div>
     </section>
