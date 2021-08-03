@@ -280,7 +280,6 @@ const router = new VueRouter({
       props: true,
     },
   ],
-  mode: "history",
 });
 
 const vue = new Vue({
