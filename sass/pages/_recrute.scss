@@ -190,12 +190,16 @@ main.recrute {
       text-transform: uppercase;
       font-size: 2rem;
       text-align: center;
+      white-space: nowrap;
+      @media screen and (max-width: 1260px) {
+        white-space: normal;
+      }
     }
 
     p {
       opacity: 82%;
       font-size: 2rem;
-      text-align: center;
+      text-align: left;
       margin-top: 3rem;
     }
   }
