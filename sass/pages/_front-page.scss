@@ -130,11 +130,11 @@
         z-index: 1;
         bottom: -9%;
         right: 23%;
-        @media screen and (max-width: 1637px) {
-          right: 27%;
+        @media screen and (max-width: 1651px) {
+          right: 20%;
         }
-        @media screen and (max-width: 1448px) {
-          right: 32%;
+        @media screen and (max-width: 1511px) {
+          right: 19%;
         }
         @media screen and (max-width: 1235px) {
           right: 18%;
@@ -163,8 +163,14 @@
         @media screen and (max-width: 1655px) {
           right: -7%;
         }
-        @media screen and (max-width: 1567px) {
-          right: -9%;
+        @media screen and (max-width: 1651px) {
+          right: -12%;
+        }
+        @media screen and (max-width: 1511px) {
+          right: -15%;
+        }
+        @media screen and (max-width: 1370px) {
+          right: -20%;
         }
         @media screen and (max-width: 1235px) {
           right: -25%;
