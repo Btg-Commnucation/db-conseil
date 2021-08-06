@@ -13,6 +13,12 @@ main.recrute {
       position: absolute;
       top: 72%;
       left: -6%;
+      @media screen and (max-width: 1765px) {
+        left: -8%;
+      }
+      @media screen and (max-width: 1651px) {
+        display: none;
+      }
 
       @media screen and (max-width: 1315px) {
         display: none;
@@ -23,6 +29,19 @@ main.recrute {
       content: url("../img/width-yellow-symbols.svg");
       position: absolute;
       top: 8%;
+
+      @media screen and (max-width: 1765px) {
+        left: -5%;
+      }
+      @media screen and (max-width: 1651px) {
+        left: -10%;
+      }
+      @media screen and (max-width: 1488px) {
+        left: -13%;
+      }
+      @media screen and (max-width: 1374px) {
+        left: -18%;
+      }
 
       @media screen and (max-width: 1315px) {
         display: none;
