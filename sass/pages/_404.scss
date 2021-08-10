@@ -1,8 +1,10 @@
 @use '../abstracts';
 
-.error404 {
+.pageerror404 {
   max-width: 100%;
-  height: 100vh;
+  height: 80vh;
+  padding-top: 20rem;
+  padding-bottom: 25rem;
 
   article {
     margin: auto;
@@ -10,12 +12,22 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 
     h1 {
       font-family: abstracts.$neutra-bold;
       font-size: 6rem;
       text-transform: uppercase;
       text-align: center;
+      position: relative;
+
+      &::before {
+        content: url(../img/little-yellow-horizon-symbols.svg);
+        position: absolute;
+        top: -80%;
+        left: 0;
+        right: 0;
+      }
     }
 
     h2 {
@@ -23,6 +35,20 @@
       font-family: abstracts.$neutra-bold;
       text-align: center;
       text-transform: uppercase;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: url(../img/little-blue-symbols.svg);
+        margin-right: 0.2em;
+        line-height: 0;
+      }
+    }
+
+    a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: abstracts.$blue-700;
     }
   }
 }
