@@ -48,6 +48,7 @@ get_header(); ?>
         <div class="container">
             <h2><?php the_field('titre_formulaire_de_contact'); ?></h2>
             <?php echo do_shortcode('[contact-form-7 id="55" title="Formulaire de contact 1"]'); ?>
+            <p class="needed-fields">Les champs marqués d'un astérisque (*), sont des champs obligatoires</p>
         </div>
     </section>
     <section class="photo-bot">

@@ -5,6 +5,13 @@ main.recrute {
   background-color: abstracts.$grey-100;
   overflow-x: hidden;
 
+  @media screen and (max-width: 1810px) {
+    padding-top: 11.8rem;
+  }
+  @media screen and (max-width: 1315px) {
+    padding-top: 6.8rem;
+  }
+
   .hero-banner {
     position: relative;
 
@@ -176,7 +183,7 @@ main.recrute {
       background-color: abstracts.$blue-700;
       border-radius: 50%;
       border: none;
-      padding: 4.3rem;
+      padding: 3rem;
       margin-bottom: 2rem;
 
       img {
@@ -221,4 +228,15 @@ main.recrute {
       background-color: transparent;
     }
   }
+}
+
+.needed-fields {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 0;
+  grid-column: 3 / 5;
+  align-self: start;
 }
