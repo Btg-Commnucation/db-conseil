@@ -110,6 +110,9 @@
         top: -50%;
       }
     }
+    @media screen and (max-width: 379px) {
+      font-size: 5rem;
+    }
     @media screen and (max-width: 365px) {
       &::before {
         top: -25%;
@@ -157,6 +160,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-bottom: 2rem;
       gap: 1.5em;
     }
 

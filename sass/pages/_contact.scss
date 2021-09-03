@@ -52,6 +52,12 @@
     @media screen and (max-width: 1000px) {
       width: 100%;
     }
+    @media screen and (max-width: 550px) {
+      font-size: 5.8rem;
+    }
+    @media screen and (max-width: 332px) {
+      font-size: 5rem;
+    }
   }
 
   .adresse {
