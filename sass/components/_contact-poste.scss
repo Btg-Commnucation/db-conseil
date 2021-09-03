@@ -52,7 +52,7 @@
   }
 
   input {
-    margin-top: 1.8rem;
+    margin-top: 0.8rem;
     border: 0px solid transparent;
     border-bottom: 1px solid #2a5393;
     width: 86%;
@@ -138,12 +138,16 @@
   }
 
   .cv {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     display: flex;
     flex-direction: column;
     font-size: 1.8rem;
     align-items: flex-start;
     font-family: abstracts.$neutra-book;
+
+    @media screen and (max-width: 1200px) {
+      grid-column: 1 / 4;
+    }
 
     @media screen and (max-width: 950px) {
       grid-column: 1 / 3;

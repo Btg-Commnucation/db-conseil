@@ -154,6 +154,7 @@
 
     .left-side {
       width: unset;
+      align-self: start;
       margin-right: 4rem;
 
       @media screen and (max-width: 1468px) {
