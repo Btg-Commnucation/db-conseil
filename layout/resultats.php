@@ -1,5 +1,5 @@
 <script type="text/x-template" id="resultats">
-    <div>
+    <div v-if="!loading">
         <section class="hero-banner">
             <div class="background-image"></div>
             <div class="gradient">

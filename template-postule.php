@@ -38,7 +38,7 @@ Template Name: Je postule
 
 
     <script type="text/x-template" id="home">
-    <div>
+    <div v-if="!loading">
 
         <section class="job">
             <div class="container">

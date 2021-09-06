@@ -11,7 +11,7 @@
         </transition>
     </div>
     <script type="text/x-template" id="home">
-    <div>
+    <div v-if="!loading">
         <section class="hero-banner">
             <div class="background-image"></div>
             <div class="gradient">

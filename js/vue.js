@@ -3,11 +3,12 @@ const Home = {
   name: "Home",
   data: () => {
     return {
-      api: jsonApi.data,
+      api: null,
       categorie: [],
       industryNumber: [],
       region: [],
       searchCategorie: "",
+      loading: true,
       searchRegion: "",
       searchJobType: "",
       showAll: false,
@@ -74,6 +75,24 @@ const Home = {
       return this.pagination;
     },
   },
+  mounted() {
+    if (localStorage.getItem("Data")) {
+      if (
+        JSON.parse(localStorage.getItem("Data")).length == jsonApi.data.length
+      ) {
+        this.api = JSON.parse(localStorage.getItem("Data"));
+        this.loading = false;
+      } else {
+        this.api = jsonApi.data;
+        localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+        this.loading = false;
+      }
+    } else {
+      this.api = jsonApi.data;
+      localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+      this.loading = false;
+    }
+  },
   methods: {
     industriesCategory(number) {
       switch (parseInt(number)) {
@@ -138,9 +157,10 @@ const Resultats = {
   name: "Resultats",
   data: () => {
     return {
-      api: jsonApi.data,
+      api: null,
       categorie: [],
       region: [],
+      loading: true,
       lookingCategorie: "",
       industryNumber: [],
       lookingRegion: "",
@@ -228,6 +248,24 @@ const Resultats = {
       }
     },
   },
+  mounted() {
+    if (localStorage.getItem("Data")) {
+      if (
+        JSON.parse(localStorage.getItem("Data")).length == jsonApi.data.length
+      ) {
+        this.api = JSON.parse(localStorage.getItem("Data"));
+        this.loading = false;
+      } else {
+        this.api = jsonApi.data;
+        localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+        this.loading = false;
+      }
+    } else {
+      this.api = jsonApi.data;
+      localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+      this.loading = false;
+    }
+  },
   methods: {
     industriesCategory(number) {
       switch (parseInt(number)) {
@@ -294,6 +332,7 @@ const Description = {
   data: () => {
     return {
       jobs: jsonApi.data,
+      loading: true,
       displayPost: "",
       industryNumber: [],
       categorie: [],
@@ -335,6 +374,24 @@ const Description = {
         return "changeBottom";
       }
     },
+  },
+  mounted() {
+    if (localStorage.getItem("Data")) {
+      if (
+        JSON.parse(localStorage.getItem("Data")).length == jsonApi.data.length
+      ) {
+        this.jobs = JSON.parse(localStorage.getItem("Data"));
+        this.loading = false;
+      } else {
+        this.jobs = jsonApi.data;
+        localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+        this.loading = false;
+      }
+    } else {
+      this.jobs = jsonApi.data;
+      localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+      this.loading = false;
+    }
   },
   methods: {
     industriesCategory(number) {

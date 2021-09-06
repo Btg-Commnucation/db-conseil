@@ -1,6 +1,6 @@
 <script type="text/x-template" id="description">
 
-<div>
+<div v-if="!loading">
     <article class="job-description" :class="startSearching && 'openSearch'">
         <div class="container">
             <a rel="noopener noreferrer" href="<?php the_field('lien_offres'); ?>"><?php the_field('texte_lien_offres'); ?></a>
