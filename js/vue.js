@@ -5,6 +5,7 @@ const Home = {
     return {
       api: jsonApi.data,
       categorie: [],
+      industryNumber: [],
       region: [],
       searchCategorie: "",
       searchRegion: "",
@@ -23,7 +24,7 @@ const Home = {
       return this.api.filter((job) => {
         return (
           job.label.toLowerCase().includes(this.searchJobType.toLowerCase()) &&
-          job.industryLabel
+          this.industriesCategory(job.industry)
             .toLowerCase()
             .includes(this.searchCategorie.toLowerCase()) &&
           job.address_state
@@ -46,10 +47,14 @@ const Home = {
 
     filteredCategory() {
       this.api.map((job) => {
-        this.categorie.push(job.industryLabel);
+        this.industryNumber.push(job.industry);
       });
-      this.categorie.sort();
-      return (this.categorie = [...new Set(this.categorie)]);
+      this.industryNumber.sort();
+      this.industryNumber = [...new Set(this.industryNumber)];
+      this.industryNumber.map((number) => {
+        return this.categorie.push(this.industriesCategory(number));
+      });
+      return this.categorie;
     },
 
     filteredRegion() {
@@ -70,6 +75,38 @@ const Home = {
     },
   },
   methods: {
+    industriesCategory(number) {
+      switch (parseInt(number)) {
+        case 48:
+          return "Construction";
+        case 94:
+          return "Aviation";
+        case 50:
+          return "Architecture";
+        case 52:
+          return "Aviation et Aérospacial";
+        case 112:
+          return "Production d'électrivité";
+        case 144:
+          return "Envivonement et énergies renouvelables";
+        case 44:
+          return "Immobilier et chantier urbain";
+        case 116:
+          return "Logistique";
+        case 11:
+          return "Consulting";
+        case 49:
+          return "Matériaux de construction";
+        case 62:
+          return "Chemin de fer";
+        case 137:
+          return "Ressources humaines";
+        case 97:
+          return "Étude de marché";
+        default:
+          return "Autre";
+      }
+    },
     activePage(page) {
       if (this.currentPage == page) {
         return "active-page";
@@ -105,6 +142,7 @@ const Resultats = {
       categorie: [],
       region: [],
       lookingCategorie: "",
+      industryNumber: [],
       lookingRegion: "",
       lookingJobType: "",
       pageNumber: 0,
@@ -139,7 +177,7 @@ const Resultats = {
             job.label
               .toLowerCase()
               .includes(this.lookingJobType.toLowerCase()) &&
-            job.industryLabel
+            this.industriesCategory(job.industry)
               .toLowerCase()
               .includes(this.lookingCategorie.toLowerCase()) &&
             job.address_state
@@ -152,10 +190,14 @@ const Resultats = {
 
     filteredCategory() {
       this.api.map((job) => {
-        this.categorie.push(job.industryLabel);
+        this.industryNumber.push(job.industry);
       });
-      this.categorie.sort();
-      return (this.categorie = [...new Set(this.categorie)]);
+      this.industryNumber.sort();
+      this.industryNumber = [...new Set(this.industryNumber)];
+      this.industryNumber.map((number) => {
+        return this.categorie.push(this.industriesCategory(number));
+      });
+      return this.categorie;
     },
 
     filteredRegion() {
@@ -187,6 +229,38 @@ const Resultats = {
     },
   },
   methods: {
+    industriesCategory(number) {
+      switch (parseInt(number)) {
+        case 48:
+          return "Construction";
+        case 94:
+          return "Aviation";
+        case 50:
+          return "Architecture";
+        case 52:
+          return "Aviation et Aérospacial";
+        case 112:
+          return "Production d'électrivité";
+        case 144:
+          return "Envivonement et énergies renouvelables";
+        case 44:
+          return "Immobilier et chantier urbain";
+        case 116:
+          return "Logistique";
+        case 11:
+          return "Consulting";
+        case 49:
+          return "Matériaux de construction";
+        case 62:
+          return "Chemin de fer";
+        case 137:
+          return "Ressources humaines";
+        case 94:
+          return "Étude de marché";
+        default:
+          return "Autre";
+      }
+    },
     activePage(page) {
       if (this.currentPage == page) {
         return "active-page";
@@ -221,6 +295,7 @@ const Description = {
     return {
       jobs: jsonApi.data,
       displayPost: "",
+      industryNumber: [],
       categorie: [],
       region: [],
       searchCategorie: "",
@@ -238,10 +313,14 @@ const Description = {
     },
     filteredCategory() {
       this.jobs.map((job) => {
-        this.categorie.push(job.industryLabel);
+        this.industryNumber.push(job.industry);
       });
-      this.categorie.sort();
-      return (this.categorie = [...new Set(this.categorie)]);
+      this.industryNumber.sort();
+      this.industryNumber = [...new Set(this.industryNumber)];
+      this.industryNumber.map((number) => {
+        return this.categorie.push(this.industriesCategory(number));
+      });
+      return this.categorie;
     },
 
     filteredRegion() {
@@ -258,6 +337,38 @@ const Description = {
     },
   },
   methods: {
+    industriesCategory(number) {
+      switch (parseInt(number)) {
+        case 48:
+          return "Construction";
+        case 94:
+          return "Aviation";
+        case 50:
+          return "Architecture";
+        case 52:
+          return "Aviation et Aérospacial";
+        case 112:
+          return "Production d'électrivité";
+        case 144:
+          return "Envivonement et énergies renouvelables";
+        case 44:
+          return "Immobilier et chantier urbain";
+        case 116:
+          return "Logistique";
+        case 11:
+          return "Consulting";
+        case 49:
+          return "Matériaux de construction";
+        case 62:
+          return "Chemin de fer";
+        case 137:
+          return "Ressources humaines";
+        case 94:
+          return "Étude de marché";
+        default:
+          return "Autre";
+      }
+    },
     showSearchForm() {
       return (this.startSearching = !this.startSearching);
     },

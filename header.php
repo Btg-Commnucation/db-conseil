@@ -11,7 +11,7 @@
 
     $headers = array(
     "Accept: application/json",
-    "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5IiwiZXhwIjoxNjU4NTYzNzk5fQ.uob8dFkKgR-IkAYPnTlbe6eRqX2pSwOxA6eUe0Nz214",
+    "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5IiwiZXhwIjoxNjYyNDQ5NzYyfQ.CJKi5VdVhaNyU9TQp6pnNasM3cTxXsOEwFWUsuSF4aY",
     );
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
     //for debug only!
@@ -34,7 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
     <script>
-        const jsonApi = <?php echo $sendingData ?>;;
+        const jsonApi = <?php echo $sendingData ?>;
     </script>
 </head>
 <body <?php body_class(  ); ?>>

@@ -47,10 +47,10 @@ Template Name: Je postule
                     <div v-for='job in slicePost' class="card">
                         <strong>{{job.address_state}}</strong>
                         <div class="card-detail">
-                            <p class="categorie">{{job.industryLabel}}</p>
+                            <p class="categorie">{{industriesCategory(job.industry)}}</p>
                             <h3>{{job.label}}</h3>
-                            <p v-if="job.description.length<208">{{job.description}}</p>
-                            <p v-else>{{job.description.substring(0, 208)+"..."}}</p>
+                            <p v-if="job.description.length<208" v-html="job.description"></p>
+                            <p v-else v-html="job.description.substring(0, 208) + '...'"></p>
                             <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
                         </div>
                     </div>

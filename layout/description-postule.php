@@ -7,7 +7,7 @@
             <section class="title">
                 <div class="title-container">
                     <h2>{{displayingOffer.label}}</h2>
-                    <p>{{displayingOffer.industryLabel}}</p>
+                    <p>{{industriesCategory(displayingOffer.industry)}}</p>
                     <span v-if="displayingOffer.reference">REF : {{displayingOffer.reference}}</span>
                 </div>
                 <strong>{{displayingOffer.address_state}}</strong>
@@ -33,15 +33,15 @@
             <section class="information">
                 <div class="part-one">
                     <h3><?php the_field('titre_information_un'); ?></h3>
-                    <p>{{displayingOffer.description}}</p>
+                    <p v-html="displayingOffer.description"></p>
                 </div>
                 <div v-if="displayingOffer.requirements" class="part-one">
                     <h3>Exigences</h3>
-                    <p>{{displayingOffer.requirements}}</p>
+                    <p v-html="displayingOffer.requirements"></p>
                 </div>
                 <div v-if="displayingOffer.benefits" class="part-one">
                     <h3>Avantages</h3>
-                    <p>{{displayingOffer.benefits}}</p>
+                    <p v-html="displayingOffer.benefits"></p>
                 </div>
                 <div v-if="displayingOffer.salary_left || displayingOffer.salary_right" class="part-one">
                     <h3>Salaire</h3>
