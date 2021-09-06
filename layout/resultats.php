@@ -37,7 +37,7 @@
                     <div v-for='job in filteredList.slice(sliceA, sliceB)' class="card">
                         <strong>{{job.address_state}}</strong>
                         <div class="card-detail">
-                            <p class="categorie">{{industriesCategory(job.industy)}}</p>
+                            <p class="categorie">{{industriesCategory(job.industry)}}</p>
                             <h3>{{job.label}}</h3>
                             <p v-if="job.description.length<208" v-html="job.description"></p>
                             <p v-else v-html="job.description.substring(0, 208) + '...'"></p>
