@@ -18,6 +18,17 @@ function pdw_load_stylesheets_and_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'pdw_load_stylesheets_and_scripts' );
 
+if( function_exists( 'acf_add_options_page' ) ) {
+	
+	acf_add_options_page( array(
+		'page_title' 	=> 'Options Token',
+		'menu_title'	=> 'Options',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+        'position'    	=> 2
+	) );	
+}
 
 register_nav_menus( array(
     'main' => 'Menu principal',

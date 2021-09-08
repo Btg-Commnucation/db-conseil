@@ -9,9 +9,11 @@
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
+    $token = get_field('token_nicoka', 'option');
+
     $headers = array(
     "Accept: application/json",
-    "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5IiwiZXhwIjoxNjYyNDQ5NzYyfQ.CJKi5VdVhaNyU9TQp6pnNasM3cTxXsOEwFWUsuSF4aY",
+    "Authorization: Bearer " . $token,
     );
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
     //for debug only!
