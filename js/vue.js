@@ -23,7 +23,7 @@ const Home = {
   computed: {
     filteredList() {
       return this.api.filter((job) => {
-        if (parseInt(job.active) === 1) {
+        if (parseInt(job.active) > 0) {
           return (
             job.label
               .toLowerCase()
@@ -90,7 +90,7 @@ const Home = {
         const tempArray = jsonApi.data;
         let tempArray2 = [];
         tempArray.map((job) => {
-          if (parseInt(job.active) === 1) {
+          if (parseInt(job.active) > 0) {
             tempArray2.push(job);
           }
         });
@@ -102,7 +102,7 @@ const Home = {
     const tempArray = jsonApi.data;
     let tempArray2 = [];
     tempArray.map((job) => {
-      if (parseInt(job.active) === 1) {
+      if (parseInt(job.active) > 0) {
         tempArray2.push(job);
       }
     });
@@ -210,7 +210,7 @@ const Resultats = {
 
       return this.api
         .filter((job) => {
-          if (parseInt(job.active) === 1) {
+          if (parseInt(job.active) > 0) {
             return (
               job.label
                 .toLowerCase()
@@ -278,7 +278,7 @@ const Resultats = {
         const tempArray = jsonApi.data;
         let tempArray2 = [];
         tempArray.map((job) => {
-          if (parseInt(job.active) === 1) {
+          if (parseInt(job.active) > 0) {
             tempArray2.push(job);
           }
         });
@@ -290,7 +290,7 @@ const Resultats = {
     const tempArray = jsonApi.data;
     let tempArray2 = [];
     tempArray.map((job) => {
-      if (parseInt(job.active) === 1) {
+      if (parseInt(job.active) > 0) {
         tempArray2.push(job);
       }
     });
@@ -418,7 +418,7 @@ const Description = {
         const tempArray = jsonApi.data;
         let tempArray2 = [];
         tempArray.map((job) => {
-          if (parseInt(job.active) === 1) {
+          if (parseInt(job.active) > 0) {
             tempArray2.push(job);
           }
         });
@@ -430,7 +430,7 @@ const Description = {
     const tempArray = jsonApi.data;
     let tempArray2 = [];
     tempArray.map((job) => {
-      if (parseInt(job.active) === 1) {
+      if (parseInt(job.active) > 0) {
         tempArray2.push(job);
       }
     });
