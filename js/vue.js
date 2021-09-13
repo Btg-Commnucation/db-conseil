@@ -23,15 +23,19 @@ const Home = {
   computed: {
     filteredList() {
       return this.api.filter((job) => {
-        return (
-          job.label.toLowerCase().includes(this.searchJobType.toLowerCase()) &&
-          this.industriesCategory(job.industry)
-            .toLowerCase()
-            .includes(this.searchCategorie.toLowerCase()) &&
-          job.address_state
-            .toLowerCase()
-            .includes(this.searchRegion.toLowerCase())
-        );
+        if (parseInt(job.active) === 1) {
+          return (
+            job.label
+              .toLowerCase()
+              .includes(this.searchJobType.toLowerCase()) &&
+            this.industriesCategory(job.industry)
+              .toLowerCase()
+              .includes(this.searchCategorie.toLowerCase()) &&
+            job.address_state
+              .toLowerCase()
+              .includes(this.searchRegion.toLowerCase())
+          );
+        }
       });
     },
     slicePost() {
@@ -83,15 +87,28 @@ const Home = {
         this.api = JSON.parse(localStorage.getItem("Data"));
         this.loading = false;
       } else {
-        this.api = jsonApi.data;
+        const tempArray = jsonApi.data;
+        let tempArray2 = [];
+        tempArray.map((job) => {
+          if (parseInt(job.active) === 1) {
+            tempArray2.push(job);
+          }
+        });
+        this.api = tempArray2;
         localStorage.setItem("Data", JSON.stringify(jsonApi.data));
         this.loading = false;
       }
-    } else {
-      this.api = jsonApi.data;
-      localStorage.setItem("Data", JSON.stringify(jsonApi.data));
-      this.loading = false;
     }
+    const tempArray = jsonApi.data;
+    let tempArray2 = [];
+    tempArray.map((job) => {
+      if (parseInt(job.active) === 1) {
+        tempArray2.push(job);
+      }
+    });
+    this.api = tempArray2;
+    localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+    this.loading = false;
   },
   methods: {
     industriesCategory(number) {
@@ -193,17 +210,19 @@ const Resultats = {
 
       return this.api
         .filter((job) => {
-          return (
-            job.label
-              .toLowerCase()
-              .includes(this.lookingJobType.toLowerCase()) &&
-            this.industriesCategory(job.industry)
-              .toLowerCase()
-              .includes(this.lookingCategorie.toLowerCase()) &&
-            job.address_state
-              .toLowerCase()
-              .includes(this.lookingRegion.toLowerCase())
-          );
+          if (parseInt(job.active) === 1) {
+            return (
+              job.label
+                .toLowerCase()
+                .includes(this.lookingJobType.toLowerCase()) &&
+              this.industriesCategory(job.industry)
+                .toLowerCase()
+                .includes(this.lookingCategorie.toLowerCase()) &&
+              job.address_state
+                .toLowerCase()
+                .includes(this.lookingRegion.toLowerCase())
+            );
+          }
         })
         .sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
     },
@@ -256,15 +275,28 @@ const Resultats = {
         this.api = JSON.parse(localStorage.getItem("Data"));
         this.loading = false;
       } else {
-        this.api = jsonApi.data;
+        const tempArray = jsonApi.data;
+        let tempArray2 = [];
+        tempArray.map((job) => {
+          if (parseInt(job.active) === 1) {
+            tempArray2.push(job);
+          }
+        });
+        this.api = tempArray2;
         localStorage.setItem("Data", JSON.stringify(jsonApi.data));
         this.loading = false;
       }
-    } else {
-      this.api = jsonApi.data;
-      localStorage.setItem("Data", JSON.stringify(jsonApi.data));
-      this.loading = false;
     }
+    const tempArray = jsonApi.data;
+    let tempArray2 = [];
+    tempArray.map((job) => {
+      if (parseInt(job.active) === 1) {
+        tempArray2.push(job);
+      }
+    });
+    this.api = tempArray2;
+    localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+    this.loading = false;
   },
   methods: {
     industriesCategory(number) {
@@ -383,15 +415,28 @@ const Description = {
         this.jobs = JSON.parse(localStorage.getItem("Data"));
         this.loading = false;
       } else {
-        this.jobs = jsonApi.data;
+        const tempArray = jsonApi.data;
+        let tempArray2 = [];
+        tempArray.map((job) => {
+          if (parseInt(job.active) === 1) {
+            tempArray2.push(job);
+          }
+        });
+        this.jobs = tempArray2;
         localStorage.setItem("Data", JSON.stringify(jsonApi.data));
         this.loading = false;
       }
-    } else {
-      this.jobs = jsonApi.data;
-      localStorage.setItem("Data", JSON.stringify(jsonApi.data));
-      this.loading = false;
     }
+    const tempArray = jsonApi.data;
+    let tempArray2 = [];
+    tempArray.map((job) => {
+      if (parseInt(job.active) === 1) {
+        tempArray2.push(job);
+      }
+    });
+    this.jobs = tempArray2;
+    localStorage.setItem("Data", JSON.stringify(jsonApi.data));
+    this.loading = false;
   },
   methods: {
     industriesCategory(number) {
