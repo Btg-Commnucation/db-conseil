@@ -193,7 +193,9 @@
         flex: 101em;
       }
       @media screen and (max-width: 1235px) {
-        flex: unset;
+        &.deuximage {
+          flex: unset;
+        }
       }
 
       @media screen and (max-width: 764px) {
