@@ -142,6 +142,8 @@
                             </ul>
                         </div>
                     </div>
+                <?php else : ?>
+                    <h3 class="avenir">à venir</h3>
                 <?php endif; ?>
             </div>
         </section>
