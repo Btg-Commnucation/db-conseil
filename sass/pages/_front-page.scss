@@ -1,4 +1,4 @@
-@use '../abstracts';
+@use "../abstracts";
 
 .front-page {
   overflow: hidden;
@@ -187,7 +187,7 @@
       column-gap: 2.6rem;
       position: relative;
       justify-content: center;
-      flex: 101em;
+      margin-right: 2.6rem;
       @media screen and (max-width: 1235px) {
         flex: unset;
       }
@@ -207,6 +207,20 @@
 
         flex-direction: column;
 
+        &.link-container {
+          display: flex;
+          width: 100%;
+          flex-direction: revert;
+          align-items: center;
+          gap: 2.4em;
+          justify-content: center;
+
+          @media screen and (max-width: 498px) {
+            flex-direction: column;
+            gap: 1em;
+          }
+        }
+
         @media screen and (max-width: 764px) {
           flex: unset;
         }
@@ -221,7 +235,14 @@
           text-decoration: none;
           color: abstracts.$blue-700;
           display: flex;
-          align-self: flex-start;
+          align-self: center;
+          justify-content: center;
+
+          @media screen and (max-width: 498px) {
+            &:last-of-type {
+              margin-top: 0;
+            }
+          }
 
           &::before {
             content: url("../img/linkedin.svg");
@@ -257,6 +278,7 @@
       z-index: 2;
       :is(p, strong, ul, ol, li) {
         opacity: 82%;
+        font-size: 2rem;
       }
       a {
         margin-top: 4.7rem;
