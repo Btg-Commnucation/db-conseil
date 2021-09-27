@@ -63,12 +63,12 @@
         </section>
         <section class="cabinet">
             <div class="container">
-                <aside>
+                <aside class="<?php if (get_field('image_membre_deux')) : echo 'deuximage'; endif; ?>">
                     <div id="stephanie">
                         <?php $imageStephanie = get_field('image_membre_un'); ?>
                         <img src="<?php echo esc_url($imageStephanie['url']); ?>" alt="<?php echo esc_attr($imageStephanie['alt']); ?>">
                         <div class="link-container">
-                            <a rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_un'); ?>"><?php the_field('nom_membre_un'); ?></a>
+                            <a class="<?php if (get_field('image_membre_deux')) : echo 'margintop'; endif; ?>" rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_un'); ?>"><?php the_field('nom_membre_un'); ?></a>
                             <?php if(!get_field('image_membre_deux')): ?>
                             <a rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_deux'); ?>"><?php the_field('nom_membre_deux'); ?></a>
                             <?php endif; ?>
@@ -78,7 +78,7 @@
                     <div id="pauline">
                         <?php $imagePauline = get_field('image_membre_deux'); ?>
                         <img src="<?php echo esc_url($imagePauline['url']); ?>" alt="<?php echo esc_attr($imagePauline['alt']); ?>">
-                        <a rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_deux'); ?>"><?php the_field('nom_membre_deux'); ?></a>
+                        <a class="<?php if (get_field('image_membre_deux')) : echo 'margintop'; endif; ?>" rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_deux'); ?>"><?php the_field('nom_membre_deux'); ?></a>
                     </div>
                     <?php endif; ?>
                 </aside>

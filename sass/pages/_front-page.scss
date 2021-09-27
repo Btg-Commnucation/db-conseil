@@ -188,6 +188,10 @@
       position: relative;
       justify-content: center;
       margin-right: 2.6rem;
+
+      &.deuximage {
+        flex: 101em;
+      }
       @media screen and (max-width: 1235px) {
         flex: unset;
       }
@@ -239,7 +243,7 @@
           justify-content: center;
 
           @media screen and (max-width: 498px) {
-            &:last-of-type {
+            &:not(.margintop):last-of-type {
               margin-top: 0;
             }
           }
