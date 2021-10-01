@@ -83,7 +83,7 @@
     <section class="postuler-job">
         <div class="container">
             <h2>Postuler à cette offre</h2>
-            <?php echo do_shortcode('[contact-form-7 id="223" title="Postuler au poste"]'); ?>
+           <h3 class="tempo">Si vous souhaitez postuler à cette offre, merci de nous contacter à <a href="mailto:contact@db-conseils.com">contact@db-conseils.com</a> en renseignant la référence du poste.</h3>
         </div>
     </section>
     <section class="photo-bot">
