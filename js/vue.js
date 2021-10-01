@@ -522,7 +522,7 @@ const Description = {
       if (!this.errors.length) {
         const bodyFormData = new FormData();
         bodyFormData.set("Nom", this.nom);
-        bodyFormData.set("Prenom", this.prenom);
+        bodyFormData.set("Prnom", this.prenom);
         bodyFormData.set("email", this.email);
         bodyFormData.set("Joindredesfichiers", this.files);
         bodyFormData.set("textarea-999", this.formMessage);

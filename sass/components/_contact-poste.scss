@@ -45,17 +45,19 @@
       margin-right: 0.5rem;
     }
   }
+}
 
+.response {
   h3 {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 1em;
-    font-family: abstracts.$neutra-bold;
+    font-size: 3rem !important;
+    text-align: center !important;
+    margin-bottom: 1em !important;
+    font-family: abstracts.$neutra-bold !important;
   }
   .invalid {
     color: red;
     font-size: 2rem;
-    font-family: abstracts.$neutra-bold;
+    font-family: abstracts.$neutra-bold !important;
   }
 }
 
