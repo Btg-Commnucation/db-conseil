@@ -543,7 +543,6 @@ const Description = {
           config: { headers: { "Content-Type": "multipart/form-data" } },
         })
           .then((response) => {
-            console.log(response);
             this.response = response.data.message;
             if (response.data.invalid_fields) {
               this.invalid = response.data.invalid_fields[0].message;
