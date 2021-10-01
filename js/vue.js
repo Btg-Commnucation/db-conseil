@@ -373,6 +373,22 @@ const Description = {
       searchRegion: "",
       searchJobType: "",
       startSearching: false,
+      nom: "",
+      prenom: "",
+      email: "",
+      sent: false,
+      files: "",
+      etudes: "",
+      reference: "",
+      postalCode: "",
+      town: "",
+      adresse: "",
+      telephone: "",
+      consent: false,
+      formMessage: "",
+      civilite: "",
+      response: "",
+      invalid: "",
     };
   },
   computed: {
@@ -381,6 +397,9 @@ const Description = {
         ? (this.displayPost = this.job)
         : (this.displayPost = this.jobs[0]);
       return this.displayPost;
+    },
+    getRef() {
+      this.reference = this.displayingOffer.reference;
     },
     filteredCategory() {
       this.jobs.map((job) => {
@@ -439,6 +458,9 @@ const Description = {
     this.loading = false;
   },
   methods: {
+    handleFileUpload() {
+      this.files = this.$refs.file.files[0];
+    },
     industriesCategory(number) {
       switch (parseInt(number)) {
         case 48:
@@ -473,6 +495,76 @@ const Description = {
     },
     showSearchForm() {
       return (this.startSearching = !this.startSearching);
+    },
+
+    validEmail(email) {
+      const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
+
+    checkForm(e) {
+      e.preventDefault();
+      this.errors = [];
+
+      if (!this.nom) {
+        this.errors.push("Veuillez saisir votre nom.");
+      }
+      if (!this.email) {
+        this.errors.push("Email requis.");
+      } else if (!this.validEmail(this.email)) {
+        this.errors.push("Un email valide est requis.");
+      }
+      if (!this.prenom) {
+        this.errors.push("Veuillez saisir votre prénom.");
+      }
+
+      if (!this.errors.length) {
+        const bodyFormData = new FormData();
+        bodyFormData.set("Nom", this.nom);
+        bodyFormData.set("Prenom", this.prenom);
+        bodyFormData.set("email", this.email);
+        bodyFormData.set("Joindredesfichiers", this.files);
+        bodyFormData.set("textarea-999", this.formMessage);
+        bodyFormData.set("etudes", this.etudes);
+        bodyFormData.set("ref", this.reference);
+        bodyFormData.set("number-102", this.postalCode);
+        bodyFormData.set("ville", this.town);
+        bodyFormData.set("text-97", this.adresse);
+        bodyFormData.set("telephone", this.telephone);
+        bodyFormData.set("checkbox-411", this.consent);
+        bodyFormData.set("checkbox-411", this.consent);
+        bodyFormData.set("civilite", this.civilite);
+
+        axios({
+          method: "post",
+          url: "https://www.db-conseils.com/wp-json/contact-form-7/v1/contact-forms/223/feedback",
+          data: bodyFormData,
+          config: { headers: { "Content-Type": "multipart/form-data" } },
+        })
+          .then((response) => {
+            console.log(response);
+            this.response = response.data.message;
+            if (response.data.invalid_fields) {
+              this.invalid = response.data.invalid_fields[0].message;
+            }
+            this.sent = true;
+            this.nom = "";
+            this.prenom = "";
+            this.email = "";
+            this.consent = false;
+            this.adresse = "";
+            this.telephone = "";
+            this.town = "";
+            this.files = "";
+            this.etudes = "";
+            this.formMessage = "";
+            this.postalCode = "";
+            this.civilite = "";
+            return true;
+          })
+          .catch((error) => console.log(error));
+      }
     },
   },
 };

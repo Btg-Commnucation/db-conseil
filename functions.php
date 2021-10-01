@@ -11,6 +11,7 @@ function pdw_load_stylesheets_and_scripts() {
     wp_enqueue_style( 'splide', get_template_directory_uri() . '/css/splide-core.min.css', array(), '1.0');
     wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), '1.0');
     wp_enqueue_script( 'splidejs', get_template_directory_uri() .'/js/splide.min.js', array(), '1.0', true);
+    wp_enqueue_script( 'axios', 'https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js', array(), '1.0', true);
     wp_enqueue_script( 'vuecdn', 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js', array(), '1.0', true);
 	wp_enqueue_script('vuerouter', 'https://unpkg.com/vue-router/dist/vue-router.js', array(), 1.0, true);
     wp_enqueue_script( 'vue', get_template_directory_uri() . '/js/vue.js', array(), '1.0', true);

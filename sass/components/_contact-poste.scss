@@ -1,4 +1,4 @@
-@use '../abstracts';
+@use "../abstracts";
 
 .postuler-job {
   background-color: abstracts.$grey-100;
@@ -14,7 +14,53 @@
   }
 }
 
-.wpcf7 form {
+.vueform form {
+  textarea {
+    min-height: 15em;
+  }
+
+  .consent-container {
+    .consent {
+      flex-direction: row !important;
+      font-family: abstracts.$neutra-book;
+      align-items: center;
+
+      @media screen and (max-width: 454px) {
+        flex-direction: column !important;
+        justify-content: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  input[type="file"] {
+    width: 100% !important;
+  }
+
+  .envoyer {
+    align-items: center !important;
+    justify-content: center !important;
+    &::before {
+      margin-right: 0.5rem;
+    }
+  }
+
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1em;
+    font-family: abstracts.$neutra-bold;
+  }
+  .invalid {
+    color: red;
+    font-size: 2rem;
+    font-family: abstracts.$neutra-bold;
+  }
+}
+
+.wpcf7 form,
+.vueform form {
   margin-top: 5.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -35,6 +81,38 @@
   @media screen and (max-width: 765px) {
     display: flex;
     flex-direction: column;
+  }
+
+  .civilite {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.3rem;
+
+    p {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+  }
+
+  .civ-container {
+    flex-direction: row !important;
+    align-self: center;
+    justify-self: center;
+    align-items: center !important;
+    justify-content: center !important;
+
+    &:first-of-type {
+      margin-left: 1em;
+    }
+    input {
+      margin-top: 0 !important;
+      width: fit-content;
+      margin-right: 0.8rem;
+      width: -moz-fit-content;
+    }
+    label {
+      font-family: abstracts.$neutra-book;
+    }
   }
 
   label,
