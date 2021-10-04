@@ -81,9 +81,7 @@ const Home = {
   },
   mounted() {
     if (localStorage.getItem("Data")) {
-      if (
-        JSON.parse(localStorage.getItem("Data")).length == jsonApi.data.length
-      ) {
+      if (localStorage.getItem("Data") == JSON.stringify(jsonApi.data)) {
         this.api = JSON.parse(localStorage.getItem("Data"));
         this.loading = false;
       } else {
@@ -269,9 +267,7 @@ const Resultats = {
   },
   mounted() {
     if (localStorage.getItem("Data")) {
-      if (
-        JSON.parse(localStorage.getItem("Data")).length == jsonApi.data.length
-      ) {
+      if (localStorage.getItem("Data") == JSON.stringify(jsonApi.data)) {
         this.api = JSON.parse(localStorage.getItem("Data"));
         this.loading = false;
       } else {
@@ -428,9 +424,7 @@ const Description = {
   },
   mounted() {
     if (localStorage.getItem("Data")) {
-      if (
-        JSON.parse(localStorage.getItem("Data")).length == jsonApi.data.length
-      ) {
+      if (localStorage.getItem("Data") == JSON.stringify(jsonApi.data)) {
         this.jobs = JSON.parse(localStorage.getItem("Data"));
         this.loading = false;
       } else {
