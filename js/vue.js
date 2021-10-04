@@ -578,6 +578,9 @@ const router = new VueRouter({
       props: true,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 120 };
+  },
 });
 
 const vue = new Vue({
