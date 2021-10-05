@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch sass:css --style compressed"
+    "start": "sass --watch sass:css --style compressed",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,10 @@
   },
   "homepage": "https://github.com/Tuvedunyel/db-conseil#readme",
   "dependencies": {
+    "axios": "^0.22.0",
     "sass": "^1.41.1",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.2"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
