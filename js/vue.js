@@ -137,6 +137,10 @@ const Home = {
           return "Ressources humaines";
         case 97:
           return "Étude de marché";
+        case 72:
+          return "Bureau législatif";
+        case 122:
+          return "Installations et Services";
         default:
           return "Autre";
       }
