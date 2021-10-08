@@ -27,3 +27,7 @@ if (splide != null) {
     interval: 8000,
   }).mount();
 }
+
+const url = window.location.href;
+const nextUrl = url.replace("#/", "");
+window.history.pushState({}, null, nextUrl);
