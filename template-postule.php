@@ -12,7 +12,7 @@ Template Name: Je postule
 <?php get_header(); ?>
 
 <main class="postule-recrute">
-    <section class="hero-banner">
+    <section id="start-decription" class="hero-banner">
         <div class="container">
             <h1><?php the_title(); ?></h1>
         </div>
@@ -51,7 +51,7 @@ Template Name: Je postule
                             <h3>{{job.label}}</h3>
                             <p v-if="job.description.length<208" v-html="job.description"></p>
                             <p v-else v-html="job.description.substring(0, 208) + '...'"></p>
-                            <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
+                            <router-link class="card-link" :to="{ name: 'Description', params: { job }, hash: '#start-description' }">En savoir plus</router-link>
                         </div>
                     </div>
                 </div>

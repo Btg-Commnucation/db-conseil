@@ -1,7 +1,7 @@
 <script type="text/x-template" id="description">
 
 <div v-if="!loading">
-    <aside class="hero-banner">
+    <aside id="start-description" class="hero-banner">
         <div class="background-image"></div>
         <div class="gradient">
             <div class="container">

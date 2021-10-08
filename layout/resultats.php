@@ -41,7 +41,7 @@
                             <h3>{{job.label}}</h3>
                             <p v-if="job.description.length<208" v-html="job.description"></p>
                             <p v-else v-html="job.description.substring(0, 208) + '...'"></p>
-                            <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
+                            <router-link class="card-link" :to="{ name: 'Description', params: { job }, hash: '#start-description' }">En savoir plus</router-link>
                         </div>
                     </div>
                 </div>
