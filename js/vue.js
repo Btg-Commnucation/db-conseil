@@ -567,10 +567,7 @@ const Description = {
 };
 
 const router = new VueRouter({
-  mode: "history",
-  hash: false,
   routes: [
-    { path: "*", redirect: "/" },
     { path: "/", component: Home, name: "Home" },
     {
       path: "/Resultats",
@@ -586,16 +583,9 @@ const router = new VueRouter({
     },
   ],
   scrollBehavior(to, from, savedPosition) {
-    const position = {};
     if (to.hash) {
       return { x: 0, y: 120 };
     }
-    // if (savedPosition) {
-    //   return savedPosition;
-    // } else {
-    //   position.selector = to.hash;
-    //   return false;
-    // }
   },
 });
 
