@@ -325,8 +325,12 @@ const Resultats = {
           return "Chemin de fer";
         case 137:
           return "Ressources humaines";
-        case 94:
+        case 97:
           return "Étude de marché";
+        case 72:
+          return "Bureau législatif";
+        case 122:
+          return "Installations et Services";
         default:
           return "Autre";
       }
@@ -485,8 +489,12 @@ const Description = {
           return "Chemin de fer";
         case 137:
           return "Ressources humaines";
-        case 94:
+        case 97:
           return "Étude de marché";
+        case 72:
+          return "Bureau législatif";
+        case 122:
+          return "Installations et Services";
         default:
           return "Autre";
       }
