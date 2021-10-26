@@ -40,13 +40,9 @@ const Home = {
     },
     slicePost() {
       if (this.showAll) {
-        return this.api
-          .slice(this.sliceA, this.sliceB)
-          .sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
+        return this.api.slice(this.sliceA, this.sliceB);
       } else {
-        return this.api
-          .slice(0, 4)
-          .sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
+        return this.api.slice(0, 4);
       }
     },
 
@@ -83,6 +79,9 @@ const Home = {
     if (localStorage.getItem("Data")) {
       if (localStorage.getItem("Data") == JSON.stringify(jsonApi.data)) {
         this.api = JSON.parse(localStorage.getItem("Data"));
+        this.api = this.api.sort(
+          (a, b) => Date.parse(b.cdate) - Date.parse(a.cdate)
+        );
         this.loading = false;
       } else {
         const tempArray = jsonApi.data;
@@ -93,6 +92,7 @@ const Home = {
           }
         });
         this.api = tempArray2;
+        this.api.sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
         localStorage.setItem("Data", JSON.stringify(jsonApi.data));
         this.loading = false;
       }
@@ -105,6 +105,9 @@ const Home = {
       }
     });
     this.api = tempArray2;
+    this.api = this.api.sort(
+      (a, b) => Date.parse(b.cdate) - Date.parse(a.cdate)
+    );
     localStorage.setItem("Data", JSON.stringify(jsonApi.data));
     this.loading = false;
   },
@@ -273,6 +276,9 @@ const Resultats = {
     if (localStorage.getItem("Data")) {
       if (localStorage.getItem("Data") == JSON.stringify(jsonApi.data)) {
         this.api = JSON.parse(localStorage.getItem("Data"));
+        this.api = this.api.sort(
+          (a, b) => Date.parse(b.cdate) - Date.parse(a.cdate)
+        );
         this.loading = false;
       } else {
         const tempArray = jsonApi.data;
@@ -283,6 +289,9 @@ const Resultats = {
           }
         });
         this.api = tempArray2;
+        this.api = this.api.sort(
+          (a, b) => Date.parse(b.cdate) - Date.parse(a.cdate)
+        );
         localStorage.setItem("Data", JSON.stringify(jsonApi.data));
         this.loading = false;
       }
@@ -295,6 +304,7 @@ const Resultats = {
       }
     });
     this.api = tempArray2;
+    this.api.sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
     localStorage.setItem("Data", JSON.stringify(jsonApi.data));
     this.loading = false;
   },
