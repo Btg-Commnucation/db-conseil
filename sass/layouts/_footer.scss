@@ -1,0 +1,152 @@
+@use '../abstracts' as var;
+
+.footer__banner {
+  background-image: url(../img/loire-bateaux.jpg);
+  background-position: bottom left;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  padding-block: 9.152rem;
+
+  @media screen and (max-width: 681px) {
+    background-size: 100%;
+  }
+  @media screen and (max-width: 368px) {
+    padding-block: 7.5rem;
+  }
+
+  .logo-container {
+    margin-inline: auto;
+    width: 307px;
+    height: 92px;
+
+    @media screen and (max-width: 899px) {
+      width: 250px;
+    }
+  }
+}
+
+.footer__informations {
+  background: hsl(var.$texteHue var.$texteSaturation var.$texteLightness);
+  color: white;
+  padding-block: 5rem;
+  overflow: hidden;
+  .container {
+    position: relative;
+    margin-inline: auto;
+    width: min(37%, 711px);
+    display: flex;
+    justify-content: space-between;
+    font-family: var.$poppins;
+    font-weight: var.$regular;
+    font-size: 1.4rem;
+
+    &::before {
+      content: "{";
+      color: #fff;
+      position: absolute;
+      left: -37%;
+      bottom: -31%;
+      z-index: 0;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 14em;
+
+      @media screen and (max-width: 830px) {
+        bottom: -19%;
+      }
+    }
+
+    @media screen and (max-width: 1109px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 830px) {
+      flex-direction: column;
+      width: 75%;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 2em;
+
+      @media screen and (max-width: 830px) {
+        margin-bottom: 1.6rem;
+      }
+
+      &:not(first-of-type) {
+        margin-top: 3rem;
+      }
+    }
+
+    article {
+      width: 50%;
+      @media screen and (max-width: 830px) {
+        width: 100%;
+      }
+    }
+
+    #main-menu {
+      flex-direction: column;
+      align-items: start;
+      @media screen and (max-width: 830px) {
+        align-items: center;
+      }
+      .menu-item:first-of-type {
+        margin-left: 0 !important;
+      }
+
+      .menu-item {
+        text-align: center;
+      }
+
+      .menu-item:not(first-of-type) {
+        margin-top: 2.7rem;
+      }
+
+      a {
+        font-size: 1.4rem;
+        color: white;
+      }
+    }
+
+    .menu-footer {
+      height: 72%;
+      @media screen and (max-width: 830px) {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: start;
+      }
+    }
+    .menu-menu-principal-container,
+    #main-menu {
+      height: 100%;
+    }
+  }
+}
+
+.footer__credit {
+  position: relative;
+  z-index: 2;
+  .mentions {
+    width: min(50%, 700px);
+    margin-inline: auto;
+    padding-block: 0.4rem;
+    text-align: center;
+
+    &,
+    p,
+    a {
+      font-family: var.$poppins;
+      font-size: 1.4rem;
+      font-weight: var.$medium;
+      color: hsl(var.$texteHue var.$texteSaturation var.$texteLightness);
+      text-decoration: none;
+      background: white;
+    }
+  }
+}

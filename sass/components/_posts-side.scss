@@ -1,0 +1,30 @@
+@use '../abstracts' as var;
+
+#side-posts {
+  margin-left: 7.7em;
+
+  @media screen and (max-width: 1579px) {
+    margin-left: 2.7em;
+  }
+
+  @media screen and (max-width: 899px) {
+    margin-lef: unset;
+    margin: auto;
+    width: 85%;
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5em;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card:not(:last-of-type) {
+    margin-bottom: 2.6rem;
+  }
+}

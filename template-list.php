@@ -8,13 +8,13 @@ get_header();
 <main class="list-page">
     <div id="root">
         <div class="display-none">
-            <router-link to="/">
+            <router-link to="/nos-offres">
                 <p>Home</p>
             </router-link>
             <router-link to="/Resultats">
                 <p>Résultats</p>
             </router-link>
-            <router-link to="Description">
+            <router-link to="/poste/:reference">
                 <p>Description</p>
             </router-link>
         </div>
@@ -22,8 +22,8 @@ get_header();
             <router-view></router-view>
         </transition>
     </div>
-    <script type="text/x-template" id="home">
-        <div>
+    <script type="text/x-template" id="offres">
+        <div v-if="!loading">
             <section class="hero-banner">
                 <div class="background-image"></div>
                 <div class="gradient">
@@ -35,13 +35,13 @@ get_header();
                                 <div class="select">
                                     <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
                                         <option value="">Catégorie</option>
-                                        <option v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
+                                        <option class="deroulant" v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
                                     </select>
                                 </div>
                                 <div class="select">
                                     <select v-model="searchRegion" name="region" id="region" aria-label="Dans quelle région recherchez-vous ?">
                                         <option value="">Région</option>
-                                        <option v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
+                                        <option class="deroulant" v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
                                     </select>
                                 </div>
                                 <input v-model="searchJobType" type="text" name="post-type" id="post-type" placeholder="Intitulé du poste" aria-label="Intitulé du poste" autocomplete="off">
@@ -54,14 +54,15 @@ get_header();
             <section class="job symbols-offer">
                 <div class="container">
                     <h2><?php the_field('titre_carte'); ?></h2>
-                    <div class="card-container">
+                    <div class="card-container" v-if="!loading">
                         <div v-for='job in slicePost' class="card">
-                            <strong>{{job.county}}</strong>
+                            <strong>{{job.address_state}}</strong>
                             <div class="card-detail">
-                                <p class="categorie">{{job.industryLabel}}</p>
+                                <p class="categorie">{{industriesCategory(job.industry)}}</p>
                                 <h3>{{job.label}}</h3>
-                                <p>{{job.description}}</p>
-                                <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
+                                <p v-if="job.description.length<208" v-html="job.description"></p>
+                                <p v-else v-html="job.description.substring(0, 208) + '...'"></p>
+                                <router-link v-if="job.reference" class="card-link" :to="{ name: 'Description', params: { job: JSON.stringify(job), reference: job.reference.replace(/\s/g, '') } }">En savoir plus</router-link>
                             </div>
                         </div>
                     </div>

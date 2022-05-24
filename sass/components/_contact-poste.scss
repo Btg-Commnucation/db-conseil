@@ -1,4 +1,4 @@
-@use '../abstracts';
+@use "../abstracts";
 
 .postuler-job {
   background-color: abstracts.$grey-100;
@@ -14,12 +14,60 @@
   }
 }
 
-.wpcf7 form {
+.vueform form {
+  textarea {
+    min-height: 15em;
+  }
+
+  .consent-container {
+    .consent {
+      flex-direction: row !important;
+      font-family: abstracts.$neutra-book;
+      align-items: center;
+
+      @media screen and (max-width: 454px) {
+        flex-direction: column !important;
+        justify-content: center;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  input[type="file"] {
+    width: 100% !important;
+  }
+
+  .envoyer {
+    align-items: center !important;
+    justify-content: center !important;
+    &::before {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.response {
+  h3 {
+    font-size: 3rem !important;
+    text-align: center !important;
+    margin-bottom: 1em !important;
+    font-family: abstracts.$neutra-bold !important;
+  }
+  .invalid {
+    color: red;
+    font-size: 2rem;
+    font-family: abstracts.$neutra-bold !important;
+  }
+}
+
+.wpcf7 form,
+.vueform form {
   margin-top: 5.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 4.6rem;
-  row-gap: 4.6rem;
+  row-gap: 2.3rem;
   column-gap: 2.9rem;
 
   @media screen and (max-width: 1659px) {
@@ -37,6 +85,38 @@
     flex-direction: column;
   }
 
+  .civilite {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.3rem;
+
+    p {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
+  }
+
+  .civ-container {
+    flex-direction: row !important;
+    align-self: center;
+    justify-self: center;
+    align-items: center !important;
+    justify-content: center !important;
+
+    &:first-of-type {
+      margin-left: 1em;
+    }
+    input {
+      margin-top: 0 !important;
+      width: fit-content;
+      margin-right: 0.8rem;
+      width: -moz-fit-content;
+    }
+    label {
+      font-family: abstracts.$neutra-book;
+    }
+  }
+
   label,
   div:not(.wpcf7-response-output) {
     width: 100%;
@@ -52,10 +132,13 @@
   }
 
   input {
-    margin-top: 1.8rem;
+    margin-top: 0.8rem;
     border: 0px solid transparent;
     border-bottom: 1px solid #2a5393;
     width: 86%;
+    font-family: abstracts.$neutra-book;
+    color: abstracts.$blue-700;
+    font-size: 2.2rem;
     background-color: transparent;
     @media screen and (max-width: 1580) {
       width: 100%;
@@ -114,19 +197,37 @@
     }
   }
 
+  .civilite-container {
+    margin-top: 1.3em;
+
+    label {
+      font-family: abstracts.$neutra-book;
+      font-weight: 400;
+    }
+
+    .first {
+      margin-left: 0;
+    }
+  }
+
   textarea {
     margin-top: 1.8rem;
     width: 100%;
     background-color: transparent;
+    border: 1px solid abstracts.$blue-700;
   }
 
   .cv {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 1.8rem;
-    align-items: center;
+    align-items: flex-start;
     font-family: abstracts.$neutra-book;
+
+    @media screen and (max-width: 1200px) {
+      grid-column: 1 / 4;
+    }
 
     @media screen and (max-width: 950px) {
       grid-column: 1 / 3;
@@ -165,8 +266,10 @@
     @media screen and (max-width: 765px) {
       grid-column: 1;
     }
+  }
 
-    .consentement label {
+  .consentement {
+    label {
       font-family: "Neutra Book", sans-serif;
       font-size: 2.2rem;
       display: flex;
@@ -180,10 +283,17 @@
         align-self: flex-start;
         width: fit-content;
         margin-right: 0.8rem;
-        margin-top: 0.5em;
+        margin-top: 0.3em;
         width: -moz-fit-content;
       }
     }
+    span {
+      margin-left: 0;
+    }
+  }
+
+  label.cv {
+    margin-bottom: 0.5em;
   }
 
   .envoyer {

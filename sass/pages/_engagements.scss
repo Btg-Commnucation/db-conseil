@@ -1,0 +1,129 @@
+@use '../abstracts' as var;
+
+#page {
+  .header-container {
+    margin-inline-start: 0;
+  }
+
+  h1 {
+    margin-left: 1.8em;
+    @media screen and (max-width: 945px) {
+      margin-left: 0;
+    }
+    @media screen and (max-width: 352px) {
+      font-size: 4rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    text-decoration: underline;
+    margin-bottom: 0.2em;
+  }
+
+  p {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  .anchor-container {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    li {
+      width: 100%;
+      display: none;
+
+      &.border {
+        display: block;
+      }
+      a {
+        border: 1px solid;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        color: hsl(var.$texteHue var.$texteSaturation var.$texteLightness);
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: var.$regular;
+
+        .circle {
+          width: 25px;
+          height: 25px;
+        }
+
+        .arrow {
+          transform: rotate(180deg);
+          left: 38%;
+          top: 0;
+          bottom: 0;
+          margin-block: auto;
+        }
+      }
+    }
+  }
+}
+
+.fetch-page__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6.8rem;
+  row-gap: 6.5rem;
+
+  @media screen and (max-width: 736px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+#page {
+  .rose {
+    li a {
+      border-color: hsl(var.$roseHue var.$roseSaturation var.$roseLightness);
+      .circle-svg circle {
+        fill: hsl(var.$roseHue var.$roseSaturation var.$roseLightness);
+      }
+    }
+  }
+}
+#page {
+  .rouge {
+    li a {
+      border-color: hsl(var.$rougeHue var.$rougeSaturation var.$rougeLightness);
+      .circle-svg circle {
+        fill: hsl(var.$rougeHue var.$rougeSaturation var.$rougeLightness);
+      }
+    }
+  }
+}
+#page {
+  .vertclair {
+    li a {
+      border-color: hsl(
+        var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness
+      );
+      .circle-svg circle {
+        fill: hsl(
+          var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness
+        );
+      }
+    }
+  }
+}
+#page {
+  .vertmoyen {
+    li a {
+      border-color: hsl(
+        var.$vertMoyenHue var.$vertMoyenSaturation var.$vertMoyenLightness
+      );
+      .circle-svg circle {
+        fill: hsl(
+          var.$vertMoyenHue var.$vertMoyenSaturation var.$vertMoyenLightness
+        );
+      }
+    }
+  }
+}

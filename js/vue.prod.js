@@ -75,186 +75,21 @@ const Home = {
       return this.pagination;
     },
   },
-  async mounted() {
-    await this.fetchData();
-    this.api = this.api.sort(
-        (a, b) => Date.parse(b.cdate) - Date.parse(a.cdate)
-    );
-    this.loading = false;
-  },
-  methods: {
-    fetchData() {
-      const tempArray = jsonApi.data;
-      let tempArray2 = [];
-      tempArray.map(job => {
-        if ( job.status !== "3" ) {
-          tempArray2.push(job);
-        }
-      });
-      console.log(tempArray2[0])
-      this.api = tempArray2;
-    },
-    industriesCategory(number) {
-      switch (parseInt(number)) {
-        case 48:
-          return "Construction";
-        case 94:
-          return "Aviation";
-        case 50:
-          return "Architecture";
-        case 52:
-          return "Aviation et Aérospacial";
-        case 112:
-          return "Production d'électrivité";
-        case 144:
-          return "Envivonement et énergies renouvelables";
-        case 44:
-          return "Immobilier et chantier urbain";
-        case 116:
-          return "Logistique";
-        case 11:
-          return "Consulting";
-        case 49:
-          return "Matériaux de construction";
-        case 62:
-          return "Chemin de fer";
-        case 137:
-          return "Ressources humaines";
-        case 97:
-          return "Étude de marché";
-        case 72:
-          return "Bureau législatif";
-        case 122:
-          return "Installations et Services";
-        case 1001:
-          return "Génie Electrique";
-        case 1000:
-          return "Infrastructure / Réseaux";
-        case 1002:
-          return "Génie Climatique";
-        default:
-          return "Autre";
+  mounted() {
+    const tempArray = jsonApi.data;
+    let tempArray2 = [];
+    tempArray.map(job => {
+      if (parseInt(job.active) > 0) {
+        tempArray2.push(job);
       }
-    },
-    activePage(page) {
-      if (this.currentPage == page) {
-        return "active-page";
-      }
-    },
-    nextPage(page) {
-      window.scroll({
-        top: 618,
-        left: 0,
-        behavior: "smooth",
-      });
-
-      if (this.currentPage < page) {
-        this.sliceA = this.sliceA + 8 * (page - this.currentPage);
-        this.sliceB = this.sliceB + 8 * (page - this.currentPage);
-        this.currentPage = page;
-      } else if (this.currentPage > page) {
-        this.sliceA = this.sliceA - 8 * (this.currentPage - page);
-        this.sliceB = this.sliceB - 8 * (this.currentPage - page);
-        this.currentPage = page;
-      }
-    },
-  },
-};
-const Offres = {
-  template: "#offres",
-  name: "Offres",
-  data: () => {
-    return {
-      api: [],
-      categorie: [],
-      industryNumber: [],
-      region: [],
-      searchCategorie: "",
-      loading: true,
-      searchRegion: "",
-      searchJobType: "",
-      showAll: false,
-      pageNumber: 0,
-      pagination: [],
-      i: 1,
-      currentPage: 1,
-      sliceA: 0,
-      sliceB: 8,
-    };
-  },
-  computed: {
-    filteredList() {
-      return this.api.filter(job => {
-        if (parseInt(job.active) > 0) {
-          return (
-            job.label
-              .toLowerCase()
-              .includes(this.searchJobType.toLowerCase()) &&
-            this.industriesCategory(job.industry)
-              .toLowerCase()
-              .includes(this.searchCategorie.toLowerCase()) &&
-            job.address_state
-              .toLowerCase()
-              .includes(this.searchRegion.toLowerCase())
-          );
-        }
-      });
-    },
-    slicePost() {
-      if (this.showAll) {
-        return this.api.slice(this.sliceA, this.sliceB);
-      } else {
-        return this.api.slice(0, 4);
-      }
-    },
-
-    filteredCategory() {
-      this.api.map(job => {
-        this.industryNumber.push(job.industry);
-      });
-      this.industryNumber.sort();
-      this.industryNumber = [...new Set(this.industryNumber)];
-      this.industryNumber.map(number => {
-        return this.categorie.push(this.industriesCategory(number));
-      });
-      return this.categorie;
-    },
-
-    filteredRegion() {
-      this.api.map(job => {
-        this.region.push(job.address_state);
-      });
-      this.region.sort();
-      return (this.region = [...new Set(this.region)]);
-    },
-
-    pageCount() {
-      this.pageNumber = Math.ceil(this.api.length / 8);
-      while (this.i <= this.pageNumber) {
-        this.pagination.push(this.i);
-        this.i = this.i + 1;
-      }
-      return this.pagination;
-    },
-  },
-  async mounted() {
-    await this.fetchData();
+    });
+    this.api = tempArray2;
     this.api = this.api.sort(
       (a, b) => Date.parse(b.cdate) - Date.parse(a.cdate)
     );
     this.loading = false;
   },
   methods: {
-    fetchData() {
-      const tempArray = jsonApi.data;
-      let tempArray2 = [];
-      tempArray.map(job => {
-        if ( job.status !== "3" ) {
-          tempArray2.push(job);
-        }
-      });
-      this.api = tempArray2;
-    },
     industriesCategory(number) {
       switch (parseInt(number)) {
         case 48:
@@ -321,167 +156,7 @@ const Offres = {
     },
   },
 };
-const Postule = {
-  template: "#postule",
-  name: "Postule",
-  data: () => {
-    return {
-      api: null,
-      categorie: [],
-      industryNumber: [],
-      region: [],
-      searchCategorie: "",
-      loading: true,
-      searchRegion: "",
-      searchJobType: "",
-      showAll: false,
-      pageNumber: 0,
-      pagination: [],
-      i: 1,
-      currentPage: 1,
-      sliceA: 0,
-      sliceB: 8,
-    };
-  },
-  computed: {
-    filteredList() {
-      return this.api.filter(job => {
-        if (parseInt(job.active) > 0) {
-          return (
-              job.label
-                  .toLowerCase()
-                  .includes(this.searchJobType.toLowerCase()) &&
-              this.industriesCategory(job.industry)
-                  .toLowerCase()
-                  .includes(this.searchCategorie.toLowerCase()) &&
-              job.address_state
-                  .toLowerCase()
-                  .includes(this.searchRegion.toLowerCase())
-          );
-        }
-      });
-    },
-    slicePost() {
-      if (this.showAll) {
-        return this.api.slice(this.sliceA, this.sliceB);
-      } else {
-        return this.api.slice(0, 4);
-      }
-    },
 
-    filteredCategory() {
-      this.api.map(job => {
-        this.industryNumber.push(job.industry);
-      });
-      this.industryNumber.sort();
-      this.industryNumber = [...new Set(this.industryNumber)];
-      this.industryNumber.map(number => {
-        return this.categorie.push(this.industriesCategory(number));
-      });
-      return this.categorie;
-    },
-
-    filteredRegion() {
-      this.api.map(job => {
-        this.region.push(job.address_state);
-      });
-      this.region.sort();
-      return (this.region = [...new Set(this.region)]);
-    },
-
-    pageCount() {
-      this.pageNumber = Math.ceil(this.api.length / 8);
-      while (this.i <= this.pageNumber) {
-        this.pagination.push(this.i);
-        this.i = this.i + 1;
-      }
-      return this.pagination;
-    },
-  },
-  async mounted() {
-    await this.fetchData();
-    this.api = this.api.sort(
-        (a, b) => Date.parse(b.cdate) - Date.parse(a.cdate)
-    );
-    this.loading = false;
-  },
-  methods: {
-    fetchData() {
-      const tempArray = jsonApi.data;
-      let tempArray2 = [];
-      tempArray.map(job => {
-        if ( job.status !== "3" ) {
-          tempArray2.push(job);
-        }
-      });
-      this.api = tempArray2;
-    },
-    industriesCategory(number) {
-      switch (parseInt(number)) {
-        case 48:
-          return "Construction";
-        case 94:
-          return "Aviation";
-        case 50:
-          return "Architecture";
-        case 52:
-          return "Aviation et Aérospacial";
-        case 112:
-          return "Production d'électrivité";
-        case 144:
-          return "Envivonement et énergies renouvelables";
-        case 44:
-          return "Immobilier et chantier urbain";
-        case 116:
-          return "Logistique";
-        case 11:
-          return "Consulting";
-        case 49:
-          return "Matériaux de construction";
-        case 62:
-          return "Chemin de fer";
-        case 137:
-          return "Ressources humaines";
-        case 97:
-          return "Étude de marché";
-        case 72:
-          return "Bureau législatif";
-        case 122:
-          return "Installations et Services";
-        case 1001:
-          return "Génie Electrique";
-        case 1000:
-          return "Infrastructure / Réseaux";
-        case 1002:
-          return "Génie Climatique";
-        default:
-          return "Autre";
-      }
-    },
-    activePage(page) {
-      if (this.currentPage == page) {
-        return "active-page";
-      }
-    },
-    nextPage(page) {
-      window.scroll({
-        top: 618,
-        left: 0,
-        behavior: "smooth",
-      });
-
-      if (this.currentPage < page) {
-        this.sliceA = this.sliceA + 8 * (page - this.currentPage);
-        this.sliceB = this.sliceB + 8 * (page - this.currentPage);
-        this.currentPage = page;
-      } else if (this.currentPage > page) {
-        this.sliceA = this.sliceA - 8 * (this.currentPage - page);
-        this.sliceB = this.sliceB - 8 * (this.currentPage - page);
-        this.currentPage = page;
-      }
-    },
-  },
-};
 const Resultats = {
   props: ["searchCategorie", "searchRegion", "searchJobType"],
   template: "#resultats",
@@ -581,24 +256,19 @@ const Resultats = {
       }
     },
   },
-  async mounted() {
-    await this.fetchData();
-    this.api = this.api.sort(
-        (a, b) => Date.parse(b.cdate) - Date.parse(a.cdate)
-    );
+  mounted() {
+    const tempArray = jsonApi.data;
+    let tempArray2 = [];
+    tempArray.map(job => {
+      if (parseInt(job.active) > 0) {
+        tempArray2.push(job);
+      }
+    });
+    this.api = tempArray2;
+    this.api.sort((a, b) => Date.parse(b.cdate) - Date.parse(a.cdate));
     this.loading = false;
   },
   methods: {
-    fetchData() {
-      const tempArray = jsonApi.data;
-      let tempArray2 = [];
-      tempArray.map(job => {
-        if ( job.status !== "3" ) {
-          tempArray2.push(job);
-        }
-      });
-      this.api = tempArray2;
-    },
     industriesCategory(number) {
       switch (parseInt(number)) {
         case 48:
@@ -646,6 +316,7 @@ const Resultats = {
         return "active-page";
       }
     },
+
     nextPage(page) {
       window.scroll({
         top: 618,
@@ -665,6 +336,7 @@ const Resultats = {
     },
   },
 };
+
 const Description = {
   props: ["job"],
   template: "#description",
@@ -801,7 +473,7 @@ const Description = {
       return re.test(email);
     },
 
-    checkForm(e) {
+    async checkForm(e) {
       e.preventDefault();
       this.errors = [];
 
@@ -831,10 +503,9 @@ const Description = {
         bodyFormData.set("text-97", this.adresse);
         bodyFormData.set("telephone", this.telephone);
         bodyFormData.set("checkbox-411", this.consent);
-        bodyFormData.set("checkbox-411", this.consent);
         bodyFormData.set("civilite", this.civilite);
 
-        axios({
+        await axios({
           method: "post",
           url: "https://www.db-conseils.com/wp-json/contact-form-7/v1/contact-forms/223/feedback",
           data: bodyFormData,
@@ -842,7 +513,8 @@ const Description = {
         })
           .then(response => {
             this.response = response.data.message;
-            if (response.data.invalid_fields) {
+            console.log(response.data);
+            if (response.data.invalid_fields.length > 0) {
               this.invalid = response.data.invalid_fields[0].message;
             }
             this.sent = true;
@@ -868,8 +540,6 @@ const Description = {
 
 const routes = [
   { path: "/", component: Home, name: "Home" },
-  { path: "/nos-offres", component: Offres, name: "Offres" },
-  { path: "/je-postule", component: Postule, name: "Postule" },
   {
     path: "/Resultats",
     component: Resultats,
@@ -877,7 +547,7 @@ const routes = [
     props: true,
   },
   {
-    path: "/poste/:reference",
+    path: "/Description",
     component: Description,
     name: "Description",
     props: true,
@@ -885,10 +555,10 @@ const routes = [
 ];
 
 const router = new VueRouter.createRouter({
-  history: VueRouter.createWebHistory(),
+  history: VueRouter.createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    if (to) {
+    if (to.hash) {
       return { x: 0, y: 120 };
     }
   },

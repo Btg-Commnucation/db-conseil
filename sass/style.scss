@@ -1,7 +1,8 @@
-@use 'base';
-@use 'layout';
-@use 'pages';
-@use 'components';
+@use "base";
+@use "abstracts" as var;
+@use "layout";
+@use "pages";
+@use "components";
 
 .display-none {
   display: none;
@@ -13,4 +14,30 @@ body {
 
 label {
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0.3em;
+
+  &:hover {
+    width: 0.5em;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(217 56% 37% / 0.5);
+  border-radius: 100vw;
+  border: none;
+}
+::-webkit-scrollbar-thumb:hover {
+  transform: scale(1.5);
+}
+
+.tempo {
+  text-align: center;
+  font-size: 2.5rem;
 }

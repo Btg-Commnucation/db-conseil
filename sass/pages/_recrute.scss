@@ -5,6 +5,13 @@ main.recrute {
   background-color: abstracts.$grey-100;
   overflow-x: hidden;
 
+  @media screen and (max-width: 1810px) {
+    padding-top: 11.8rem;
+  }
+  @media screen and (max-width: 1315px) {
+    padding-top: 6.8rem;
+  }
+
   .hero-banner {
     position: relative;
 
@@ -13,6 +20,12 @@ main.recrute {
       position: absolute;
       top: 72%;
       left: -6%;
+      @media screen and (max-width: 1765px) {
+        left: -8%;
+      }
+      @media screen and (max-width: 1651px) {
+        display: none;
+      }
 
       @media screen and (max-width: 1315px) {
         display: none;
@@ -23,6 +36,19 @@ main.recrute {
       content: url("../img/width-yellow-symbols.svg");
       position: absolute;
       top: 8%;
+
+      @media screen and (max-width: 1765px) {
+        left: -5%;
+      }
+      @media screen and (max-width: 1651px) {
+        left: -10%;
+      }
+      @media screen and (max-width: 1488px) {
+        left: -13%;
+      }
+      @media screen and (max-width: 1374px) {
+        left: -18%;
+      }
 
       @media screen and (max-width: 1315px) {
         display: none;
@@ -66,7 +92,14 @@ main.recrute {
     text-align: center;
     max-width: 100%;
     margin: auto;
-    margin-bottom: 5.6rem;
+    margin-bottom: 12.6rem;
+
+    @media screen and (max-width: 1369px) {
+      font-size: 5.5rem;
+    }
+    @media screen and (max-width: 1315px) {
+      font-size: 6rem;
+    }
 
     &::before {
       content: url("../img/little-yellow-horizon-symbols.svg");
@@ -78,7 +111,7 @@ main.recrute {
       @media screen and (max-width: 1315px) {
         top: -30%;
       }
-      @media screen and (max-width: 412px) {
+      @media screen and (max-width: 479px) {
         top: -15%;
       }
     }
@@ -104,6 +137,7 @@ main.recrute {
 
   .hero-banner__content {
     padding-bottom: 7rem;
+    align-self: center;
     @media screen and (max-width: 800px) {
       padding-bottom: 3rem;
     }
@@ -124,17 +158,24 @@ main.recrute {
     }
 
     ul {
-      display: flex;
+      display: grid;
       margin-top: 4.3rem;
-      flex-wrap: wrap;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       column-gap: 4.8rem;
       row-gap: 4rem;
+
+      @media screen and (max-width: 1360px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (max-width: 650px) {
+        grid-template-columns: 1fr;
+      }
 
       li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        flex: 1 0 18em;
       }
     }
 
@@ -142,12 +183,12 @@ main.recrute {
       background-color: abstracts.$blue-700;
       border-radius: 50%;
       border: none;
-      padding: 4.3rem;
+      padding: 3rem;
       margin-bottom: 2rem;
 
       img {
-        max-width: 60px;
-        max-height: 60px;
+        width: 60px;
+        height: 60px;
       }
     }
 
@@ -156,11 +197,16 @@ main.recrute {
       text-transform: uppercase;
       font-size: 2rem;
       text-align: center;
+      white-space: nowrap;
+      @media screen and (max-width: 1260px) {
+        white-space: normal;
+      }
     }
 
     p {
       opacity: 82%;
       font-size: 2rem;
+      text-align: center;
       margin-top: 3rem;
     }
   }
@@ -182,4 +228,15 @@ main.recrute {
       background-color: transparent;
     }
   }
+}
+
+.needed-fields {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 0;
+  grid-column: 3 / 5;
+  align-self: start;
 }

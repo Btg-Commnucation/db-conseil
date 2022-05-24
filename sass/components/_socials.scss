@@ -1,0 +1,43 @@
+@use '../abstracts';
+
+main {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.1em;
+}
+
+.social-container {
+  position: fixed;
+  right: 3%;
+  top: 0;
+  bottom: 0;
+  margin-block: auto;
+  z-index: 1;
+  height: fit-content;
+  height: -moz-fit-content;
+  a {
+    width: 32px;
+    height: 32px;
+    display: block;
+
+    @media screen and (max-width: 718px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 4.2rem;
+    }
+
+    img {
+      margin-top: 0;
+    }
+  }
+  &.agenda {
+    a {
+      width: 52px;
+      height: 52px;
+    }
+  }
+}

@@ -12,14 +12,14 @@ Template Name: Je postule
 <?php get_header(); ?>
 
 <main class="postule-recrute">
-    <section class="hero-banner">
+    <section id="start-decription" class="hero-banner">
         <div class="container">
             <h1><?php the_title(); ?></h1>
         </div>
     </section>
     <div id="root">
         <div class="display-none">
-            <router-link to="/">
+            <router-link to="/je-postule">
                 <p>Home</p>
             </router-link>
             <router-link to="/Resultats">
@@ -30,27 +30,30 @@ Template Name: Je postule
             </router-link>
         </div>
 
-        <transition name="component-fade" mode="out-in">
-            <router-view></router-view>
-        </transition>
+        <router-view v-slot="{ Component }">
+            <transition name="component-fade" mode="out-in">
+                <component :is="Component" />
+            </transition>
+        </router-view>
     </div>
 
 
 
-    <script type="text/x-template" id="home">
-    <div>
+    <script type="text/x-template" id="postule">
+    <div v-if="!loading">
 
         <section class="job">
             <div class="container">
                 <h2><?php the_field('titre_carte'); ?></h2>
                 <div class="card-container">
                     <div v-for='job in slicePost' class="card">
-                        <strong>{{job.county}}</strong>
+                        <strong>{{job.address_state}}</strong>
                         <div class="card-detail">
-                            <p class="categorie">{{job.industryLabel}}</p>
+                            <p class="categorie">{{industriesCategory(job.industry)}}</p>
                             <h3>{{job.label}}</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra mi vitae eleifend efficitur. Nullam eu ipsum libero. Fusce vitae augue eu odio porta sollicitudin ut non dui. Vivamus mollis diam vel diam consequat, quis posuere felis suscipit.</p>
-                            <router-link class="card-link" :to="{ name: 'Description', params: { job } }">En savoir plus</router-link>
+                            <p v-if="job.description.length<208" v-html="job.description"></p>
+                            <p v-else v-html="job.description.substring(0, 208) + '...'"></p>
+                            <router-link class="card-link" v-if="job.reference" :to="{ name: 'Description', params: { job: JSON.stringify(job), reference: job.reference.replace(/\s/g, '') } }">En savoir plus</router-link>
                         </div>
                     </div>
                 </div>

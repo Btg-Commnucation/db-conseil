@@ -9,9 +9,11 @@
     curl_setopt($curl, CURLOPT_URL, $url);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
+    $token = get_field('token_nicoka', 'option');
+
     $headers = array(
     "Accept: application/json",
-    "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI5IiwiZXhwIjoxNjU4NTYzNzk5fQ.uob8dFkKgR-IkAYPnTlbe6eRqX2pSwOxA6eUe0Nz214",
+    "Authorization: Bearer " . $token,
     );
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
     //for debug only!
@@ -34,7 +36,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
     <script>
-        const jsonApi = <?php echo $sendingData ?>;;
+        const jsonApi = <?php echo $sendingData ?>;
     </script>
 </head>
 <body <?php body_class(  ); ?>>
@@ -53,8 +55,8 @@
                     <div class="menu-btn__burger">
                     </div>
                 </div><ul id="%1$s" class="%2$s" hidden>%3$s<div class="form-button__container">
-                <a rel="noopener noreferrer" href="/je-postule" >Je postule</a>
-                <a rel="noopener noreferrer" href="/votre-cabinet-de-recrutement-sur-mesure" >Je recrute</a>
+                <a rel="noopener noreferrer" href="/db-conseils/je-postule" >Je postule</a>
+                <a rel="noopener noreferrer" href="/db-conseils/je-recrute" >Je recrute</a>
             </div></ul>',
             ) ); ?>
             <!-- <div class="form-button__container">

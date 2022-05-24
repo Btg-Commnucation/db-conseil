@@ -31,31 +31,21 @@
 }
 
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   @media screen and (max-width: 770px) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  flex: 1 0 35%;
 
   @media screen and (max-width: 770px) {
     flex: unset;
     width: 100%;
-  }
-
-  &:not(:nth-of-type(2)),
-  &:not(:first-of-type) {
-    margin-top: 3rem;
-  }
-
-  &:nth-of-type(odd) {
-    margin-right: 3rem;
   }
 
   strong {

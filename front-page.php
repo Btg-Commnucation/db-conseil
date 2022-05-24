@@ -3,15 +3,17 @@
     <div id="root">
         <div class="display-none">
             <router-link to="/"></router-link>
-            <router-link to="/Description"></router-link>
+            <router-link to="/poste/:reference"></router-link>
             <router-link to="/Resultats"></router-link>
         </div>
-        <transition name="component-fade" mode="out-in">
-            <router-view></router-view>
-        </transition>
+        <router-view v-slot="{ Component }">
+            <transition name="component-fade" mode="out-in">
+                <component :is="Component" />
+            </transition>
+        </router-view>
     </div>
     <script type="text/x-template" id="home">
-    <div>
+    <div v-if="!loading">
         <section class="hero-banner">
             <div class="background-image"></div>
             <div class="gradient">
@@ -23,13 +25,13 @@
                             <div class="select">
                                 <select v-model="searchCategorie" name="categorie" id="categorie" aria-label="Quelle catégorie de poste ?">
                                     <option value="">Catégorie</option>
-                                    <option v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
+                                    <option class="deroulant" v-for="categorie in filteredCategory" v-bind:value="categorie">{{categorie}}</option>
                                 </select>
                             </div>
                             <div class="select">
                                 <select v-model="searchRegion" name="region" id="region" aria-label="Dans quelle région recherchez-vous ?">
                                     <option value="">Région</option>
-                                    <option v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
+                                    <option class="deroulant" v-for="region in filteredRegion" v-bind:value="region">{{region}}</option>
                                 </select>
                             </div>
                             <input v-model="searchJobType" type="text" name="post-type" id="post-type"
@@ -45,14 +47,15 @@
         <section class="job">
             <div class="container">
                 <h2><?php the_field('titre_carte'); ?></h2>
-                <div class="card-container">
+                <div class="card-container" v-if="!loading">
                     <div v-for='job in slicePost' class="card">
-                        <strong>{{job.county}}</strong>
+                        <strong>{{job.address_state}}</strong>
                         <div class="card-detail">
-                            <p class="categorie">{{job.industryLabel}}</p>
+                            <p class="categorie">{{industriesCategory(job.industry)}}</p>
                             <h3>{{job.label}}</h3>
-                            <p>{{job.description}}</p>
-                            <router-link class="card-link" :to="{ name: 'Description', params: { job } }"><?php the_field('texte_bouton_en_savoir_plus'); ?>
+                            <p v-if="job.description.length<208" v-html="job.description"></p>
+                            <p v-else v-html='job.description.substring(0, 208)+"..."'></p>
+                            <router-link v-if="job.reference" class="card-link" :to="{ name: 'Description', params: { job: JSON.stringify(job), reference: job.reference.replace(/\s/g, '') } }"><?php the_field('texte_bouton_en_savoir_plus'); ?>
                             </router-link>
                         </div>
                     </div>
@@ -62,17 +65,24 @@
         </section>
         <section class="cabinet">
             <div class="container">
-                <aside>
+                <aside class="<?php if (get_field('image_membre_deux')) : echo 'deuximage'; endif; ?>">
                     <div id="stephanie">
                         <?php $imageStephanie = get_field('image_membre_un'); ?>
                         <img src="<?php echo esc_url($imageStephanie['url']); ?>" alt="<?php echo esc_attr($imageStephanie['alt']); ?>">
-                        <a rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_un'); ?>"><?php the_field('nom_membre_un'); ?></a>
+                        <div class="link-container">
+                            <a class="<?php if (get_field('image_membre_deux')) : echo 'margintop'; endif; ?>" rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_un'); ?>"><?php the_field('nom_membre_un'); ?></a>
+                            <?php if(!get_field('image_membre_deux')): ?>
+                            <a rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_deux'); ?>"><?php the_field('nom_membre_deux'); ?></a>
+                            <?php endif; ?>
+                        </div>
                     </div>
+                    <?php if (get_field('image_membre_deux')) : ?>
                     <div id="pauline">
                         <?php $imagePauline = get_field('image_membre_deux'); ?>
                         <img src="<?php echo esc_url($imagePauline['url']); ?>" alt="<?php echo esc_attr($imagePauline['alt']); ?>">
-                        <a rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_deux'); ?>"><?php the_field('nom_membre_deux'); ?></a>
+                        <a class="<?php if (get_field('image_membre_deux')) : echo 'margintop'; endif; ?>" rel="noopener noreferrer" href="<?php the_field('lien_linkedin_membre_deux'); ?>"><?php the_field('nom_membre_deux'); ?></a>
                     </div>
+                    <?php endif; ?>
                 </aside>
                 <article>
                     <h2><?php the_field('titre_cabinet_principal'); ?></h2>
@@ -134,6 +144,8 @@
                             </ul>
                         </div>
                     </div>
+                <?php else : ?>
+                    <h3 class="avenir">à venir</h3>
                 <?php endif; ?>
             </div>
         </section>

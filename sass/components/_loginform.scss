@@ -1,0 +1,40 @@
+@use '../abstracts' as var;
+
+#loginform {
+  padding-block: 10rem;
+  margin-inline: auto;
+  width: min(75%, 1000px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    font-size: 1.8rem;
+    font-weight: 600;
+    input {
+      margin-top: 0.5em;
+      border-radius: 5px;
+      border: 1px solid
+        hsl(var.$texteHue var.$texteSaturation var.$texteLightness);
+      padding: 0.5rem 1rem;
+      font-weight: 400;
+
+      &#wp-submit {
+        border: none;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: white;
+        background: hsl(
+          var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness
+        );
+        padding: 1rem 1.5rem;
+      }
+    }
+  }
+}

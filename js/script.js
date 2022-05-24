@@ -1,5 +1,5 @@
 let windowWidth = window.innerWidth;
-if (windowWidth <= 1175) {
+if (windowWidth <= 1330) {
   const menuBtn = document.querySelector(".menu-btn");
   const mainMenu = document.getElementById("main-menu");
   let menuOpen = false;
@@ -27,3 +27,7 @@ if (splide != null) {
     interval: 8000,
   }).mount();
 }
+
+// const url = window.location.href;
+// const nextUrl = url.replace("#/", "");
+// window.history.pushState({}, null, nextUrl);

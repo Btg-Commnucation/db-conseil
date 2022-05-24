@@ -1,4 +1,4 @@
-@use '../abstracts';
+@use "../abstracts";
 
 .front-page {
   overflow: hidden;
@@ -34,26 +34,11 @@
   }
 
   h1 {
-    width: 35% !important;
-    @media screen and (max-width: 1709px) {
-      width: 39% !important;
+    width: 55% !important;
+    @media screen and (max-width: 1410px) {
+      width: 74% !important;
     }
-    @media screen and (max-width: 1533px) {
-      width: 43% !important;
-    }
-    @media screen and (max-width: 1391px) {
-      width: 48% !important;
-    }
-    @media screen and (max-width: 1246px) {
-      width: 53% !important;
-    }
-    @media screen and (max-width: 1128px) {
-      width: 59% !important;
-    }
-    @media screen and (max-width: 1013px) {
-      width: 66% !important;
-    }
-    @media screen and (max-width: 906px) {
+    @media screen and (max-width: 1056px) {
       width: 100% !important;
     }
     @media screen and (max-width: 598px) {
@@ -95,6 +80,10 @@
 
   .job-container {
     bottom: -24em;
+
+    @media screen and (max-width: 1074px) {
+      bottom: -38em;
+    }
   }
   .plus {
     bottom: -10.5em;
@@ -122,7 +111,7 @@
   }
 
   .cabinet {
-    padding-bottom: 11.2rem;
+    padding-bottom: 15.2rem;
     position: relative;
     overflow-x: unset;
 
@@ -141,11 +130,11 @@
         z-index: 1;
         bottom: -9%;
         right: 23%;
-        @media screen and (max-width: 1637px) {
-          right: 27%;
+        @media screen and (max-width: 1651px) {
+          right: 20%;
         }
-        @media screen and (max-width: 1448px) {
-          right: 32%;
+        @media screen and (max-width: 1511px) {
+          right: 19%;
         }
         @media screen and (max-width: 1235px) {
           right: 18%;
@@ -166,16 +155,22 @@
         content: url("../img/width-yellow-symbols.svg");
         position: absolute;
         z-index: 1;
-        right: -5%;
-        bottom: -34%;
+        right: -4%;
+        bottom: -29%;
         @media screen and (max-width: 1798px) {
           right: -6%;
         }
         @media screen and (max-width: 1655px) {
           right: -7%;
         }
-        @media screen and (max-width: 1567px) {
-          right: -9%;
+        @media screen and (max-width: 1651px) {
+          right: -12%;
+        }
+        @media screen and (max-width: 1511px) {
+          right: -15%;
+        }
+        @media screen and (max-width: 1370px) {
+          right: -20%;
         }
         @media screen and (max-width: 1235px) {
           right: -25%;
@@ -192,9 +187,15 @@
       column-gap: 2.6rem;
       position: relative;
       justify-content: center;
-      flex: 101em;
+      margin-right: 2.6rem;
+
+      &.deuximage {
+        flex: 101em;
+      }
       @media screen and (max-width: 1235px) {
-        flex: unset;
+        &.deuximage {
+          flex: unset;
+        }
       }
 
       @media screen and (max-width: 764px) {
@@ -212,6 +213,20 @@
 
         flex-direction: column;
 
+        &.link-container {
+          display: flex;
+          width: 100%;
+          flex-direction: revert;
+          align-items: center;
+          gap: 2.4em;
+          justify-content: center;
+
+          @media screen and (max-width: 498px) {
+            flex-direction: column;
+            gap: 1em;
+          }
+        }
+
         @media screen and (max-width: 764px) {
           flex: unset;
         }
@@ -226,7 +241,14 @@
           text-decoration: none;
           color: abstracts.$blue-700;
           display: flex;
-          align-self: flex-start;
+          align-self: center;
+          justify-content: center;
+
+          @media screen and (max-width: 498px) {
+            &:not(.margintop):last-of-type {
+              margin-top: 0;
+            }
+          }
 
           &::before {
             content: url("../img/linkedin.svg");
@@ -262,6 +284,7 @@
       z-index: 2;
       :is(p, strong, ul, ol, li) {
         opacity: 82%;
+        font-size: 2rem;
       }
       a {
         margin-top: 4.7rem;
@@ -562,4 +585,10 @@
       }
     }
   }
+}
+
+.avenir {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
 }
