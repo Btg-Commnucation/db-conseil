@@ -91,7 +91,6 @@ const Home = {
           tempArray2.push(job);
         }
       });
-      console.log(tempArray2[0])
       this.api = tempArray2;
     },
     industriesCategory(number) {
@@ -666,12 +665,12 @@ const Resultats = {
   },
 };
 const Description = {
-  props: ["job"],
   template: "#description",
   name: "Description",
   data: () => {
     return {
       jobs: [],
+      job: {},
       loading: true,
       displayPost: "",
       industryNumber: [],
@@ -700,14 +699,8 @@ const Description = {
     };
   },
   computed: {
-    displayingOffer() {
-      this.job != null
-        ? (this.displayPost = JSON.parse(this.job))
-        : (this.displayPost = this.jobs[0]);
-      return this.displayPost;
-    },
     getRef() {
-      this.reference = this.displayingOffer.reference;
+      this.reference = this.job.reference;
     },
     filteredCategory() {
       this.jobs.map(job => {
@@ -734,7 +727,9 @@ const Description = {
       }
     },
   },
-  mounted() {
+  async mounted() {
+    await this.getData();
+    document.title = this.job.label;
     const tempArray = jsonApi.data;
     let tempArray2 = [];
     tempArray.map(job => {
@@ -746,6 +741,19 @@ const Description = {
     this.loading = false;
   },
   methods: {
+    getData() {
+      if (this.$route.params.job) {
+        this.job = JSON.parse(this.$route.params.job);
+        // document.title = this.job.label;
+      } else {
+        const data = jsonApi.data;
+        data.map(job => {
+          if (job.reference === this.$route.params.reference) {
+            this.job = job;
+          }
+        })
+      }
+    },
     handleFileUpload() {
       this.files = this.$refs.file.files[0];
     },
