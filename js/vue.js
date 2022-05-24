@@ -685,23 +685,14 @@ const Description = {
       email: "",
       sent: false,
       files: "",
-      etudes: "",
-      reference: "",
-      postalCode: "",
-      town: "",
-      adresse: "",
       telephone: "",
       consent: false,
       formMessage: "",
-      civilite: "",
       response: "",
       invalid: "",
     };
   },
   computed: {
-    getRef() {
-      this.reference = this.job.reference;
-    },
     filteredCategory() {
       this.jobs.map(job => {
         this.industryNumber.push(job.industry);
@@ -744,11 +735,10 @@ const Description = {
     getData() {
       if (this.$route.params.job) {
         this.job = JSON.parse(this.$route.params.job);
-        // document.title = this.job.label;
       } else {
         const data = jsonApi.data;
         data.map(job => {
-          if (job.reference === this.$route.params.reference) {
+          if (job.status !== "3" && job.reference.replace(/\s/g, '') === this.$route.params.reference) {
             this.job = job;
           }
         })
@@ -832,15 +822,9 @@ const Description = {
         bodyFormData.set("email", this.email);
         bodyFormData.set("Joindredesfichiers", this.files);
         bodyFormData.set("textarea-999", this.formMessage);
-        bodyFormData.set("etudes", this.etudes);
-        bodyFormData.set("ref", this.reference);
-        bodyFormData.set("number-102", this.postalCode);
-        bodyFormData.set("ville", this.town);
-        bodyFormData.set("text-97", this.adresse);
+        bodyFormData.set("ref", this.job.reference);
         bodyFormData.set("telephone", this.telephone);
         bodyFormData.set("checkbox-411", this.consent);
-        bodyFormData.set("checkbox-411", this.consent);
-        bodyFormData.set("civilite", this.civilite);
 
         axios({
           method: "post",
@@ -849,23 +833,15 @@ const Description = {
           config: { headers: { "Content-Type": "multipart/form-data" } },
         })
           .then(response => {
+            console.log(response)
             this.response = response.data.message;
-            if (response.data.invalid_fields) {
-              this.invalid = response.data.invalid_fields[0].message;
-            }
             this.sent = true;
             this.nom = "";
             this.prenom = "";
             this.email = "";
             this.consent = false;
-            this.adresse = "";
             this.telephone = "";
-            this.town = "";
-            this.files = "";
-            this.etudes = "";
             this.formMessage = "";
-            this.postalCode = "";
-            this.civilite = "";
             return true;
           })
           .catch(error => console.log(error));

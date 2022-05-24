@@ -88,18 +88,6 @@
                 <p v-if="invalid" class="invalid">{{invalid}}</p>
             </article>
            <form v-if="!sent" @submit="checkForm">
-               <div class="civilite">
-                   <p>Civilité* :</p>
-                   <div class="civ-container">
-                       <input v-model="civilite" type="radio" name="madame" value="Madame" id="madame">
-                       <label for="madame">Madame</label>
-                       
-                    </div>
-                   <div class="civ-container">
-                        <input v-model="civilite" type="radio" name="monsieur" value="Monsieur" id="monsieur">
-                       <label for="monsieur">Monsieur</label>
-                    </div>
-               </div>
                <label for="nom">
                    Nom* :
                    <input v-model="nom" type="text" name="nom" required="required" id="nom">
@@ -113,32 +101,16 @@
                    <input v-model="email" type="email" name="email" required="required" id="email">
                 </label>
                <label for="tel">
-                   Téléphone* :
-                   <input v-model="telephone" type="tel" name="tel" required="required" id="tel">
-                </label>
-               <label for="adresse">
-                   Adresse* :
-                   <input v-model="adresse" type="text" name="adresse" required="required" id="adresse">
-                </label>
-               <label for="ville">
-                   Ville* :
-                   <input v-model="town" type="text" name="ville" required="required" id="ville">
-                </label>
-               <label for="postal">
-                   Code Postal* :
-                   <input v-model="postalCode" type="number" name="postal" required="required" id="postal">
+                   Téléphone :
+                   <input v-model="telephone" type="tel" name="tel" id="tel">
                 </label>
                <label for="ref">
                    Réf du poste* :
-                   <input v-model="getRef" type="text" name="ref" id="ref" :placeholder="reference">
-                </label>
-               <label for="etudes">
-                   Années d'études :
-                   <input v-model="etudes" type="number" name="etudes" id="etudes">
+                   <input :value="job.reference" type="text" name="ref" id="ref" />
                 </label>
                 <label for="message" class="message">
-                    Message* :
-                    <textarea v-model="formMessage" name="message" required="required" id="message"></textarea>
+                    Message :
+                    <textarea v-model="formMessage" name="message" id="message"></textarea>
                 </label>
                 <div class="cv">
                     <label for="files" class="cv">
