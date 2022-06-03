@@ -3,7 +3,8 @@
 <head>
 <?php
 
-    $url = "https://dbconseils.nicoka.com/api/jobs";
+    $old_url = "https://dbconseils.nicoka.com/api/jobs";
+    $url='https://dbconseils.nicoka.com/api/jobs/published/?__hr=1';
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_URL, $url);

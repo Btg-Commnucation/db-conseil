@@ -55,7 +55,7 @@ const Home = {
       this.industryNumber.map(number => {
         return this.categorie.push(this.industriesCategory(number));
       });
-      return this.categorie;
+      return [... new Set(this.categorie)];
     },
 
     filteredRegion() {
@@ -216,7 +216,7 @@ const Offres = {
       this.industryNumber.map(number => {
         return this.categorie.push(this.industriesCategory(number));
       });
-      return this.categorie;
+      return [... new Set(this.categorie)];
     },
 
     filteredRegion() {
@@ -367,19 +367,6 @@ const Postule = {
         return this.api.slice(0, 4);
       }
     },
-
-    filteredCategory() {
-      this.api.map(job => {
-        this.industryNumber.push(job.industry);
-      });
-      this.industryNumber.sort();
-      this.industryNumber = [...new Set(this.industryNumber)];
-      this.industryNumber.map(number => {
-        return this.categorie.push(this.industriesCategory(number));
-      });
-      return this.categorie;
-    },
-
     filteredRegion() {
       this.api.map(job => {
         this.region.push(job.address_state);
@@ -549,7 +536,7 @@ const Resultats = {
       this.industryNumber.map(number => {
         return this.categorie.push(this.industriesCategory(number));
       });
-      return this.categorie;
+      return [... new Set(this.categorie)];
     },
 
     filteredRegion() {
@@ -702,7 +689,7 @@ const Description = {
       this.industryNumber.map(number => {
         return this.categorie.push(this.industriesCategory(number));
       });
-      return this.categorie;
+      return [... new Set(this.categorie)];
     },
 
     filteredRegion() {

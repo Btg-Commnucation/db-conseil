@@ -33,7 +33,7 @@
     </aside>
     <article class="job-description" :class="startSearching && 'openSearch'">
         <div class="container">
-            <router-link to="/"><?php the_field('retour_aux_offres'); ?></router-link>
+            <router-link to="/nos-offres"><?php the_field('retour_aux_offres'); ?></router-link>
             <section class="title">
                 <div class="title-container">
                     <h2>{{job.label}}</h2>
