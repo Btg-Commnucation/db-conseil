@@ -722,10 +722,11 @@ const Description = {
     getData() {
       if (this.$route.params.job) {
         this.job = JSON.parse(this.$route.params.job);
+
       } else {
         const data = jsonApi.data;
         data.map(job => {
-          if (job.status !== "3" && job.reference.replace(/\s/g, '') === this.$route.params.reference) {
+          if (job.reference && job.reference.replace(/\s/g, '') == this.$route.params.reference) {
             this.job = job;
           }
         })
