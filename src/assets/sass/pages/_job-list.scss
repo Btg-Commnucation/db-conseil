@@ -1,0 +1,36 @@
+@use "../abstracts";
+
+.list-page {
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    z-index: 99;
+
+    .background-image {
+      position: absolute;
+      z-index: -1;
+      background-image: url(/descriptif.jpg);
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 26em;
+      opacity: 0.32;
+      @media screen and (max-width: 500px) {
+        overflow: hidden;
+      }
+
+      &::after {
+        content: url("/width-opacity-symbols.svg");
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: fit-content;
+        width: -moz-fit-content;
+
+        @media screen and (max-width: 450px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

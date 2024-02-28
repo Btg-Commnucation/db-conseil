@@ -1,0 +1,164 @@
+@use '../abstracts' as var;
+
+.elues {
+  position: relative;
+  display: flex;
+  gap: 0;
+
+  .accolade {
+    position: absolute;
+    height: fit-content;
+
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+
+    .st1 {
+      fill: #91b508 !important;
+    }
+
+    svg {
+      width: 123px;
+      height: 142px;
+    }
+  }
+
+  .circle {
+    position: relative;
+    .arrow {
+      left: -5%;
+      top: 12%;
+      @media screen and (max-width: 1467px) {
+        left: -9%;
+      }
+      @media screen and (max-width: 881px) {
+        left: -5%;
+      }
+      @media screen and (max-width: 694px) {
+        left: -8%;
+      }
+    }
+  }
+
+  .color {
+    width: 11px;
+    min-height: 100%;
+    @media screen and (max-width: 535px) {
+      display: none;
+    }
+  }
+
+  .light-green {
+    background: hsl(
+      var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness
+    );
+  }
+  .deep-green {
+    background: hsl(
+      var.$vertMoyenHue var.$vertMoyenSaturation var.$vertMoyenLightness
+    );
+  }
+  .red {
+    background: hsl(var.$rougeHue var.$rougeSaturation var.$rougeLightness);
+  }
+  .pink {
+    background: hsl(var.$roseHue var.$roseSaturation var.$roseLightness);
+  }
+
+  .main-content {
+    background: hsl(var.$greyHue var.$greySaturation var.$greyLightness);
+    width: calc(100% - (11px * 4));
+    padding: 7.3rem 8.8rem;
+    padding-bottom: 6.1rem;
+    @media screen and (max-width: 535px) {
+      padding-inline: 1.5rem;
+      padding-bottom: 1.1rem;
+      width: 100%;
+    }
+  }
+
+  .image {
+    width: 27em;
+    height: 26em;
+
+    @media screen and (max-width: 881px) {
+      width: 100%;
+      height: 41em;
+      margin-bottom: 5em;
+    }
+    @media screen and (max-width: 620px) {
+      height: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-top: 2.7rem;
+    font-weight: var.$semiBold;
+
+    &::before {
+      left: -6%;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 4.9rem;
+  }
+
+  article,
+  a,
+  h3 {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: hsl(var.$texteHue var.$texteSaturation var.$texteLightness);
+  }
+
+  h3 {
+    font-weight: var.$semiBold;
+  }
+
+  article div:not(.equipe-muni) {
+    margin-top: 2.4rem;
+  }
+
+  ul {
+    margin-block: 0;
+  }
+}
+
+.container {
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-start;
+
+  @media screen and (max-width: 881px) {
+    flex-direction: column;
+  }
+}
+
+.elue-content {
+  margin-left: 6.5em;
+  width: calc(77% - 27em);
+
+  @media screen and (max-width: 1281px) {
+    width: calc(100% - 27em);
+  }
+
+  @media screen and (max-width: 1000px) {
+    margin-left: 2.5rem;
+    width: calc(100% - 19em);
+  }
+  @media screen and (max-width: 881px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 535px) {
+    margin-left: 0;
+  }
+}

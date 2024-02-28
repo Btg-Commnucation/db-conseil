@@ -1,0 +1,162 @@
+@use "../abstracts";
+
+.job {
+  margin-bottom: 12rem;
+
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 7rem;
+  }
+  @media screen and (max-width: 450px) {
+    margin-bottom: 4rem;
+  }
+  .container {
+    max-width: 65%;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1420px) {
+      max-width: 73%;
+    }
+    @media screen and (max-width: 1263px) {
+      max-width: 85%;
+    }
+  }
+
+  h2 {
+    font-family: abstracts.$neutra-bold;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  @media screen and (max-width: 770px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 770px) {
+    flex: unset;
+    width: 100%;
+  }
+
+  strong {
+    align-self: flex-end;
+    background-color: abstracts.$yellow-600;
+    color: white;
+    font-family: abstracts.$neutra-bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.7rem 1.8rem;
+    border: 0px solid transparent;
+    border-radius: 5px;
+  }
+
+  h3 {
+    margin-bottom: 2.7rem;
+    text-transform: uppercase;
+  }
+
+  :is(h3, .categorie) {
+    font-family: abstracts.$neutra-bold;
+    font-weight: 700;
+  }
+
+  .categorie {
+    text-transform: uppercase;
+    opacity: 82%;
+  }
+
+  .card-link {
+    color: abstracts.$blue-700;
+    font-family: abstracts.$neutra-bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    align-self: flex-end;
+    margin-top: 2.1rem;
+    font-weight: 700;
+    text-underline-offset: 0.7rem;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: url(/little-blue-symbols.svg);
+      margin-right: 0.9rem;
+      line-height: 0;
+    }
+  }
+
+  .card-detail {
+    border: 1px solid abstracts.$blue-700;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem 1.9rem 1.2rem 1.9rem;
+  }
+}
+
+.see-all__button {
+  align-self: center;
+  margin-top: 4.5rem;
+  background-color: abstracts.$blue-700;
+  color: white;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: 1px solid abstracts.$blue-700;
+  padding: 1.5rem 3rem 1.5rem 2.68rem;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: url("/little-white-symbols.svg");
+    margin-right: 0.9rem;
+    line-height: 0;
+  }
+}
+
+.pagination {
+  margin-top: 4.5rem !important;
+  display: flex;
+  font-size: 2.6rem;
+  flex-wrap: wrap;
+  color: abstracts.$grey-500;
+  list-style: none;
+  justify-content: center;
+
+  li {
+    border: 1px solid abstracts.$grey-500;
+    border-radius: 50%;
+    padding: 0.9rem 1.5rem 0.9rem 1.5rem;
+    width: 59px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 3.8rem;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: abstracts.$blue-700;
+      color: white;
+      border: 1px solid abstracts.$blue-700;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 1.4rem;
+    }
+  }
+}
+
+.active-page {
+  background-color: abstracts.$blue-700;
+  color: white;
+  border: 1px solid abstracts.$blue-700;
+}

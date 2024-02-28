@@ -1,0 +1,409 @@
+@use "../abstracts";
+
+.cabinet {
+  padding-top: 7.3rem;
+  padding-bottom: 15.2rem;
+  background-color: abstracts.$grey-100;
+  position: relative;
+  overflow-x: hidden;
+
+  .hero-banner {
+    &::before {
+      content: url("/dot-width-blue.svg");
+      position: absolute;
+      right: 23%;
+      top: 17.5%;
+
+      @media screen and (max-width: 1723px) {
+        top: 17%;
+        right: 25%;
+      }
+
+      @media screen and (max-width: 1651px) {
+        right: 19%;
+      }
+
+      @media screen and (max-width: 1468px) {
+        right: 22%;
+      }
+
+      @media screen and (max-width: 1368px) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: url("/width-yellow-symbols.svg");
+      position: absolute;
+      right: -5%;
+      top: 1%;
+
+      @media screen and (max-width: 1651px) {
+        right: -11%;
+      }
+      @media screen and (max-width: 1368px) {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    max-width: 71%;
+
+    @media screen and (max-width: 1651px) {
+      max-width: 80%;
+    }
+    @media screen and (max-width: 1381px) {
+      max-width: 85%;
+    }
+  }
+
+  .article-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+
+    @media screen and (max-width: 1468px) {
+      column-gap: 3rem;
+    }
+    @media screen and (max-width: 1176px) {
+      flex-direction: column;
+    }
+  }
+
+  .left-side {
+    max-width: 57%;
+
+    @media screen and (max-width: 1381px) {
+      max-width: 63%;
+    }
+    @media screen and (max-width: 1176px) {
+      max-width: unset;
+      margin-bottom: 4.6rem;
+    }
+  }
+
+  .right-side {
+    align-self: flex-start;
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-family: abstracts.$neutra-bold;
+    font-weight: 700;
+    line-height: 7rem;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: url("/little-yellow-horizon-symbols.svg");
+      position: absolute;
+      top: -50%;
+      left: 0;
+      right: 0;
+
+      @media screen and (max-width: 741px) {
+        top: -30%;
+      }
+      @media screen and (max-width: 412px) {
+        top: -18%;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 7.3rem;
+    font-size: 3.2rem;
+    font-family: abstracts.$neutra-bold;
+    text-transform: uppercase;
+  }
+
+  .short-text {
+    margin-bottom: 3.6rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-family: abstracts.$neutra-bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    &:not(:first-of-type) {
+      margin-top: 4.6rem;
+    }
+
+    &:before {
+      content: url("/little-yellow-symbols.svg");
+      line-height: 0;
+      margin-right: 0.3em;
+    }
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+
+  .bottom-article {
+    margin-top: 5.4rem;
+
+    @media screen and (max-width: 1176px) {
+      flex-direction: column-reverse;
+    }
+
+    .left-side {
+      width: unset;
+      align-self: start;
+      margin-right: 4rem;
+
+      @media screen and (max-width: 1468px) {
+        margin-right: 2rem;
+      }
+      @media screen and (max-width: 1170px) {
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-top: 4.6rem;
+      }
+    }
+
+    .right-side {
+      width: 67%;
+      @media screen and (max-width: 1176px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .the-team {
+    background-color: abstracts.$yellow-600;
+    margin-top: 6.3rem;
+    padding-top: 4.2rem;
+    padding-bottom: 7.9rem;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: 800px) {
+      padding-top: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+      @media screen and (max-width: 1000px) {
+        margin-top: 3.3rem;
+      }
+    }
+
+    &::before {
+      content: url("/width-white-symbols.svg");
+      position: absolute;
+      left: 0;
+      top: -40%;
+      @media screen and (max-width: 1503px) {
+        top: -52%;
+      }
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+    }
+
+    .container {
+      max-width: 69%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media screen and (max-width: 1180px) {
+        max-width: 80%;
+      }
+      @media screen and (max-width: 1000px) {
+        max-width: 85%;
+      }
+    }
+
+    aside {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2.32rem;
+
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+      }
+
+      .dot-image {
+        margin: 0 3.3rem;
+        margin-bottom: 8rem;
+        @media screen and (max-width: 800px) {
+          margin: 0;
+          margin-bottom: 4rem;
+          margin-top: 4rem;
+        }
+      }
+    }
+
+    #pauline,
+    #stephanie {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .img-container {
+        border: 1px solid white;
+        padding: 0.8rem;
+        margin-bottom: 2.5rem;
+      }
+
+      a {
+        font-size: 2rem;
+        font-family: abstracts.$neutra-bold;
+        text-decoration: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: abstracts.$blue-700;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: url("/linkedin.svg");
+          padding-right: 2rem;
+        }
+      }
+    }
+
+    article {
+      margin-top: 5.2rem;
+      font-size: 2rem;
+      opacity: 82%;
+
+      @media screen and (max-width: 1180px) {
+        margin-top: 4.2rem;
+      }
+
+      strong {
+        font-family: abstracts.$neutra-bold;
+      }
+    }
+  }
+
+  .post-recruit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+
+    @media screen and (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      font-size: 1.8rem;
+      color: white;
+      background-color: abstracts.$blue-700;
+      padding: 1.5rem 4rem;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      position: relative;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      position: absolute;
+      bottom: -6%;
+      right: 25%;
+
+      &::before {
+        content: url(/little-white-symbols.svg);
+        line-height: 0;
+      }
+
+      @media screen and (max-width: 750px) {
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: fit-content;
+        width: -moz-fit-content;
+      }
+    }
+
+    .postule {
+      padding-bottom: 5.7rem;
+      background-color: abstracts.$blue-700;
+      color: white;
+      padding-left: 19.4rem;
+      padding-top: 1.9rem;
+      padding-right: 1.7rem;
+      position: relative;
+
+      @media screen and (max-width: 1464px) {
+        padding-left: 13.4rem;
+      }
+      @media screen and (max-width: 1229px) {
+        padding-left: 7.4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        padding-left: 4.4rem;
+      }
+
+      a {
+        background-color: abstracts.$yellow-600;
+        color: abstracts.$blue-700;
+
+        &::before {
+          content: url(/little-blue-symbols.svg);
+        }
+      }
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        &::before {
+          content: url("/dot-little-white.svg");
+          padding-bottom: 2.1rem;
+        }
+      }
+    }
+
+    .recrute {
+      padding-right: 22.3rem;
+      padding-left: 4rem;
+      padding-top: 1.9rem;
+      position: relative;
+      padding-bottom: 7.6rem;
+      margin-bottom: 0;
+
+      @media screen and (max-width: 1464px) {
+        padding-right: 13.4rem;
+      }
+      @media screen and (max-width: 1229px) {
+        padding-right: 7.4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        padding-right: 4.4rem;
+        padding-top: 4rem;
+      }
+
+      a {
+        right: unset;
+        left: 25%;
+        @media screen and (max-width: 750px) {
+          right: 0;
+          left: 0;
+        }
+      }
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        &::before {
+          content: url("/dot-little-blue.svg");
+          padding-bottom: 2.1rem;
+        }
+      }
+    }
+  }
+}

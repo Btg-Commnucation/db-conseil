@@ -1,0 +1,242 @@
+@use "../abstracts";
+
+main.recrute {
+  padding-top: 6.8rem;
+  background-color: abstracts.$grey-100;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 1810px) {
+    padding-top: 11.8rem;
+  }
+  @media screen and (max-width: 1315px) {
+    padding-top: 6.8rem;
+  }
+
+  .hero-banner {
+    position: relative;
+
+    &::before {
+      content: url("/dot-width-blue.svg");
+      position: absolute;
+      top: 72%;
+      left: -6%;
+      @media screen and (max-width: 1765px) {
+        left: -8%;
+      }
+      @media screen and (max-width: 1651px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 1315px) {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: url("/width-yellow-symbols.svg");
+      position: absolute;
+      top: 8%;
+
+      @media screen and (max-width: 1765px) {
+        left: -5%;
+      }
+      @media screen and (max-width: 1651px) {
+        left: -10%;
+      }
+      @media screen and (max-width: 1488px) {
+        left: -13%;
+      }
+      @media screen and (max-width: 1374px) {
+        left: -18%;
+      }
+
+      @media screen and (max-width: 1315px) {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    max-width: 75%;
+
+    @media screen and (max-width: 1315px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .image-container {
+    margin-right: 4.6rem;
+    width: 124%;
+
+    @media screen and (max-width: 1315px) {
+      width: unset;
+      margin-right: 0;
+    }
+
+    img {
+      position: relative;
+      bottom: -2em;
+    }
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-family: abstracts.$neutra-bold;
+    font-weight: 700;
+    line-height: 7rem;
+    text-align: center;
+    position: relative;
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 12.6rem;
+
+    @media screen and (max-width: 1369px) {
+      font-size: 5.5rem;
+    }
+    @media screen and (max-width: 1315px) {
+      font-size: 6rem;
+    }
+
+    &::before {
+      content: url("/little-yellow-horizon-symbols.svg");
+      position: absolute;
+      top: -50%;
+      left: 0;
+      right: 0;
+
+      @media screen and (max-width: 1315px) {
+        top: -30%;
+      }
+      @media screen and (max-width: 479px) {
+        top: -15%;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    font-family: abstracts.$neutra-bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+    opacity: 82%;
+    line-height: 2.5rem;
+
+    &:not(:last-of-type) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .hero-banner__content {
+    padding-bottom: 7rem;
+    align-self: center;
+    @media screen and (max-width: 800px) {
+      padding-bottom: 3rem;
+    }
+    @media screen and (max-width: 550px) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .accompagnement {
+    padding-top: 11.1rem;
+    padding-bottom: 7rem;
+    background-color: white;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul {
+      display: grid;
+      margin-top: 4.3rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 4.8rem;
+      row-gap: 4rem;
+
+      @media screen and (max-width: 1360px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (max-width: 650px) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .etape-image-container {
+      background-color: abstracts.$blue-700;
+      border-radius: 50%;
+      border: none;
+      padding: 3rem;
+      margin-bottom: 2rem;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    h3 {
+      font-family: abstracts.$neutra-bold;
+      text-transform: uppercase;
+      font-size: 2rem;
+      text-align: center;
+      white-space: nowrap;
+      @media screen and (max-width: 1260px) {
+        white-space: normal;
+      }
+    }
+
+    p {
+      opacity: 82%;
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  }
+
+  .contact-form {
+    background-color: abstracts.$grey-100;
+
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input,
+    textarea {
+      background-color: transparent;
+    }
+  }
+}
+
+.needed-fields {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin: 0;
+  grid-column: 3 / 5;
+  align-self: start;
+}

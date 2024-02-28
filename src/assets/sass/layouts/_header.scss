@@ -1,0 +1,122 @@
+@use '../abstracts' as var;
+
+header {
+  .header-container {
+    width: min(77%, 1600px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline-start: 4.2em;
+    padding-block: 4.5rem;
+    background-color: white;
+
+    @media screen and (max-width: 1476px) {
+      flex-direction: column;
+      justify-content: center;
+      margin-inline: auto !important;
+    }
+    @media screen and (max-width: 1379px) {
+      width: 87%;
+    }
+
+    @media screen and (max-width: 1137px) {
+      width: 95%;
+    }
+
+    @media screen and (max-width: 993px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.logo__link {
+  width: 218px;
+  height: 70px;
+  @media screen and (max-width: 1476px) {
+    margin-block-end: 2em;
+  }
+
+  @media screen and (max-width: 993px) {
+    margin-block-end: 0;
+  }
+}
+
+.main-nav__container {
+  width: 72%;
+  @media screen and (max-width: 1752px) {
+    width: 77%;
+  }
+  @media screen and (max-width: 1476px) {
+    width: 100%;
+  }
+}
+
+#main-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    font-size: 1.8rem;
+    font-family: var.$poppins;
+    font-weight: var.$semiBold;
+    color: hsl(var.$texteHue var.$texteSaturation var.$texteLightness);
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+
+    @media screen and (max-width: 1639px) {
+      font-size: 1.6rem;
+    }
+    @media screen and (max-width: 993px) {
+      font-size: 1.8rem;
+    }
+
+    &:hover {
+      color: hsl(
+        var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness
+      );
+    }
+
+    &::before {
+      content: "{";
+      margin-right: 1.1rem;
+    }
+
+    &::after {
+      content: "}";
+      margin-left: 1.1rem;
+    }
+  }
+}
+
+.menu-item-has-children {
+  position: relative;
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 19em;
+    padding: 1rem 1.3rem;
+    z-index: 1;
+    border-inline-start: 4px solid
+      hsl(var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness);
+
+    @media screen and (max-width: 993px) {
+      position: unset;
+      border: none;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    a {
+      font-size: 1.4rem !important;
+      font-weight: var.$regular !important;
+    }
+  }
+}

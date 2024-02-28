@@ -1,0 +1,31 @@
+.photo-bot {
+  position: relative;
+  background-image: url("/bottom-img.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  height: 308px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .gradient-bottom {
+    position: absolute;
+    width: 100%;
+    background: transparent
+      linear-gradient(180deg, #00000058 0%, #00000000 100%) 0% 0% no-repeat
+      padding-box;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 28%;
+  }
+
+  .gradient-second {
+    position: absolute;
+    width: 100%;
+    background: transparent linear-gradient(0deg, #00000058 0%, #00000000 100%)
+      0% 0% no-repeat padding-box;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 28%;
+  }
+}

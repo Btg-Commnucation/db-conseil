@@ -1,0 +1,585 @@
+@use "../abstracts";
+
+.front-page {
+  overflow: hidden;
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .background-image {
+    position: absolute;
+    z-index: -1;
+    background-image: url("/test.jpg");
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 36em;
+    opacity: 0.32;
+    background-repeat: no-repeat;
+
+    &::after {
+      content: url("/width-opacity-symbols.svg");
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: fit-content;
+      width: -moz-fit-content;
+    }
+  }
+
+  .gradient {
+    height: 36em;
+  }
+
+  h1 {
+    width: 55% !important;
+    @media screen and (max-width: 1410px) {
+      width: 74% !important;
+    }
+    @media screen and (max-width: 1056px) {
+      width: 100% !important;
+    }
+    @media screen and (max-width: 598px) {
+      &::before {
+        top: -25% !important;
+      }
+    }
+    @media screen and (max-width: 379px) {
+      font-size: 5rem;
+    }
+  }
+
+  .back-offre {
+    color: abstracts.$blue-700;
+    text-decoration: none;
+  }
+
+  .offres-link {
+    align-self: center;
+    margin-top: 4.5rem;
+    background-color: #2a5393;
+    color: #fff;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 1px solid #2a5393;
+    padding: 1.5rem 3rem 1.5rem 2.68rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    &::before {
+      content: url("/little-white-symbols.svg");
+      margin-right: 0.9rem;
+      line-height: 0;
+    }
+  }
+
+  .job-container {
+    bottom: -24em;
+
+    @media screen and (max-width: 1074px) {
+      bottom: -38em;
+    }
+  }
+  .plus {
+    bottom: -10.5em;
+  }
+
+  .changeBottom {
+    bottom: -16em;
+  }
+
+  .job {
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: url("/width-yellow-symbols.svg");
+      position: absolute;
+      top: 6%;
+      left: -15%;
+      @media screen and (max-width: 1420px) {
+        left: -25%;
+      }
+      @media screen and (max-width: 1263px) {
+        z-index: -1;
+      }
+    }
+  }
+
+  .cabinet {
+    padding-bottom: 15.2rem;
+    position: relative;
+    overflow-x: unset;
+
+    .container {
+      display: flex;
+      column-gap: 2.6rem;
+      row-gap: 2.6rem;
+      overflow-x: hidden;
+      @media screen and (max-width: 1235px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      &::before {
+        content: url("/dot-width-blue.svg");
+        position: absolute;
+        z-index: 1;
+        bottom: -9%;
+        right: 23%;
+        @media screen and (max-width: 1651px) {
+          right: 20%;
+        }
+        @media screen and (max-width: 1511px) {
+          right: 19%;
+        }
+        @media screen and (max-width: 1235px) {
+          right: 18%;
+          bottom: -5%;
+        }
+        @media screen and (max-width: 1109px) {
+          right: 23%;
+        }
+        @media screen and (max-width: 1001px) {
+          right: 27%;
+        }
+        @media screen and (max-width: 898px) {
+          display: none;
+        }
+      }
+
+      &::after {
+        content: url("/width-yellow-symbols.svg");
+        position: absolute;
+        z-index: 1;
+        right: -4%;
+        bottom: -29%;
+        @media screen and (max-width: 1798px) {
+          right: -6%;
+        }
+        @media screen and (max-width: 1655px) {
+          right: -7%;
+        }
+        @media screen and (max-width: 1651px) {
+          right: -12%;
+        }
+        @media screen and (max-width: 1511px) {
+          right: -15%;
+        }
+        @media screen and (max-width: 1370px) {
+          right: -20%;
+        }
+        @media screen and (max-width: 1235px) {
+          right: -25%;
+          bottom: -18%;
+        }
+        @media screen and (max-width: 898px) {
+          display: none;
+        }
+      }
+    }
+
+    aside {
+      display: flex;
+      column-gap: 2.6rem;
+      position: relative;
+      justify-content: center;
+      margin-right: 2.6rem;
+
+      &.deuximage {
+        flex: 101em;
+      }
+      @media screen and (max-width: 1235px) {
+        &.deuximage {
+          flex: unset;
+        }
+      }
+
+      @media screen and (max-width: 764px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      div {
+        text-align: center;
+        width: fit-content;
+        width: -moz-fit-content;
+        height: fit-content;
+        height: -moz-fit-content;
+        display: flex;
+
+        flex-direction: column;
+
+        &.link-container {
+          display: flex;
+          width: 100%;
+          flex-direction: revert;
+          align-items: center;
+          gap: 2.4em;
+          justify-content: center;
+
+          @media screen and (max-width: 498px) {
+            flex-direction: column;
+            gap: 1em;
+          }
+        }
+
+        @media screen and (max-width: 764px) {
+          flex: unset;
+        }
+
+        img {
+          margin: auto;
+        }
+
+        a {
+          margin-top: 2.2rem;
+          font-size: 2rem;
+          text-decoration: none;
+          color: abstracts.$blue-700;
+          display: flex;
+          align-self: center;
+          justify-content: center;
+
+          @media screen and (max-width: 498px) {
+            &:not(.margintop):last-of-type {
+              margin-top: 0;
+            }
+          }
+
+          &::before {
+            content: url("/linkedin.svg");
+            padding-right: 1.4rem;
+          }
+        }
+      }
+
+      #pauline {
+        @media screen and (max-width: 764px) {
+          margin-top: 5rem;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 2.7rem;
+    }
+
+    ul {
+      margin-left: 3.5rem !important;
+
+      li {
+        list-style: disc !important;
+      }
+    }
+
+    article {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+      :is(p, strong, ul, ol, li) {
+        opacity: 82%;
+        font-size: 2rem;
+      }
+      a {
+        margin-top: 4.7rem;
+        font-size: 1.8rem;
+        color: #fff;
+        background-color: #2a5393;
+        padding: 1.5rem 4rem;
+        text-decoration: none;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        width: -moz-fit-content;
+
+        &::before {
+          content: url(/little-white-symbols.svg);
+          line-height: 0;
+          margin-right: 0.3em;
+        }
+      }
+
+      p:first-of-type {
+        margin-top: 0;
+        margin-bottom: 3.6rem;
+      }
+    }
+
+    .telescope {
+      background-size: cover;
+      width: 83%;
+      height: 376px;
+      background: url("/telescope.jpg") no-repeat right;
+      position: absolute;
+      bottom: -40%;
+      left: 0;
+      @media screen and (max-width: 1235px) {
+        bottom: -24%;
+        width: 100%;
+      }
+      @media screen and (max-width: 764px) {
+        bottom: -16%;
+      }
+    }
+  }
+
+  .post-recruit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 28.5rem;
+    background-color: white;
+
+    @media screen and (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      font-size: 1.8rem;
+      color: white;
+      background-color: abstracts.$blue-700;
+      padding: 2rem 4rem;
+      text-decoration: none;
+      font-weight: 400;
+      text-transform: uppercase;
+      border-radius: 10px;
+      position: absolute;
+      bottom: -9%;
+      right: 25%;
+
+      @media screen and (max-width: 431px) {
+        bottom: -6%;
+      }
+
+      &::before {
+        content: url("/little-white-symbols.svg");
+      }
+
+      @media screen and (max-width: 750px) {
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: fit-content;
+        width: -moz-fit-content;
+      }
+    }
+
+    .postule {
+      background-color: abstracts.$blue-700;
+      color: white;
+      padding: 1.9rem 1.7rem 5.7rem 19.4rem;
+      position: relative;
+      z-index: 1;
+
+      @media screen and (max-width: 1464px) {
+        padding-left: 13.4rem;
+      }
+      @media screen and (max-width: 1229px) {
+        padding-left: 7.4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        padding-left: 4.4rem;
+      }
+
+      a {
+        background-color: abstracts.$yellow-600;
+        color: abstracts.$blue-700;
+
+        &::before {
+          content: url("/little-blue-symbols.svg");
+        }
+      }
+
+      .texte-fond {
+        font-size: 2rem;
+
+        p:not(:first-of-type) {
+          margin-top: 2.5rem;
+        }
+      }
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        font-size: 3.2rem;
+        font-family: abstracts.$neutra-bold;
+        text-transform: uppercase;
+        margin-bottom: 2.7rem;
+        margin-top: 0;
+
+        &::before {
+          content: url("/dot-little-white.svg");
+          padding-bottom: 2.1rem;
+        }
+      }
+    }
+
+    .recrute {
+      position: relative;
+      padding: 1.9rem 22.3rem 7.6rem 4rem;
+      background-color: white;
+      margin-bottom: 0;
+
+      @media screen and (max-width: 1464px) {
+        padding-right: 13.4rem;
+      }
+      @media screen and (max-width: 1229px) {
+        padding-right: 7.4rem;
+      }
+      @media screen and (max-width: 1000px) {
+        padding-right: 4.4rem;
+      }
+
+      a {
+        right: unset;
+        left: 25%;
+        @media screen and (max-width: 750px) {
+          right: 0;
+          left: 0;
+        }
+      }
+
+      .texte-fond {
+        font-size: 2rem;
+        p:not(:first-of-type) {
+          margin-top: 2.5rem;
+        }
+      }
+
+      h2 {
+        display: flex;
+        flex-direction: column;
+        font-size: 3.2rem;
+        font-family: abstracts.$neutra-bold;
+        margin-top: 0;
+        text-transform: uppercase;
+        margin-bottom: 3.2rem;
+
+        &::before {
+          content: url("/dot-little-blue.svg");
+          padding-bottom: 2.1rem;
+        }
+      }
+    }
+  }
+
+  .temoignages {
+    padding-top: 10.5rem;
+    padding-bottom: 7.1rem;
+
+    @media screen and (max-width: 450px) {
+      padding-bottom: 4rem;
+    }
+
+    .title-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+
+    h2 {
+      font-size: 3.2rem;
+      font-family: abstracts.$neutra-bold;
+      text-transform: uppercase;
+
+      &::before {
+        content: url("/little-blue-symbols.svg");
+      }
+    }
+
+    .splide__arrows {
+      display: none;
+    }
+
+    .splide {
+      li {
+        display: flex;
+
+        @media screen and (max-width: 1209px) {
+          flex-direction: column;
+          row-gap: 6.6rem;
+        }
+
+        .temoignages-container {
+          display: flex;
+          align-items: center;
+          @media screen and (max-width: 725px) {
+            flex-direction: column;
+          }
+        }
+
+        .temoignages-container:first-of-type {
+          &::after {
+            content: url("/middle-yellow-symnols.svg");
+            margin-left: 3rem;
+            margin-right: 3rem;
+
+            @media screen and (max-width: 1206px) {
+              display: none;
+            }
+          }
+        }
+
+        .slider-image__container {
+          width: 55%;
+          @media screen and (max-width: 1360px) {
+            width: 80%;
+          }
+          img {
+            margin: auto;
+          }
+        }
+
+        article {
+          margin-left: 2rem;
+          font-size: 2rem;
+
+          &::before {
+            content: url("/double-blue-quote.svg");
+            margin-bottom: 1.9rem;
+          }
+
+          strong {
+            font-family: abstracts.$neutra-bold;
+            padding-top: 2rem;
+            display: flow-root;
+          }
+        }
+      }
+
+      .splide__pagination {
+        margin-top: 5.1rem;
+        column-gap: 0.5rem;
+      }
+
+      .splide__pagination__page {
+        border: 1px solid abstracts.$blue-700;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: white;
+
+        &.is-active {
+          background-color: abstracts.$blue-700;
+        }
+      }
+    }
+  }
+}
+
+.avenir {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}

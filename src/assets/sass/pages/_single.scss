@@ -1,0 +1,155 @@
+@use "../abstracts" as var;
+
+.background__image {
+  padding-block: 5.1rem;
+  background-image: url("/bkg-single-tours-en-commun.png");
+  background-size: contain;
+
+  article {
+    background-color: white;
+    padding-inline: 6.7em;
+    padding-block: 7.6rem;
+    @media screen and (max-width: 414px) {
+      padding-inline: 2.7em;
+    }
+  }
+
+  h1 {
+    position: relative;
+  }
+
+  strong {
+    font-weight: var.$medium;
+    font-size: 1.8rem;
+    display: flow-root;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    color: hsl(
+      var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness
+    );
+    margin-bottom: 0.6rem;
+    margin-top: 1.5rem;
+  }
+
+  img:not(first-of-type) {
+    margin-top: 7.1rem;
+  }
+}
+
+h1 {
+  color: hsl(
+    var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness
+  );
+  font-size: 4.6rem;
+  font-weight: var.$bold;
+
+  @media screen and (max-width: 459px) {
+    font-size: 3.6rem;
+  }
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: var.$extraBold;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: var.$semiBold;
+}
+
+.container-narrow {
+  width: min(63%, 1227px);
+  margin-inline: auto;
+
+  @media screen and (max-width: 1000px) {
+    width: 91%;
+  }
+
+  @media screen and (max-width: 590px) {
+    width: 85%;
+  }
+}
+
+.back__actu a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  .arrow path {
+    transition: 500ms ease-in-out;
+  }
+
+  &:hover {
+    .arrow path {
+      fill: hsl(var.$rougeHue var.$rougeSaturation var.$rougeLightness);
+    }
+  }
+  span {
+    color: hsl(var.$texteHue var.$texteSaturation var.$texteLightness);
+    background-color: white;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: var.$regular;
+  }
+  margin-bottom: 1.5rem;
+}
+
+.circle {
+  position: relative;
+  margin-left: 2rem;
+  margin-right: 0.794rem;
+
+  .arrow {
+    position: absolute;
+    left: -67%;
+  }
+  svg circle {
+    fill: hsl(
+      var.$vertClairHue var.$vertClairSaturation var.$vertClairLightness
+    );
+  }
+}
+
+.date-container {
+  border-inline-start: 1px solid
+    hsl(var.$texteHue var.$texteSaturation var.$texteLightness);
+  margin-top: 0.6rem;
+  padding-left: 1.45rem;
+  margin-bottom: 1.856rem;
+
+  h2::before {
+    content: "{";
+    margin-right: 1.1rem;
+  }
+
+  a,
+  p {
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    color: hsl(
+      var.$vertMoyenHue var.$vertMoyenSaturation var.$vertMoyenLightness
+    );
+
+    &::before {
+      content: "{";
+      margin-right: 1.1rem;
+    }
+    &::after {
+      content: "}";
+      margin-left: 1.1rem;
+    }
+  }
+}
+
+.contenu-container p:not(first-of-type) {
+  margin-top: 1rem;
+}

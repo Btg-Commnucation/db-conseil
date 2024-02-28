@@ -1,0 +1,18 @@
+@use "../abstracts" as var;
+
+.error .container-narrow {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  align-items: center;
+  text-align: center;
+  padding-block: 5rem;
+  width: 100vw;
+
+  a {
+    text-decoration: none;
+    color: hsl(var.$rougeHue, var.$rougeSaturation, var.$rougeLightness);
+    font-size: 2rem;
+    font-weight: var.$semiBold;
+  }
+}

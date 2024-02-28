@@ -1,0 +1,276 @@
+@use "../abstracts";
+
+.list-page {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: url("/width-yellow-symbols.svg");
+    position: absolute;
+    top: -3%;
+    z-index: 100;
+    right: -14%;
+
+    @media screen and (max-width: 1762px) {
+      right: -22%;
+    }
+    @media screen and (max-width: 1446px) {
+      right: -27%;
+    }
+    @media screen and (max-width: 1371px) {
+      right: -32%;
+    }
+    @media screen and (max-width: 1263px) {
+      inset: 0;
+      margin: auto;
+      width: fit-content;
+      z-index: -1;
+      top: 36%;
+    }
+  }
+}
+.gradient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 26em;
+  justify-content: center;
+  background: linear-gradient(
+    0deg,
+    rgba(42, 83, 147, 1) 0%,
+    rgba(42, 83, 147, 0) 64%
+  );
+  padding-top: 9rem;
+  padding-bottom: 17rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-family: abstracts.$neutra-bold;
+    font-weight: 700;
+    position: relative;
+    width: 23%;
+    line-height: 7rem;
+    text-align: center;
+
+    &::before {
+      content: url("/little-yellow-horizon-symbols.svg");
+      position: absolute;
+      top: -50%;
+      left: 0;
+      right: 0;
+    }
+
+    @media screen and (max-width: 1739px) {
+      width: 23%;
+    }
+    @media screen and (max-width: 1587px) {
+      width: 26%;
+    }
+    @media screen and (max-width: 1404px) {
+      width: 29%;
+    }
+    @media screen and (max-width: 1259px) {
+      width: 32%;
+    }
+    @media screen and (max-width: 1141px) {
+      width: 36%;
+    }
+    @media screen and (max-width: 1014px) {
+      width: 40%;
+    }
+    @media screen and (max-width: 918px) {
+      width: 43%;
+    }
+    @media screen and (max-width: 848px) {
+      width: 47%;
+    }
+    @media screen and (max-width: 776px) {
+      width: 52%;
+    }
+    @media screen and (max-width: 700px) {
+      width: 59%;
+    }
+    @media screen and (max-width: 689px) {
+      width: 100%;
+
+      &::before {
+        top: -100%;
+      }
+    }
+    @media screen and (max-width: 687px) {
+      &::before {
+        top: -50%;
+      }
+    }
+    @media screen and (max-width: 379px) {
+      font-size: 5rem;
+    }
+    @media screen and (max-width: 365px) {
+      &::before {
+        top: -25%;
+      }
+    }
+  }
+}
+
+.job-container {
+  background-color: abstracts.$blue-700;
+  border-radius: 5px;
+  display: flex;
+  width: 76%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.6rem 3.1rem 3.1rem 3.1rem;
+  position: absolute;
+  bottom: -20em;
+
+  @media screen and (max-width: 1420px) {
+    width: 85%;
+  }
+  @media screen and (max-width: 1263px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1074px) {
+    bottom: -34em;
+  }
+  @media screen and (max-width: 435px) {
+    bottom: -38em;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    margin-top: 4.1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 5rem;
+    justify-content: center;
+
+    @media screen and (max-width: 1074px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      gap: 1.5em;
+    }
+
+    @media screen and (max-width: 590px) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  h2 {
+    color: white;
+    font-family: abstracts.$neutra-bold;
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+    &::before {
+      content: url("/little-white-symbols.svg");
+      margin-right: 0.5rem;
+    }
+  }
+
+  :is(.select, input) {
+    font-size: 2.2rem;
+    color: abstracts.$blue-700;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    padding: 1.4rem 0.8rem;
+    margin-right: 1rem;
+    width: 25%;
+
+    @media screen and (max-width: 1074px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 590px) {
+      margin-bottom: 1.5em;
+      width: 100%;
+    }
+
+    & select {
+      font-size: 2.2rem;
+      color: abstracts.$blue-700;
+      border: 0px solid transparent;
+      border-radius: 5px;
+      padding: 1.4rem 0.8rem;
+      margin-right: 1rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .select {
+    padding: 0;
+  }
+
+  input {
+    padding-left: 0.8rem;
+  }
+}
+
+.job {
+  padding-top: 20.5rem;
+
+  @media screen and (max-width: 1074px) {
+    padding-top: 43.5rem;
+  }
+
+  @media screen and (max-width: 578px) {
+    padding-top: 48.5rem;
+  }
+
+  @media screen and (max-width: 435px) {
+    padding-top: 49.5rem;
+  }
+}
+
+#root {
+  overflow: hidden;
+}
+
+.deroulant {
+  font-size: 1.8rem;
+}
+
+.rechercher-job {
+  font-size: 1.6rem;
+  background-color: abstracts.$yellow-700;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid abstracts.$yellow-700;
+  padding: 1.5rem 3.02rem 1.5rem 3.02rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: url("/little-white-symbols.svg");
+    margin-right: 0.5rem;
+    line-height: 0;
+  }
+
+  @media screen and (max-width: 1074px) {
+    width: fit-content;
+    width: -moz-fit-content;
+    justify-self: center;
+    align-items: center;
+  }
+}
