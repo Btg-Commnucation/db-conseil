@@ -18,7 +18,7 @@ label {
 
 ::-webkit-scrollbar {
   width: 0.3em;
-
+  
   &:hover {
     width: 0.5em;
   }
@@ -33,6 +33,7 @@ label {
   border-radius: 100vw;
   border: none;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   transform: scale(1.5);
 }
@@ -64,4 +65,15 @@ label {
   50% {
     opacity: 0.5;
   }
+}
+
+.wpcf7.sucessMessage, .wpcf7.errorMessage {
+  margin-top: 3rem;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }

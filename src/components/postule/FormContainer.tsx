@@ -2,6 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import z from 'zod';
 import { toFormikValidationSchema } from 'zod-formik-adapter';
 import axios from 'axios';
+import { useState } from 'react';
 
 const WORDPRESS_API = import.meta.env.VITE_WORDPRESS_API;
 
@@ -50,6 +51,9 @@ const initialValues = {
 };
 
 const FormContainer = () => {
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   const handleSubmit = async (values: TValues) => {
     const formData = new FormData();
     formData.set('Nom', values.nom);
@@ -84,12 +88,38 @@ const FormContainer = () => {
         `${WORDPRESS_API}/contact-form-7/v1/contact-forms/226/feedback`,
         formData,
       );
+      if (response.status === 200) {
+        setIsSuccess(true);
+      } else {
+        setIsError(true);
+      }
 
       console.log(response);
     } catch (error) {
       console.log(error);
     }
   };
+
+  if (isSuccess) {
+    return (
+      <div className="wpcf7 sucessMessage">
+        <h1>Merci pour votre message</h1>
+        <strong>Nous reviendrons bientôt vers vous</strong>
+      </div>
+    );
+  }
+
+  if (isError) {
+    return (
+      <div className="wpcf7 errorMessage">
+        <h1>Une erreur est survenue</h1>
+        <strong>
+          Nous nous excusons de la gêne occasionnée. Vous pouvez réessayer plus
+          tard
+        </strong>
+      </div>
+    );
+  }
 
   return (
     <div className="wpcf7">
