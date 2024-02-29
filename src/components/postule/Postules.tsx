@@ -47,7 +47,7 @@ const Postules = ({ pageData }: { pageData: IPostule }) => {
   });
 
   const createSlug = (lien: string): string => {
-    const regexp = /^http(?:s)?:\/\/(?:www\.)?db-conseils\.(?:.+)\/(.+)$/;
+    const regexp = /^http(?:s)?:\/\/(?:admin\.)?db-conseils\.(?:.+)\/(.+)$/;
     const matches = lien.match(regexp);
     if (matches && matches[1]) {
       return matches[1];

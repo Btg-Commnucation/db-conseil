@@ -1,5 +1,5 @@
-import he from "he";
-import { Link } from "react-router-dom";
+import he from 'he';
+import { Link } from 'react-router-dom';
 
 type TCard = {
   divClass: string;
@@ -11,12 +11,12 @@ type TCard = {
 
 const Card = ({ divClass, titre, texte, lien, texteLien }: TCard) => {
   const createSlug = (lien: string): string => {
-    const regexp = /^http(?:s)?:\/\/(?:www\.)?db-conseils\.(?:.+)\/(.+)$/;
+    const regexp = /^http(?:s)?:\/\/(?:admin\.)?db-conseils\.(?:.+)\/(.+)$/;
     const matches = lien.match(regexp);
     if (matches && matches[1]) {
       return matches[1];
     } else {
-      return "";
+      return '';
     }
   };
 
